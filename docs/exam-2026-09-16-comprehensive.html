@@ -1,187 +1,75 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Comprehensive Knowledge Exam — 2026-09-16</title><style>:root{color-scheme:light dark;--bg:#0b1020;--card:#131a2b;--text:#eef3ff;--muted:#9fb0d0;--accent:#7dd3fc;--good:#86efac;--bad:#fca5a5;--border:#2b3654}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}main{max-width:1120px;margin:auto;padding:28px 18px 80px}.hero,.question,.result{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:19px;margin:0 0 15px}.hero h1{margin:0 0 8px}.meta{color:var(--muted)}.pill{display:inline-block;border:1px solid var(--border);padding:4px 9px;border-radius:999px;margin:3px;color:var(--muted)}h2{margin:38px 0 13px}.question h3{margin:0 0 10px;font-size:1.02rem}.option{display:block;padding:9px 11px;margin:7px 0;border:1px solid var(--border);border-radius:9px;cursor:pointer}.option:hover{border-color:var(--accent)}input{margin-right:8px}.explanation{display:none;margin-top:12px;padding:12px;border-radius:9px;background:#0d1528}.explanation.show{display:block}.correct{border-color:var(--good)!important}.incorrect{border-color:var(--bad)!important}.good{color:var(--good)}.bad{color:var(--bad)}button{width:100%;padding:15px;border:0;border-radius:12px;background:var(--accent);color:#082032;font-size:1.06rem;font-weight:800;cursor:pointer}a{color:var(--accent)}.result{display:none;position:sticky;top:8px;z-index:5}.result.show{display:block}@media(prefers-color-scheme:light){:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#5c6a82;--accent:#0369a1;--good:#15803d;--bad:#b91c1c;--border:#d8e0ee}.explanation{background:#f7f9fc}}</style></head><body><main><section class="hero"><h1>Comprehensive Daily Knowledge Exam — 2026-09-16</h1><p>120 scenario-based questions spanning the major article families indexed in <a href="https://github.com/ccaiccie/knowledge" target="_blank" rel="noopener">ccaiccie/knowledge</a>. This version is designed for repetition, mechanism-level recall, troubleshooting, packet-flow reasoning, design tradeoffs, and operational verification.</p><div><span class="pill">120 questions</span><span class="pill">30 topic families</span><span class="pill">All on one page</span><span class="pill">Answers after submit</span></div><p class="meta">Coverage includes wireless roaming, BGP scaling, pseudowires, GitHub/InnerSource, AWS, Azure, GCP, MACsec, DNSSEC, OIDC, FortiAP, PRP, IPv6 translation, route leaking, perimeter architecture, cloud firewall insertion, and cross-cloud routing models.</p></section><div id="result" class="result"></div><form id="exam"><div id="questions"></div><button type="submit">Submit All 120 Questions</button></form></main><script>
-const T=[
-["802.11k/v/r",[
-["A voice client spends most roam time scanning many 5 GHz channels before selecting a target. Which mechanism most directly reduces this delay?","802.11k Neighbor Reports",["802.11r FT","802.11v BTM","RADIUS CoA"],"802.11k narrows candidate/channel discovery."],
-["A BTM Request recommends AP-2, but the client stays on AP-1. No disassociation-imminent timer exists. Best interpretation?","The client may legally ignore the advisory",["802.11v is definitely broken","802.11r failed","DHCP failed"],"Ordinary 802.11v BTM is advisory."],
-["Sticky clients still roam late after 802.11r is enabled, although the roam itself is faster. Why?","802.11r accelerates security transition, not the roam trigger",["802.11r only works on 2.4 GHz","802.11r disables BTM","802.11r forces DHCP"],"FT improves execution after the client decides to roam."],
-["FT completes quickly but upstream forwarding stays on the old AP and the application drops. What does this prove?","Wireless security transition and forwarding convergence are separate stages",["802.11k must be disabled","FT guarantees application continuity","BTM is mandatory"],"A successful FT can coexist with post-roam forwarding failure."]]],
-["BGP Route Reflection / Confederations / ORR / Add-Path",[
-["Two route-reflector clusters exchange a reflected route. Which attribute helps detect reflection loops?","CLUSTER_LIST",["MED","LOCAL_PREF","ORIGIN"],"CLUSTER_LIST records reflector clusters traversed."],
-["An RR reflects a client-learned iBGP route to another client. What rule is being selectively relaxed?","The normal rule against advertising iBGP-learned routes to other iBGP peers",["eBGP must use multihop","AS_PATH is removed","NEXT_HOP must always change"],"Route reflection replaces the full-mesh requirement."],
-["Clients in different regions get suboptimal exits because the RR chooses from its own IGP perspective. Which feature addresses this?","Optimal Route Reflection (ORR)",["Route dampening","Graceful Restart","AS override"],"ORR improves client-specific path selection from different topology viewpoints."],
-["An RR hides backup paths by advertising only one best path. Which capability can expose multiple paths for the same NLRI?","BGP Add-Path",["BFD","MD5","Route refresh"],"Add-Path advertises multiple distinct paths for one prefix."]]],
-["Pseudowire / VCCV / BFD",[
-["An MPLS pseudowire is up at the signaling layer but user traffic is blackholed. Which OAM family is designed to verify pseudowire connectivity?","VCCV",["STP","DHCP snooping","LLDP only"],"VCCV provides pseudowire connectivity verification channels."],
-["You need subsecond failure detection for a pseudowire forwarding path without relying on slow control-plane timers. What is a common tool?","BFD",["ARP aging","DNS TTL","MSTP"],"BFD provides rapid liveness detection."],
-["Control-word or encapsulation mismatch causes a pseudowire to signal but fail data forwarding. What evidence is most useful?","Compare pseudowire encapsulation/control-word state on both endpoints",["Only ping the loopback","Only check NTP","Only check DNS"],"Both ends must agree on pseudowire data-plane encapsulation."],
-["BFD reports a failure instantly, but traffic recovery still takes longer. What distinction matters?","Failure detection is separate from control/data-plane convergence",["BFD replaces routing","VCCV performs NAT","MPLS cannot reconverge"],"Fast detection does not guarantee equally fast rerouting."]]],
-["GitHub Branch Protection",[
-["A team wants every change to main reviewed and CI-tested before merge. Which control best enforces this?","Branch protection/rules requiring pull requests and status checks",["A README note","Issue labels","A project board"],"Repository rules can enforce merge gates."],
-["A status check is required by branch protection but its workflow job was renamed. What symptom appears?","Merges block waiting for a required check that never reports under the expected name",["Branches delete automatically","Git history disappears","Tags stop working"],"Required-check identity must match actual CI output."],
-["Why can allowing force-pushes weaken a protected branch?","History can be rewritten, potentially bypassing normal review expectations",["It improves auditability","It guarantees signed commits","It disables pull requests"],"Force pushes change published history."],
-["A branch rule exists but admins can bypass it. What design question matters?","Whether bypass permissions align with governance and emergency-change policy",["Whether DNS uses TCP","Whether BGP MED is set","Whether VLAN 1 exists"],"Protection is only as strong as its allowed bypass paths."]]],
-["InnerSource",[
-["A company wants open collaboration inside the enterprise while keeping code private to employees. Which model fits?","InnerSource",["Public open source only","Shadow IT","Closed waterfall"],"InnerSource applies open-source collaboration practices internally."],
-["A repository has many contributors but no clear maintainers, review expectations, or contribution guide. What is the likely failure mode?","Contribution friction and unclear ownership",["Faster BGP convergence","Lower DNS latency","Automatic compliance"],"InnerSource depends on discoverable governance and maintainership."],
-["What artifact most directly helps internal contributors understand how to propose changes?","A CONTRIBUTING guide",["A packet capture","An ARP table","A cloud route table"],"Contribution guidance lowers collaboration friction."],
-["Why are discoverability and reusable components central to InnerSource?","Teams can find and contribute to internal solutions instead of duplicating work",["They disable access control","They eliminate testing","They replace version control"],"The model aims to increase reuse and cross-team contribution."]]],
-["Git / gh CLI / GitHub Foundations",[
-["You committed locally but nothing appears on GitHub. Which step is missing?","Push the commit to a remote branch",["Rebase the DNS zone","Create a VLAN","Run BFD"],"git commit is local; git push publishes to a remote."],
-["You want to create a pull request from the command line after pushing a branch. Which tool is most directly designed for GitHub operations?","gh CLI",["dig","tcpdump","openssl only"],"gh complements git with GitHub API workflows."],
-["A developer runs git fetch and expects the working tree to change immediately. Why is that expectation wrong?","fetch updates remote-tracking refs without merging into the current branch",["fetch deletes local commits","fetch rewrites tags only","fetch disables remotes"],"Fetch downloads refs/objects without integrating them."],
-["What is the practical difference between git and gh?","git manages repository history/content; gh manages GitHub-hosted workflows such as PRs and issues",["They are identical binaries","gh replaces TCP","git is only for cloud networking"],"They operate at different layers of the workflow."]]],
-["AWS Route 53 Resolver / DNS",[
-["On-premises clients must resolve private Route 53 names in a VPC. Which construct is commonly used?","Route 53 Resolver inbound endpoint",["NAT Gateway","Internet Gateway","Transit Gateway route table only"],"Inbound endpoints accept DNS queries into the VPC resolver."],
-["AWS workloads must resolve an on-premises private zone. What is the typical pattern?","Resolver outbound endpoint plus forwarding rule",["Public hosted zone only","NLB hairpin","S3 gateway endpoint"],"Outbound endpoints forward matching DNS queries to external resolvers."],
-["A forwarding rule exists but queries time out. What should be checked first?","Security groups/network paths to the DNS targets and rule association",["BGP cluster ID","802.11r mobility domain","MACsec SCI"],"Resolver endpoints still depend on reachable DNS servers and associations."],
-["Why can overlapping private DNS namespaces create hard-to-debug outcomes?","Different resolver rules/private hosted zones may compete for the same suffix and change which authority answers",["DNS ignores suffixes","NAT64 disables recursion","Route 53 never caches"],"Namespace design and rule precedence matter."]]],
-["AWS PrivateLink / GWLB Firewall Inspection",[
-["You need transparent insertion of third-party firewalls without making workloads route directly to appliance ENIs. Which AWS service pattern is relevant?","Gateway Load Balancer with GWLB endpoints",["S3 gateway endpoint","CloudFront only","Route 53 health check"],"GWLB provides scalable transparent appliance insertion."],
-["Stateful firewalls behind GWLB see asymmetric forward and return paths. What is the primary risk?","Session/state mismatch and dropped return traffic",["Faster throughput","Automatic SNAT everywhere","DNSSEC failure"],"Stateful inspection generally requires symmetric service chaining."],
-["PrivateLink is used to expose a service privately to consumers. What is its key architectural property?","Consumers access an endpoint without needing full routed VPC-to-VPC connectivity",["It requires public IPs","It merges route tables","It disables IAM"],"PrivateLink provides private service consumption across boundaries."],
-["Which evidence best verifies GWLB service insertion?","Route tables/endpoints plus appliance flow logs or packet capture showing GENEVE-delivered traffic",["Only DNS TTL","Only IAM users","Only S3 object count"],"You must prove both steering and appliance receipt."]]],
-["Azure ExpressRoute / Global Reach",[
-["Two on-premises sites connect to different ExpressRoute circuits and need private connectivity through Microsoft's backbone. Which feature is relevant?","ExpressRoute Global Reach",["Azure Front Door","Private Endpoint","Application Gateway WAF"],"Global Reach connects on-premises networks through ExpressRoute circuits."],
-["A preferred ExpressRoute path is being lost despite lower latency. Which evidence matters most?","BGP attributes and effective route selection, not latency alone",["Only CPU usage","Only DNS TTL","Only NSG names"],"Routing policy, not measured RTT, selects BGP paths."],
-["Why might AS-path prepending be used on one ExpressRoute circuit?","To make that path less preferred for inbound routing where policy honors AS_PATH",["To encrypt traffic","To create a VNet","To enable DNSSEC"],"Prepending is a BGP path-engineering tool."],
-["FastPath is enabled. What design benefit is expected?","Eligible traffic can bypass parts of the gateway data path for improved performance",["It disables BGP","It provides WAF","It replaces ExpressRoute circuits"],"FastPath optimizes the forwarding path while preserving the connectivity model."]]],
-["GCP Policy-Based Routing",[
-["Traffic from selected workloads must traverse an inspection appliance regardless of normal destination routing. Which construct is relevant?","Policy-Based Routing",["Cloud DNS only","VPC Peering only","Cloud Armor only"],"PBR can steer by source/destination/protocol to a next hop."],
-["A PBR sends traffic to an internal passthrough NLB fronting an NVA, but return traffic follows a normal route. What breaks?","Stateful symmetry",["DNSSEC chain","MACsec MKA","OIDC nonce"],"Stateful appliances need matching service insertion in both directions."],
-["Why might a DEFAULT_ROUTING bypass policy be needed?","To prevent selected traffic from recursively re-entering the service-insertion policy",["To create DNS records","To rotate JWT keys","To run BFD"],"Bypass policies can avoid routing loops/recursion."],
-["What is the best verification method for PBR?","Inspect effective policy/routing and packet path through the chosen next hop",["Only project name","Only IAM role","Only subnet CIDR"],"Prove the policy match and actual forwarding path."]]],
-["MACsec IEEE 802.1AE",[
-["Two switches must encrypt Ethernet frames over a carrier handoff while preserving Layer 2. Which technology fits?","MACsec",["IPsec tunnel mode only","NAT64","OIDC"],"MACsec provides link/L2 encryption and integrity."],
-["MKA peers fail to establish secure associations. Which keying objects should be checked?","CAK/CKN and MKA policy compatibility",["BGP MED","DNSKEY","OIDC state"],"MKA uses CAK/CKN to establish security associations and derive SAKs."],
-["Encrypted links pass small frames but drop large ones after MACsec is enabled. Likely issue?","MTU overhead was not accommodated",["DNS TTL too low","BGP ORIGIN wrong","VLAN name too long"],"MACsec adds frame overhead that can expose MTU limits."],
-["A Port-Channel carries MACsec. What operational concern matters?","Member-link security/session behavior and consistency across the bundle",["Only DNSSEC KSK","Only DHCP option 82","Only OIDC logout"],"Bundled links require consistent secure-channel behavior."]]],
-["AWS Cloud WAN",[
-["A global enterprise wants centrally defined segmentation and routing policy across many AWS regions. Which service fits?","AWS Cloud WAN",["S3 static website","Route 53 private zone only","Lambda@Edge only"],"Cloud WAN provides a global core network and policy model."],
-["Two segments should not exchange routes by default. What design principle applies?","Segmentation controls route propagation and attachment isolation",["All attachments automatically full-mesh","NAT replaces routing policy","DNS decides segmentation"],"Cloud WAN segments are routing-policy domains."],
-["A branch attachment is associated with the wrong segment. What symptom is likely?","Unexpected reachability or missing routes due to segment policy",["OIDC signature failure","MACsec replay","802.11 scan delay"],"Association and propagation determine routing visibility."],
-["What evidence best troubleshoots Cloud WAN routing?","Core network policy, attachment state, segment routes, and route propagation",["Only EC2 hostname","Only IAM password policy","Only S3 bucket tags"],"The control-plane policy and propagated routes are the key evidence."]]],
-["AWS NLB Hairpin / Client IP / Proxy Protocol v2",[
-["A target behind an NLB calls the NLB address and traffic hairpins back. Why can source preservation complicate this?","The target may see its own source address, creating return-path/socket ambiguity",["DNSSEC breaks","BGP cluster ID changes","MACsec drops keys"],"Hairpin flows can interact poorly with client-IP preservation."],
-["You must preserve original client metadata even when transport source changes. Which NLB feature can carry it?","Proxy Protocol v2",["802.11k","NSEC3","MKA"],"PPv2 can convey source/destination metadata to supporting targets."],
-["The application suddenly receives binary bytes before its protocol payload after PPv2 is enabled. Why?","The backend is not parsing the Proxy Protocol v2 header",["TLS is impossible with NLB","NAT64 occurred","Git rebase ran"],"PPv2 inserts a header the application or proxy must understand."],
-["Which check best validates client-IP preservation behavior?","Observe backend connection source addresses and NLB target settings",["Only Route 53 record count","Only AWS account alias","Only subnet name"],"Backend socket evidence proves what source the target actually sees."]]],
-["AWS VPC Traffic Mirroring",[
-["A sensor sees outbound mirrored packets but not inbound packets. What should you verify first?","Mirror session source/filter direction and target path",["BGP confederation ID","OIDC nonce","DNSKEY KSK"],"Traffic Mirroring direction/filter configuration determines captured packets."],
-["Why can mirrored traffic differ from an inline firewall view?","Mirroring is out-of-band observation and does not itself enforce or guarantee the same service path",["Mirroring performs NAT","Mirroring changes BGP","Mirroring is DNS"],"Packet copies are observational, not inline forwarding."],
-["The mirror target is reachable but capture is empty. Which evidence matters?","Session/filter match counters and packet capture at the target",["Only VPC name","Only IAM group","Only Route 53 TTL"],"Prove both selection and delivery."],
-["Why is MTU/encapsulation relevant to mirroring?","Mirrored delivery adds encapsulation overhead that can affect transport to the target",["It changes JWT audience","It changes VLAN IDs","It disables TCP"],"Encapsulation overhead must fit the underlay path."]]],
-["DNSSEC",[
-["A validating resolver marks a signed zone Bogus after a key rollover. Which chain should be inspected?","DS, DNSKEY, and RRSIG consistency across parent/child",["BGP MED","MKA CKN","802.11 BTM"],"DNSSEC validation follows the chain of trust."],
-["What is the main conceptual distinction between a KSK and ZSK?","KSK commonly signs the DNSKEY RRset while ZSK signs ordinary zone data",["KSK routes traffic","ZSK performs NAT","They are VLAN types"],"The split supports operational key management."],
-["A resolver proves that a nonexistent name does not exist in a signed zone. Which mechanisms provide authenticated denial?","NSEC or NSEC3",["BFD","VCCV","PKCE"],"NSEC/NSEC3 cryptographically prove nonexistence."],
-["Large DNSSEC responses fail over UDP but succeed over TCP. What should you investigate?","EDNS size, fragmentation/MTU, and TCP fallback handling",["BGP ORR","802.11r","Git hooks"],"DNSSEC increases response size and exposes transport/MTU issues."]]],
-["Azure Firewall / Inspection",[
-["Azure Firewall Policy evaluates a published inbound flow. Which rule family is processed before network/application rules?","DNAT rules",["Application rules always first","DNS rules","BGP rules"],"Azure Firewall uses a fixed DNAT → Network → Application sequence."],
-["An FQDN-based outbound application rule fails because name resolution differs from what the firewall sees. Which feature/design area matters?","DNS Proxy and consistent DNS resolution path",["BGP cluster list","MACsec replay","OIDC PKCE"],"FQDN policy depends on coherent DNS behavior."],
-["Premium TLS inspection is enabled and clients reject sites. What should be checked?","Trust of the inspection CA and certificate deployment",["Only UDR priority","Only BGP ASN","Only VLAN tagging"],"TLS interception requires clients to trust the issuing CA."],
-["Which logs best distinguish a DNAT mismatch from application-rule denial?","Structured Azure Firewall rule-processing logs by category",["Only VM boot diagnostics","Only NSG names","Only DNS TTL"],"Firewall logs show which rule collection processed or denied the flow."]]],
-["Azure Route Server + NVA",[
-["You want an NVA to exchange routes dynamically with Azure instead of maintaining many UDRs. Which service is designed for this?","Azure Route Server",["Azure Front Door","Private DNS Resolver","Application Gateway"],"Route Server uses BGP with NVAs."],
-["The NVA advertises routes to Route Server but spokes do not use them. What should be checked?","BGP learned routes, VNet propagation behavior, and effective routes on spoke NICs",["Only DNSSEC","Only OIDC scope","Only MACsec"],"Verify control-plane learning and data-plane effective routes."],
-["Stateful NVA insertion sends forward traffic through appliance A but return through appliance B without shared state. Primary risk?","Asymmetric state and session drops",["Faster convergence","Automatic SNAT","DNS recursion"],"Stateful service insertion requires symmetry or state sharing."],
-["Why is Route Server not itself a firewall dataplane?","It exchanges routes/control-plane information; traffic is forwarded through the selected NVA paths",["It terminates TLS","It performs OIDC","It is a DNS server"],"Route Server is a routing control-plane service."]]],
-["Azure Virtual WAN / Secured Hub / Security SaaS",[
-["A global Azure design needs centrally managed hub routing and security across regions. Which architecture is relevant?","Virtual WAN secured hubs",["One flat VNet","Only Front Door","Only Private DNS"],"Virtual WAN provides managed hub connectivity and routing."],
-["Routing Intent is configured in a secured hub. What is its purpose?","Steer categories such as Internet/private traffic through designated security providers",["Generate DNSSEC keys","Run GitHub Actions","Perform 802.11 FT"],"Routing Intent automates security service insertion policy."],
-["Two vWAN hubs are connected but expected routes are missing. What evidence matters?","Hub route tables, associations, propagations, and effective routes",["Only NSG name","Only subscription ID","Only DNS TTL"],"vWAN routing depends on route-table association/propagation."],
-["A Security SaaS provider is integrated for Internet traffic. What must still be validated?","Steering, provider reachability, return-path symmetry, and failover behavior",["Only source code branch","Only MAC address","Only OIDC logout"],"Managed integration still requires end-to-end path validation."]]],
-["Gateway Load Balancer / Transparent NVA",[
-["You want to insert NVAs transparently without changing workload default gateways. Which Azure service fits?","Gateway Load Balancer",["Traffic Manager","DNS Private Resolver","ExpressRoute Global Reach"],"GWLB enables transparent service chaining to appliances."],
-["Why is HA Ports important with an internal load balancer fronting NVAs?","It can load-balance all ports/protocols for transparent flows",["It signs JWTs","It performs DNSSEC","It creates BGP communities"],"HA Ports support broad transparent traffic distribution."],
-["Appliance health probes fail. What is the expected operational effect?","The load balancer stops sending new flows to unhealthy backends",["All routes disappear globally","DNS zones delete","OIDC tokens expire"],"Health state controls backend selection."],
-["A transparent NVA sees only one traffic direction. What is the core troubleshooting focus?","Service-chain symmetry and both forward/return steering points",["Only TLS certificate name","Only Git branch name","Only VLAN 1"],"Inline stateful inspection depends on both directions traversing the service."]]],
-["Azure Front Door + Application Gateway WAF",[
-["Which product is positioned at the global edge while Application Gateway is regional?","Azure Front Door",["Azure Route Server","ExpressRoute","Private DNS Resolver"],"Front Door is a global edge reverse proxy; App Gateway is regional."],
-["You want to prevent direct Internet bypass of a backend that should only receive Front Door traffic. What control is relevant?","Origin lockdown using Private Link or validated Front Door identity/service-tag patterns",["BGP Add-Path","MACsec","NPTv6"],"The origin must reject requests that bypass the intended edge."],
-["A WAF blocks valid traffic due to anomaly scoring. What evidence should you inspect?","WAF logs showing matched managed/custom rules and scores",["Only NIC route table","Only DNS TTL","Only BGP ASN"],"WAF diagnostic logs explain the rule evaluation."],
-["Front Door and App Gateway are layered. What security design principle matters?","Understand which layer terminates TLS and which WAF policy enforces each request leg",["Only STP root","Only MAC address","Only DHCP lease"],"Multiple reverse proxies create multiple TLS and policy boundaries."]]],
-["Azure Private Endpoint Inspection",[
-["A Private Endpoint route bypasses the firewall even though a broader UDR exists. What should you investigate?","Private Endpoint network policies and route-precedence behavior",["BGP confederation ID","OIDC nonce","DNSSEC KSK"],"Private Endpoint routing has specific policy/precedence requirements."],
-["An ILB-backed NVA design inspects Private Endpoint traffic. What must the NVA support?","IP forwarding and symmetric return handling",["OIDC discovery","802.11k","Git LFS"],"The NVA is acting as a routed inspection hop."],
-["Forward traffic hits the NVA but return traffic goes directly back to the client. What likely breaks?","Stateful inspection symmetry",["DNSSEC signing","MACsec MKA","BGP ORR"],"The return must traverse the expected stateful path."],
-["What evidence best validates the design?","Effective routes plus NVA/firewall flow logs for both directions",["Only resource-group name","Only VM size","Only DNS zone"],"Route and flow evidence together prove actual service insertion."]]],
-["AWS Firewall Insertion",[
-["A centralized AWS inspection VPC must process east-west traffic between application VPCs. What is the central design challenge?","Steer both directions through the inspection layer while preserving symmetry",["Only create DNS records","Only use bigger subnets","Only enable CloudTrail"],"Routing and symmetry are the core of centralized stateful inspection."],
-["A Transit Gateway route sends traffic to inspection but the return table bypasses it. What happens?","Asymmetric flow likely breaks stateful sessions",["Performance automatically improves","NAT64 starts","OIDC tokens refresh"],"Both TGW route domains must preserve the service chain."],
-["Why are appliance mode or equivalent symmetry features important in some TGW designs?","They help keep flows through consistent AZ/appliance paths",["They create IAM users","They sign DNS zones","They perform TLS WAF"],"Stateful appliances require consistent flow mapping."],
-["What evidence best proves insertion?","TGW/VPC route tables plus appliance flow logs/pcap in both directions",["Only account alias","Only subnet name","Only S3 object count"],"Control-plane routes and dataplane evidence are both required."]]],
-["GCP NCC / Cloud NGFW / Firewall Insertion",[
-["A global GCP topology needs hub-and-spoke route exchange among VPC and hybrid connections. Which service is relevant?","Network Connectivity Center (NCC)",["Cloud DNS only","Cloud CDN only","Artifact Registry"],"NCC provides a global connectivity control plane."],
-["A third-party NVA participates as a Router Appliance spoke. What protocol commonly exchanges routes with Cloud Router?","BGP",["STP","LLDP only","OIDC"],"Router Appliance integration uses dynamic routing with Cloud Router."],
-["Cloud NGFW Enterprise uses firewall endpoints. What architectural difference separates it from a customer VM-Series NVA?","Managed Packet Intercept/firewall endpoints versus customer-managed routed appliance insertion",["It is only DNS","It is only BGP","It requires no policy"],"The enforcement/service-insertion model differs fundamentally."],
-["A PBR/NLB NVA design loops traffic back into the same policy. What control should be considered?","A DEFAULT_ROUTING bypass/recursion-avoidance policy",["More TLS certificates","More DNSSEC keys","More Git branches"],"Service insertion requires explicit recursion prevention."]]],
-["OIDC / OAuth2 / PKCE / JWKS",[
-["An application treats an API access token as proof of user authentication. What is the protocol-level correction?","OIDC uses the ID Token for the authentication result; access tokens target resource servers",["Access tokens are always ID tokens","JWT means identity automatically","OAuth replaces TLS"],"Token type and audience matter."],
-["An authorization code is stolen from a browser redirect, but the attacker lacks the original verifier. Which protection is working?","PKCE",["DNSSEC","BFD","MACsec"],"PKCE binds the code exchange to the initiating client instance."],
-["An ID Token signature fails after the OP rotates keys. What should the RP refresh?","JWKS from the provider's jwks_uri",["BGP table","DHCP lease","802.11 neighbor report"],"JWKS publishes current verification keys."],
-["Which pair is the strongest stable OIDC protocol identity key?","issuer (iss) plus subject (sub)",["email only","display name only","source IP only"],"iss+sub identifies the subject within an issuer namespace."]]],
-["FortiAP Dynamic VLAN Assignment",[
-["RADIUS authenticates successfully but a bridge-mode client never gets DHCP in its assigned VLAN. What should be checked first?","AP uplink/intermediate trunks carry the dynamically assigned VLAN",["BGP CLUSTER_LIST","OIDC JWKS","DNSSEC RRSIG"],"Bridge-mode user traffic is locally tagged onto the wired LAN."],
-["Which RADIUS attribute commonly carries the VLAN ID or name tag?","Tunnel-Private-Group-ID (IETF 81)",["NAS-Port-Type only","Calling-Station-Id only","Framed-IP-Address only"],"Attribute 81 carries the selected VLAN identifier/string mapping."],
-["Why use a VLAN name tag such as 'staff' instead of hard-coding VLAN 100 in RADIUS?","It decouples identity policy from site-local VLAN numbering",["It encrypts traffic","It performs NAT","It replaces 802.1X"],"Each site can map the same business tag to local VLAN IDs."],
-["A user moves between AP groups that map the same SSID to different VLANs. What application risk exists?","Layer-3 address/session continuity can break when the subnet changes",["802.11k stops working","RADIUS cannot authenticate","MACsec is required"],"Location-based VLAN assignment can intentionally change the client's subnet."]]],
-["PRP IEC 62439-3",[
-["A PRP endpoint sends duplicate frames on LAN A and LAN B. What does the receiver do?","Accepts the first valid copy and discards the duplicate",["Waits for both before forwarding","Runs STP reconvergence","NATs one copy"],"PRP achieves zero recovery time through duplication and duplicate elimination."],
-["Why is PRP different from RSTP/REP/MRP?","PRP keeps both paths active instead of waiting for topology reconvergence",["PRP is Layer 7","PRP is a routing protocol","PRP requires NAT"],"Availability comes from parallel transmission, not post-failure convergence."],
-["A SAN needs to participate through a PRP domain. Which device type integrates it?","RedBox",["Route reflector","DNS64 server","OIDC RP"],"A RedBox represents singly attached nodes into the PRP domain."],
-["Application traffic still works, but supervision shows LAN B lost. Why is this operationally important?","The system is degraded to single-path operation and has lost redundancy",["No action is needed because traffic works","PRP automatically repairs fibers","The duplicate count should be zero"],"PRP can mask a latent path failure, so redundancy health must be monitored."]]],
-["DNS64 / NAT64 / NPTv6",[
-["An IPv6-only client asks for an A-only service. Which component synthesizes an AAAA response?","DNS64",["NPTv6","BGP","DHCPv6-PD"],"DNS64 synthesizes an IPv6 address embedding the NAT64 translation prefix."],
-["A translator converts the synthesized IPv6 destination into an IPv4 flow. Which function is this?","NAT64",["NPTv6","SLAAC","6PE"],"NAT64 performs cross-family translation."],
-["You need stateless IPv6-prefix-to-IPv6-prefix translation without per-flow port state. Which mechanism fits?","NPTv6",["NAT64","DNS64","PAT44"],"NPTv6 maps IPv6 prefixes algorithmically."],
-["A stateful NAT64 forward path works but return traffic bypasses the translator. Likely outcome?","Session failure due to asymmetric translation path",["Automatic recovery","NPTv6 takeover","DNSSEC validation"],"Return traffic must traverse the same stateful translation function."]]],
-["Cisco VRF Route Leaking / Redistribution",[
-["VRF-A can reach a shared service, but replies have no route back into VRF-A. What is missing?","A reverse-path leak/route in the return routing context",["More DNS64","More BTM","A new OIDC nonce"],"Shared-service designs need bidirectional reachability."],
-["What is the conceptual difference between route leaking and redistribution?","Leaking moves reachability between routing tables; redistribution moves routes between routing protocols",["They are identical","Leaking is NAT","Redistribution is VLAN tagging"],"They cross different logical boundaries."],
-["A leaked prefix appears in the RIB but packets blackhole. What should be checked next?","FIB/adjacency and recursive next-hop resolution in that VRF",["Only route-map name","Only NTP","Only hostname"],"RIB presence does not guarantee successful forwarding programming."],
-["How should a shared-service design minimize accidental tenant reachability?","Leak only explicitly required service prefixes with policy",["Import all routes everywhere","Disable VRFs","Use one flat VLAN"],"Selective leaking preserves segmentation boundaries."]]],
-["Perimeter Design / Fortinet / HA / SD-WAN",[
-["A firewall HA failover completes but applications recover much later. What timeline should be separated?","Failure detection, routing convergence, session/state recovery, and application recovery",["Only ping loss","Only CPU utilization","Only DNS TTL"],"Different layers can recover at different times."],
-["FortiManager pushes policy successfully but a branch loses traffic due to interface mapping. What abstraction should be checked?","Normalized/dynamic interface mapping to the target device",["OIDC state","DNSSEC KSK","PRP RCT"],"Central policy must resolve interfaces correctly on each managed firewall."],
-["SD-WAN health checks are green but traffic ignores the desired member. What should be examined?","SD-WAN rule matching and how SLA status is consumed by the rule",["Only BGP router ID","Only DHCP lease","Only VLAN name"],"Measurement and policy consumption are separate."],
-["A perimeter design uses BGP, IPsec, NAT, and stateful inspection. Which troubleshooting method is strongest?","Walk the packet through route/SD-WAN choice, policy, session/NAT, tunnel, return route, and state match",["Check one GUI dashboard only","Restart everything","Change timers blindly"],"Integrated packet-walk reasoning isolates cross-feature failures."]]],
-["Cross-cloud VPC/VNet/Subnet/Routing Mental Models",[
-["An engineer assumes GCP subnets own route tables exactly like AWS subnets. What is the correction?","GCP route applicability is VPC-centric rather than one route-table association per subnet",["GCP has no routes","AWS has no subnets","Azure uses BGP only"],"Cloud routing scopes differ materially."],
-["What is a key Azure routing concept compared with AWS subnet route-table associations?","Azure effective routes combine system routes, UDRs, and BGP-learned routes",["Azure ignores system routes","AWS uses no route tables","GCP uses STP"],"Azure computes an effective route set from several sources."],
-["A design copies a NAT Gateway assumption from AWS into GCP. What must be reconsidered?","Cloud NAT is distributed and not an inline appliance hop in the same way as a routed NAT instance",["GCP requires public IPs on every VM","Cloud NAT is DNS","AWS NAT is Layer 2"],"Similar labels can hide different forwarding architectures."],
-["What is the safest cross-cloud troubleshooting method?","Translate the packet walk into each cloud's actual routing, NAT, security, and service-insertion constructs",["Assume identical semantics","Use only product names","Ignore route scope"],"Conceptual equivalence must be validated against platform behavior."]]],
-["GCP Firewall Policy Hierarchy / goto_next / NSI",[
-["An organization-level firewall policy does not make the final allow/deny decision and intentionally passes evaluation onward. Which action is relevant?","goto_next",["NAT64","BFD","PKCE"],"goto_next delegates evaluation to the next policy layer."],
-["A rule uses apply_security_profile_group. What does that indicate?","Traffic is being sent to Cloud NGFW Enterprise security inspection rather than simply allowed/denied",["A DNS lookup","A BGP prepend","A Git merge"],"The action invokes advanced security profiles."],
-["Policy behavior changes after moving from AFTER_CLASSIC_FIREWALL to BEFORE_CLASSIC_FIREWALL. Why?","The rule-evaluation order relative to classic VPC firewall rules changed",["Subnet CIDRs changed automatically","BGP ASN changed","TLS version changed"],"Placement in the evaluation hierarchy determines precedence."],
-["What should be captured in a packet-walk review?","Hierarchical policy, network firewall policy, classic rules, and any NSI interception action in order",["Only VM tags","Only project name","Only DNS TTL"],"Troubleshooting must follow actual policy evaluation sequence."]]],
-["GCP Cloud NGFW Enterprise Firewall Endpoints",[
-["What is a defining property of Cloud NGFW Enterprise firewall endpoints?","Managed zonal firewall endpoints intercept traffic through Google-managed packet interception",["They are customer VMs with static routes","They are DNS servers","They are BGP reflectors"],"The service is managed rather than a customer-routed appliance fleet."],
-["TLS inspection is configured but validation fails. Which dependency matters?","CA/trust configuration and the selected TLS inspection policy",["BGP cluster ID","PRP sequence","Git branch name"],"Decryption requires correct certificate trust/policy."],
-["Why does GENEVE/packet-intercept overhead matter?","It consumes MTU headroom and can expose fragmentation/drop issues",["It changes DNSSEC keys","It creates OIDC scopes","It disables routes"],"Encapsulation overhead affects effective packet size."],
-["Multi-zone coverage is incomplete. What symptom can result?","Traffic in uncovered zones may not receive the intended inspection path",["All VPC routes vanish","OIDC stops globally","Git commits fail"],"Zonal deployment and association scope must match workloads."]]],
-["Azure Forced Tunneling",[
-["Azure workloads should use on-premises Internet egress/security. What routing mechanism commonly enforces this?","A default route learned or configured toward the on-premises path",["OIDC Discovery","DNSSEC NSEC3","802.11k"],"Forced tunneling steers 0/0 away from Azure-native Internet egress."],
-["On-premises inspection sees outbound sessions but replies never return through the tunnel. What likely breaks?","Stateful symmetry and Internet return routing",["BGP ORR","MACsec MKA","Git LFS"],"The return path must reach the original Azure source through the same security architecture."],
-["A learned default disappears during BGP failure. What design question matters?","Whether the architecture should fail closed, fail open, or use a backup default",["Whether OIDC uses email","Whether PRP uses LAN A","Whether VLAN 1 exists"],"Default-route loss defines security and availability behavior."],
-["What evidence proves forced tunneling is active?","Effective routes on the workload NIC plus on-premises firewall/NAT flow logs",["Only subscription name","Only DNS record","Only VM size"],"You need both Azure route selection and downstream flow evidence."]]],
-["Network Automation Using GitHub",[
-["A network team wants every config change peer-reviewed, tested, and auditable. Which workflow fits?","Git branch + pull request + CI validation + controlled deployment",["Direct edits on devices only","Email attachments only","Shared spreadsheet only"],"Git-based workflows add versioning, review, and automation gates."],
-["A CI job validates syntax but not intended network behavior. What is missing?","Semantic/pre-deployment tests such as topology, policy, or reachability validation",["More branch names","More DNS zones","More NTP"],"Syntax correctness alone does not prove safe network intent."],
-["A deployment pipeline has broad production credentials available to every PR job. Primary risk?","Untrusted or premature code can gain excessive deployment capability",["BGP converges faster","DNS becomes recursive","MACsec keys rotate"],"Least privilege and protected environments are essential."],
-["Why store network intent/config in Git?","It provides history, diff, review, rollback context, and automation triggers",["It replaces routing protocols","It eliminates testing","It encrypts WAN links"],"Version control improves governance and repeatability."]]],
-["Azure Customer-managed Hub / Third-party NVA",[
-["A hub-spoke VNet design uses a third-party firewall in the hub. What typically steers spoke traffic to it?","UDRs or dynamic route exchange depending on the design",["DNSSEC","OIDC scopes","802.11 BTM"],"Hub inspection depends on route control toward the NVA."],
-["Spoke-to-spoke traffic reaches the firewall outbound but the return path goes directly. What breaks?","Stateful symmetry",["DNS validation","MACsec replay","Git history"],"Both directions need the same inspection context."],
-["An NVA forwards transit packets. Which VM/NIC capability is generally required?","IP forwarding",["Proxy Protocol v2","NSEC3","PKCE"],"Azure NVAs must be allowed to forward non-local traffic."],
-["What evidence should be reviewed after adding a UDR?","Effective routes on both source and destination-side NICs plus firewall session logs",["Only route-table resource name","Only VM SKU","Only DNS TTL"],"Effective routes reveal actual forwarding decisions."]]],
-["AWS / Azure / GCP Firewall Insertion Comparison",[
-["Across clouds, what is the most universal requirement for a stateful inspection service?","Bidirectional steering that preserves session symmetry",["Identical product names","Same route-table model","Same encapsulation"],"The mechanism differs, but state symmetry is universal."],
-["Why is copying an AWS TGW inspection design literally into Azure unsafe?","The platforms have different routing scopes, service-insertion primitives, and control-plane behavior",["Azure cannot route","AWS has no firewalls","GCP uses only Layer 2"],"Translate the architecture concept, not the exact product mechanics."],
-["What should every cloud firewall-insertion validation include?","Forward route, inspection evidence, return route, NAT behavior, and failover testing",["Only a successful ping","Only a diagram","Only resource creation status"],"End-to-end packet walks expose asymmetry and hidden bypasses."],
-["A design intentionally fails open when inspection is unavailable. What must be documented?","The exact bypass condition, security exposure, routing behavior, and recovery path",["Only firewall brand","Only CIDR list","Only Git username"],"Fail-open is a deliberate risk decision that must be explicit."]]]
-];
-let qs=[];T.forEach(([topic,arr])=>arr.forEach(x=>qs.push({topic,q:x[0],correct:x[1],wrong:x[2],e:x[3]})));
-const box=document.getElementById('questions');let last='';qs.forEach((x,i)=>{if(x.topic!==last){const h=document.createElement('h2');h.textContent=x.topic;box.appendChild(h);last=x.topic;}const choices=[x.correct,...x.wrong];const shift=(i*3+x.topic.length)%4;const o=choices.slice(shift).concat(choices.slice(0,shift));const answer=o.indexOf(x.correct);x.answer=answer;x.options=o;const d=document.createElement('section');d.className='question';d.dataset.i=i;d.innerHTML='<h3>'+(i+1)+'. '+x.q+'</h3>'+o.map((v,j)=>'<label class="option"><input type="radio" name="q'+i+'" value="'+j+'">'+v+'</label>').join('')+'<div class="explanation"><strong>Answer: '+String.fromCharCode(65+answer)+'. '+x.correct+'</strong><br>'+x.e+'</div>';box.appendChild(d);});
-document.getElementById('exam').addEventListener('submit',e=>{e.preventDefault();let score=0;document.querySelectorAll('.question').forEach((d,i)=>{const sel=d.querySelector('input:checked');const labels=d.querySelectorAll('.option');labels.forEach((l,j)=>{if(j===qs[i].answer)l.classList.add('correct');});if(sel){const v=+sel.value;if(v===qs[i].answer)score++;else labels[v].classList.add('incorrect');}d.querySelector('.explanation').classList.add('show');});const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.className='result show';r.innerHTML='<strong class="'+(pct>=80?'good':'bad')+'">Score: '+score+' / '+qs.length+' ('+pct+'%)</strong><div class="meta">Review every explanation below. Re-run the exam until you can explain why each distractor is wrong.</div>';window.scrollTo({top:0,behavior:'smooth'});});
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comprehensive Knowledge Exam — 2026-09-16</title>
+<style>
+html,body{margin:0;padding:0;background:#0b1020}#examframe{display:block;width:100%;border:0;min-height:100vh;background:#0b1020}
+</style>
+</head>
+<body>
+<iframe id="examframe" src="exam-2026-09-16-comprehensive-base.html" title="Comprehensive Daily Knowledge Exam"></iframe>
+<script>
+const f=document.getElementById('examframe');
+f.addEventListener('load',()=>{
+  const d=f.contentDocument;
+  const style=d.createElement('style');
+  style.textContent=`
+    .check-answer{width:auto!important;display:inline-block;margin-top:10px;padding:9px 14px!important;border-radius:9px!important;font-size:.95rem!important;background:transparent!important;color:var(--accent)!important;border:1px solid var(--accent)!important;font-weight:700!important}
+    .check-answer:hover{background:var(--accent)!important;color:#082032!important}
+    .check-feedback{margin-top:8px;font-weight:700}
+    .check-feedback.good{color:var(--good)}
+    .check-feedback.bad{color:var(--bad)}
+    .check-feedback.muted{color:var(--muted)}
+  `;
+  d.head.appendChild(style);
+
+  d.querySelectorAll('.question').forEach(q=>{
+    if(q.querySelector('.check-answer')) return;
+    const btn=d.createElement('button');
+    btn.type='button';
+    btn.className='check-answer';
+    btn.textContent='Check Answer';
+    const feedback=d.createElement('div');
+    feedback.className='check-feedback';
+    const explanation=q.querySelector('.explanation');
+    q.insertBefore(btn,explanation);
+    q.insertBefore(feedback,explanation);
+
+    btn.addEventListener('click',()=>{
+      const labels=[...q.querySelectorAll('.option')];
+      const selected=q.querySelector('input:checked');
+      const answerText=explanation?.querySelector('strong')?.textContent || '';
+      const match=answerText.match(/Answer:\s*([A-Z])\./i);
+      if(!match){feedback.className='check-feedback bad';feedback.textContent='Unable to determine the keyed answer for this question.';return;}
+      const correctIndex=match[1].toUpperCase().charCodeAt(0)-65;
+      labels.forEach(l=>l.classList.remove('correct','incorrect'));
+      if(correctIndex>=0 && correctIndex<labels.length) labels[correctIndex].classList.add('correct');
+      if(!selected){
+        feedback.className='check-feedback muted';
+        feedback.textContent='Select an answer first.';
+        return;
+      }
+      const chosen=Number(selected.value);
+      if(chosen===correctIndex){
+        feedback.className='check-feedback good';
+        feedback.textContent='Correct.';
+      }else{
+        if(labels[chosen]) labels[chosen].classList.add('incorrect');
+        feedback.className='check-feedback bad';
+        feedback.textContent='Incorrect. The correct answer is highlighted below.';
+      }
+      explanation.classList.add('show');
+      resize();
+    });
+  });
+
+  const resize=()=>{try{f.style.height=(d.documentElement.scrollHeight+20)+'px'}catch(e){}};
+  resize();
+  new ResizeObserver(resize).observe(d.documentElement);
+  setTimeout(resize,250);
+});
+</script>
+</body>
+</html>
