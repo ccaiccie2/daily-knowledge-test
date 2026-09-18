@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated": "2026-09-17",
   "purpose": "Cumulative question bank. New questions must be checked against existing stems and reasoning paths before append.",
   "dedupe_policy": {
@@ -32,7 +32,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: 802.11r only does not best fit the evidence in this scenario. The key distinction is that 802.11k Neighbor Reports is the mechanism or design choice supported by the observed behavior. The evidence isolates candidate discovery as the bottleneck. 802.11k reduces the scan search space by supplying neighboring BSSIDs/channels; 802.11r already appears healthy.",
+        "Correct: The evidence isolates candidate discovery as the bottleneck. 802.11k reduces the scan search space by supplying neighboring BSSIDs/channels; 802.11r already appears healthy.",
+        "Incorrect: 802.11v BTM alone does not best fit the evidence in this scenario. The key distinction is that 802.11k Neighbor Reports is the mechanism or design choice supported by the observed behavior. The evidence isolates candidate discovery as the bottleneck. 802.11k reduces the scan search space by supplying neighboring BSSIDs/channels; 802.11r already appears healthy.",
+        "Incorrect: Longer DHCP leases does not best fit the evidence in this scenario. The key distinction is that 802.11k Neighbor Reports is the mechanism or design choice supported by the observed behavior. The evidence isolates candidate discovery as the bottleneck. 802.11k reduces the scan search space by supplying neighboring BSSIDs/channels; 802.11r already appears healthy."
+      ]
     },
     {
       "id": "kb-0002",
@@ -56,7 +62,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: The WLAN is necessarily broken does not best fit the evidence in this scenario. The key distinction is that The client is allowed to ignore the advisory is the mechanism or design choice supported by the observed behavior. Ordinary BTM is advisory. The infrastructure can recommend a target, but the client normally retains the final roaming decision.",
+        "Incorrect: The controller must immediately deauthenticate it does not best fit the evidence in this scenario. The key distinction is that The client is allowed to ignore the advisory is the mechanism or design choice supported by the observed behavior. Ordinary BTM is advisory. The infrastructure can recommend a target, but the client normally retains the final roaming decision.",
+        "Correct: Ordinary BTM is advisory. The infrastructure can recommend a target, but the client normally retains the final roaming decision.",
+        "Incorrect: 802.11r key derivation failed does not best fit the evidence in this scenario. The key distinction is that The client is allowed to ignore the advisory is the mechanism or design choice supported by the observed behavior. Ordinary BTM is advisory. The infrastructure can recommend a target, but the client normally retains the final roaming decision."
+      ]
     },
     {
       "id": "kb-0003",
@@ -80,7 +92,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: A MACsec CAK does not best fit the evidence in this scenario. The key distinction is that A NAT64 translator configured for the same synthesis prefix is the mechanism or design choice supported by the observed behavior. DNS64 only synthesizes an IPv6 destination. A NAT64 translator must recognize the same prefix and translate the flow to IPv4.",
+        "Incorrect: A DNSSEC KSK rollover does not best fit the evidence in this scenario. The key distinction is that A NAT64 translator configured for the same synthesis prefix is the mechanism or design choice supported by the observed behavior. DNS64 only synthesizes an IPv6 destination. A NAT64 translator must recognize the same prefix and translate the flow to IPv4.",
+        "Incorrect: An 802.11r mobility domain does not best fit the evidence in this scenario. The key distinction is that A NAT64 translator configured for the same synthesis prefix is the mechanism or design choice supported by the observed behavior. DNS64 only synthesizes an IPv6 destination. A NAT64 translator must recognize the same prefix and translate the flow to IPv4.",
+        "Correct: DNS64 only synthesizes an IPv6 destination. A NAT64 translator must recognize the same prefix and translate the flow to IPv4."
+      ]
     },
     {
       "id": "kb-0004",
@@ -104,7 +122,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: The client falls back to NPTv6 automatically does not best fit the evidence in this scenario. The key distinction is that Valid-looking AAAA answers that never match the NAT64 translation rule is the mechanism or design choice supported by the observed behavior. DNS64 and NAT64 must agree on the translation prefix. Prefix mismatch breaks the control-plane/data-plane handoff.",
+        "Correct: DNS64 and NAT64 must agree on the translation prefix. Prefix mismatch breaks the control-plane/data-plane handoff.",
+        "Incorrect: DNS stops using UDP does not best fit the evidence in this scenario. The key distinction is that Valid-looking AAAA answers that never match the NAT64 translation rule is the mechanism or design choice supported by the observed behavior. DNS64 and NAT64 must agree on the translation prefix. Prefix mismatch breaks the control-plane/data-plane handoff.",
+        "Incorrect: BGP enters Active does not best fit the evidence in this scenario. The key distinction is that Valid-looking AAAA answers that never match the NAT64 translation rule is the mechanism or design choice supported by the observed behavior. DNS64 and NAT64 must agree on the translation prefix. Prefix mismatch breaks the control-plane/data-plane handoff."
+      ]
     },
     {
       "id": "kb-0005",
@@ -128,7 +152,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Signature validity is not enough. The RP must validate that the token type and audience are intended for that client.",
+        "Incorrect: The OP used PKCE does not best fit the evidence in this scenario. The key distinction is that The RP failed to validate token audience and token purpose is the mechanism or design choice supported by the observed behavior. Signature validity is not enough. The RP must validate that the token type and audience are intended for that client.",
+        "Incorrect: The browser used state does not best fit the evidence in this scenario. The key distinction is that The RP failed to validate token audience and token purpose is the mechanism or design choice supported by the observed behavior. Signature validity is not enough. The RP must validate that the token type and audience are intended for that client.",
+        "Incorrect: JWKS was cached does not best fit the evidence in this scenario. The key distinction is that The RP failed to validate token audience and token purpose is the mechanism or design choice supported by the observed behavior. Signature validity is not enough. The RP must validate that the token type and audience are intended for that client."
+      ]
     },
     {
       "id": "kb-0006",
@@ -152,7 +182,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: UserInfo does not best fit the evidence in this scenario. The key distinction is that PKCE is the mechanism or design choice supported by the observed behavior. PKCE binds the authorization code to the client instance through the code_verifier/code_challenge relationship.",
+        "Correct: PKCE binds the authorization code to the client instance through the code_verifier/code_challenge relationship.",
+        "Incorrect: nonce does not best fit the evidence in this scenario. The key distinction is that PKCE is the mechanism or design choice supported by the observed behavior. PKCE binds the authorization code to the client instance through the code_verifier/code_challenge relationship.",
+        "Incorrect: state does not best fit the evidence in this scenario. The key distinction is that PKCE is the mechanism or design choice supported by the observed behavior. PKCE binds the authorization code to the client instance through the code_verifier/code_challenge relationship."
+      ]
     },
     {
       "id": "kb-0007",
@@ -176,7 +212,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Routing convergence is only one timeline. Stateful HA also requires session/state synchronization and explicit recovery expectations.",
+        "Incorrect: DNS TTL does not best fit the evidence in this scenario. The key distinction is that HA state synchronization and application recovery behavior is the mechanism or design choice supported by the observed behavior. Routing convergence is only one timeline. Stateful HA also requires session/state synchronization and explicit recovery expectations.",
+        "Incorrect: OIDC logout does not best fit the evidence in this scenario. The key distinction is that HA state synchronization and application recovery behavior is the mechanism or design choice supported by the observed behavior. Routing convergence is only one timeline. Stateful HA also requires session/state synchronization and explicit recovery expectations.",
+        "Incorrect: 802.11k neighbor reports does not best fit the evidence in this scenario. The key distinction is that HA state synchronization and application recovery behavior is the mechanism or design choice supported by the observed behavior. Routing convergence is only one timeline. Stateful HA also requires session/state synchronization and explicit recovery expectations."
+      ]
     },
     {
       "id": "kb-0008",
@@ -200,7 +242,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: A usable LLD must define routing, NAT, policy, session behavior, and failover—not just the forward architecture picture.",
+        "Incorrect: Only the SIEM needs packet details does not best fit the evidence in this scenario. The key distinction is that The design intent was never translated into concrete bidirectional packet/session behavior is the mechanism or design choice supported by the observed behavior. A usable LLD must define routing, NAT, policy, session behavior, and failover—not just the forward architecture picture.",
+        "Incorrect: Return paths do not matter on stateful firewalls does not best fit the evidence in this scenario. The key distinction is that The design intent was never translated into concrete bidirectional packet/session behavior is the mechanism or design choice supported by the observed behavior. A usable LLD must define routing, NAT, policy, session behavior, and failover—not just the forward architecture picture.",
+        "Incorrect: HLD always overrides routing does not best fit the evidence in this scenario. The key distinction is that The design intent was never translated into concrete bidirectional packet/session behavior is the mechanism or design choice supported by the observed behavior. A usable LLD must define routing, NAT, policy, session behavior, and failover—not just the forward architecture picture."
+      ]
     },
     {
       "id": "kb-0009",
@@ -224,7 +272,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Insecure does not best fit the evidence in this scenario. The key distinction is that Bogus is the mechanism or design choice supported by the observed behavior. A broken DS→DNSKEY chain is an authenticated-chain failure, so the response becomes Bogus rather than merely Insecure.",
+        "Correct: A broken DS→DNSKEY chain is an authenticated-chain failure, so the response becomes Bogus rather than merely Insecure.",
+        "Incorrect: Secure does not best fit the evidence in this scenario. The key distinction is that Bogus is the mechanism or design choice supported by the observed behavior. A broken DS→DNSKEY chain is an authenticated-chain failure, so the response becomes Bogus rather than merely Insecure.",
+        "Incorrect: Unsigned but trusted does not best fit the evidence in this scenario. The key distinction is that Bogus is the mechanism or design choice supported by the observed behavior. A broken DS→DNSKEY chain is an authenticated-chain failure, so the response becomes Bogus rather than merely Insecure."
+      ]
     },
     {
       "id": "kb-0010",
@@ -248,7 +302,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec CKN does not best fit the evidence in this scenario. The key distinction is that EDNS size, fragmentation/PMTU handling, and TCP fallback is the mechanism or design choice supported by the observed behavior. DNSSEC increases response size, which makes EDNS, fragmentation, MTU, and TCP fallback operationally important.",
+        "Correct: DNSSEC increases response size, which makes EDNS, fragmentation, MTU, and TCP fallback operationally important.",
+        "Incorrect: OIDC nonce reuse does not best fit the evidence in this scenario. The key distinction is that EDNS size, fragmentation/PMTU handling, and TCP fallback is the mechanism or design choice supported by the observed behavior. DNSSEC increases response size, which makes EDNS, fragmentation, MTU, and TCP fallback operationally important.",
+        "Incorrect: BGP LOCAL_PREF does not best fit the evidence in this scenario. The key distinction is that EDNS size, fragmentation/PMTU handling, and TCP fallback is the mechanism or design choice supported by the observed behavior. DNSSEC increases response size, which makes EDNS, fragmentation, MTU, and TCP fallback operationally important."
+      ]
     },
     {
       "id": "kb-0011",
@@ -272,7 +332,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Whether OIDC aud is correct does not best fit the evidence in this scenario. The key distinction is that Whether MACsec overhead exceeds the service MTU is the mechanism or design choice supported by the observed behavior. MACsec adds Ethernet overhead. Paths already near MTU can begin dropping larger frames when protection is enabled.",
+        "Incorrect: Whether BGP ORIGIN is IGP does not best fit the evidence in this scenario. The key distinction is that Whether MACsec overhead exceeds the service MTU is the mechanism or design choice supported by the observed behavior. MACsec adds Ethernet overhead. Paths already near MTU can begin dropping larger frames when protection is enabled.",
+        "Incorrect: Whether NAT64 uses 64:ff9b::/96 does not best fit the evidence in this scenario. The key distinction is that Whether MACsec overhead exceeds the service MTU is the mechanism or design choice supported by the observed behavior. MACsec adds Ethernet overhead. Paths already near MTU can begin dropping larger frames when protection is enabled.",
+        "Correct: MACsec adds Ethernet overhead. Paths already near MTU can begin dropping larger frames when protection is enabled."
+      ]
     },
     {
       "id": "kb-0012",
@@ -296,7 +362,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: CKN selects BGP best path does not best fit the evidence in this scenario. The key distinction is that The peers do not agree on the connectivity association/keying identity is the mechanism or design choice supported by the observed behavior. MKA peers need compatible CAK/CKN association parameters before SAKs and secure associations can be established.",
+        "Correct: MKA peers need compatible CAK/CKN association parameters before SAKs and secure associations can be established.",
+        "Incorrect: CKN is a DNSSEC digest does not best fit the evidence in this scenario. The key distinction is that The peers do not agree on the connectivity association/keying identity is the mechanism or design choice supported by the observed behavior. MKA peers need compatible CAK/CKN association parameters before SAKs and secure associations can be established.",
+        "Incorrect: CKN changes IP routing does not best fit the evidence in this scenario. The key distinction is that The peers do not agree on the connectivity association/keying identity is the mechanism or design choice supported by the observed behavior. MKA peers need compatible CAK/CKN association parameters before SAKs and secure associations can be established."
+      ]
     },
     {
       "id": "kb-0013",
@@ -320,7 +392,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: PRP duplicates every frame across independent LANs; losing one copy does not require a convergence event.",
+        "Incorrect: The RedBox performed NAT does not best fit the evidence in this scenario. The key distinction is that The receiver was already accepting duplicate copies and simply continues with the surviving LAN copy is the mechanism or design choice supported by the observed behavior. PRP duplicates every frame across independent LANs; losing one copy does not require a convergence event.",
+        "Incorrect: STP reconverged instantly does not best fit the evidence in this scenario. The key distinction is that The receiver was already accepting duplicate copies and simply continues with the surviving LAN copy is the mechanism or design choice supported by the observed behavior. PRP duplicates every frame across independent LANs; losing one copy does not require a convergence event.",
+        "Incorrect: BFD rerouted LAN B does not best fit the evidence in this scenario. The key distinction is that The receiver was already accepting duplicate copies and simply continues with the surviving LAN copy is the mechanism or design choice supported by the observed behavior. PRP duplicates every frame across independent LANs; losing one copy does not require a convergence event."
+      ]
     },
     {
       "id": "kb-0014",
@@ -344,7 +422,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: A route reflector does not best fit the evidence in this scenario. The key distinction is that A RedBox is the mechanism or design choice supported by the observed behavior. A RedBox connects SAN devices to the PRP network and handles replication/duplicate-discard functions for them.",
+        "Correct: A RedBox connects SAN devices to the PRP network and handles replication/duplicate-discard functions for them.",
+        "Incorrect: An OIDC RP does not best fit the evidence in this scenario. The key distinction is that A RedBox is the mechanism or design choice supported by the observed behavior. A RedBox connects SAN devices to the PRP network and handles replication/duplicate-discard functions for them.",
+        "Incorrect: A NAT64 gateway does not best fit the evidence in this scenario. The key distinction is that A RedBox is the mechanism or design choice supported by the observed behavior. A RedBox connects SAN devices to the PRP network and handles replication/duplicate-discard functions for them."
+      ]
     },
     {
       "id": "kb-0015",
@@ -368,7 +452,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Successful authentication does not prove VLAN placement. The FortiAP/FortiGate policy must consume the attributes and map them to a reachable VLAN.",
+        "Incorrect: That DNSSEC is disabled does not best fit the evidence in this scenario. The key distinction is that That dynamic VLAN assignment is enabled and VLAN 220 maps to a valid data path for that AP is the mechanism or design choice supported by the observed behavior. Successful authentication does not prove VLAN placement. The FortiAP/FortiGate policy must consume the attributes and map them to a reachable VLAN.",
+        "Incorrect: That BGP Add-Path is enabled does not best fit the evidence in this scenario. The key distinction is that That dynamic VLAN assignment is enabled and VLAN 220 maps to a valid data path for that AP is the mechanism or design choice supported by the observed behavior. Successful authentication does not prove VLAN placement. The FortiAP/FortiGate policy must consume the attributes and map them to a reachable VLAN.",
+        "Incorrect: That 802.11r is disabled does not best fit the evidence in this scenario. The key distinction is that That dynamic VLAN assignment is enabled and VLAN 220 maps to a valid data path for that AP is the mechanism or design choice supported by the observed behavior. Successful authentication does not prove VLAN placement. The FortiAP/FortiGate policy must consume the attributes and map them to a reachable VLAN."
+      ]
     },
     {
       "id": "kb-0016",
@@ -392,7 +482,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: In bridge mode, user VLANs leave the AP on the physical uplink, so the switching path must carry the dynamically assigned VLAN.",
+        "Incorrect: The client lacks 802.11k does not best fit the evidence in this scenario. The key distinction is that The AP's wired uplink trunk does not carry VLAN 330 is the mechanism or design choice supported by the observed behavior. In bridge mode, user VLANs leave the AP on the physical uplink, so the switching path must carry the dynamically assigned VLAN.",
+        "Incorrect: The FortiGate lacks NAT64 does not best fit the evidence in this scenario. The key distinction is that The AP's wired uplink trunk does not carry VLAN 330 is the mechanism or design choice supported by the observed behavior. In bridge mode, user VLANs leave the AP on the physical uplink, so the switching path must carry the dynamically assigned VLAN.",
+        "Incorrect: The AP lacks JWKS does not best fit the evidence in this scenario. The key distinction is that The AP's wired uplink trunk does not carry VLAN 330 is the mechanism or design choice supported by the observed behavior. In bridge mode, user VLANs leave the AP on the physical uplink, so the switching path must carry the dynamically assigned VLAN."
+      ]
     },
     {
       "id": "kb-0017",
@@ -416,7 +512,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: 802.11r FT failed does not best fit the evidence in this scenario. The key distinction is that Only the forward route was leaked; the return path into BLUE is missing is the mechanism or design choice supported by the observed behavior. VRFs have separate RIB/FIB domains. Shared services require deliberate bidirectional reachability.",
+        "Incorrect: DNSSEC became Bogus does not best fit the evidence in this scenario. The key distinction is that Only the forward route was leaked; the return path into BLUE is missing is the mechanism or design choice supported by the observed behavior. VRFs have separate RIB/FIB domains. Shared services require deliberate bidirectional reachability.",
+        "Correct: VRFs have separate RIB/FIB domains. Shared services require deliberate bidirectional reachability.",
+        "Incorrect: MACsec MKA failed does not best fit the evidence in this scenario. The key distinction is that Only the forward route was leaked; the return path into BLUE is missing is the mechanism or design choice supported by the observed behavior. VRFs have separate RIB/FIB domains. Shared services require deliberate bidirectional reachability."
+      ]
     },
     {
       "id": "kb-0018",
@@ -440,7 +542,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: PKCE does not best fit the evidence in this scenario. The key distinction is that Selective policy/tagging with redistribution loop prevention is the mechanism or design choice supported by the observed behavior. Redistribution across routing domains needs filtering, tagging, and loop-prevention policy—not just mutual redistribution statements.",
+        "Correct: Redistribution across routing domains needs filtering, tagging, and loop-prevention policy—not just mutual redistribution statements.",
+        "Incorrect: Longer DHCP leases does not best fit the evidence in this scenario. The key distinction is that Selective policy/tagging with redistribution loop prevention is the mechanism or design choice supported by the observed behavior. Redistribution across routing domains needs filtering, tagging, and loop-prevention policy—not just mutual redistribution statements.",
+        "Incorrect: Global ECMP disablement does not best fit the evidence in this scenario. The key distinction is that Selective policy/tagging with redistribution loop prevention is the mechanism or design choice supported by the observed behavior. Redistribution across routing domains needs filtering, tagging, and loop-prevention policy—not just mutual redistribution statements."
+      ]
     },
     {
       "id": "kb-0019",
@@ -464,7 +572,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: A PRP RedBox does not best fit the evidence in this scenario. The key distinction is that An explicit insertion mechanism such as PBR, NSI, or a supported routed next-hop design is the mechanism or design choice supported by the observed behavior. Same-VPC traffic will not detour through an NVA simply because it exists; the provider must be instructed how to steer it.",
+        "Correct: Same-VPC traffic will not detour through an NVA simply because it exists; the provider must be instructed how to steer it.",
+        "Incorrect: An OIDC nonce does not best fit the evidence in this scenario. The key distinction is that An explicit insertion mechanism such as PBR, NSI, or a supported routed next-hop design is the mechanism or design choice supported by the observed behavior. Same-VPC traffic will not detour through an NVA simply because it exists; the provider must be instructed how to steer it.",
+        "Incorrect: A DNSSEC trust anchor does not best fit the evidence in this scenario. The key distinction is that An explicit insertion mechanism such as PBR, NSI, or a supported routed next-hop design is the mechanism or design choice supported by the observed behavior. Same-VPC traffic will not detour through an NVA simply because it exists; the provider must be instructed how to steer it."
+      ]
     },
     {
       "id": "kb-0020",
@@ -488,7 +602,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNS recursion does not best fit the evidence in this scenario. The key distinction is that Stateful path symmetry is the mechanism or design choice supported by the observed behavior. Stateful inspection depends on both directions of a session traversing compatible state.",
+        "Correct: Stateful inspection depends on both directions of a session traversing compatible state.",
+        "Incorrect: MKA key rotation does not best fit the evidence in this scenario. The key distinction is that Stateful path symmetry is the mechanism or design choice supported by the observed behavior. Stateful inspection depends on both directions of a session traversing compatible state.",
+        "Incorrect: 802.11k scanning does not best fit the evidence in this scenario. The key distinction is that Stateful path symmetry is the mechanism or design choice supported by the observed behavior. Stateful inspection depends on both directions of a session traversing compatible state."
+      ]
     },
     {
       "id": "kb-0021",
@@ -512,7 +632,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: goto_next explicitly passes policy evaluation to the next applicable firewall-policy layer.",
+        "Incorrect: goto_next enables TLS inspection does not best fit the evidence in this scenario. The key distinction is that goto_next delegates evaluation rather than terminating it is the mechanism or design choice supported by the observed behavior. goto_next explicitly passes policy evaluation to the next applicable firewall-policy layer.",
+        "Incorrect: goto_next performs SNAT does not best fit the evidence in this scenario. The key distinction is that goto_next delegates evaluation rather than terminating it is the mechanism or design choice supported by the observed behavior. goto_next explicitly passes policy evaluation to the next applicable firewall-policy layer.",
+        "Incorrect: goto_next creates a route does not best fit the evidence in this scenario. The key distinction is that goto_next delegates evaluation rather than terminating it is the mechanism or design choice supported by the observed behavior. goto_next explicitly passes policy evaluation to the next applicable firewall-policy layer."
+      ]
     },
     {
       "id": "kb-0022",
@@ -536,7 +662,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only with BFD does not best fit the evidence in this scenario. The key distinction is that No; the earlier terminating decision already handled the packet is the mechanism or design choice supported by the observed behavior. Policy placement and evaluation order matter. A later layer cannot undo an already terminating earlier decision.",
+        "Incorrect: Yes; any allow overrides any deny does not best fit the evidence in this scenario. The key distinction is that No; the earlier terminating decision already handled the packet is the mechanism or design choice supported by the observed behavior. Policy placement and evaluation order matter. A later layer cannot undo an already terminating earlier decision.",
+        "Incorrect: Only when DNSSEC is off does not best fit the evidence in this scenario. The key distinction is that No; the earlier terminating decision already handled the packet is the mechanism or design choice supported by the observed behavior. Policy placement and evaluation order matter. A later layer cannot undo an already terminating earlier decision.",
+        "Correct: Policy placement and evaluation order matter. A later layer cannot undo an already terminating earlier decision."
+      ]
     },
     {
       "id": "kb-0023",
@@ -560,7 +692,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: GCP has no routes does not best fit the evidence in this scenario. The key distinction is that GCP route applicability is VPC-level rather than AWS-style subnet route-table association is the mechanism or design choice supported by the observed behavior. Provider terminology is similar, but route scope and association models differ materially.",
+        "Incorrect: AWS has no subnets does not best fit the evidence in this scenario. The key distinction is that GCP route applicability is VPC-level rather than AWS-style subnet route-table association is the mechanism or design choice supported by the observed behavior. Provider terminology is similar, but route scope and association models differ materially.",
+        "Incorrect: Azure requires MACsec does not best fit the evidence in this scenario. The key distinction is that GCP route applicability is VPC-level rather than AWS-style subnet route-table association is the mechanism or design choice supported by the observed behavior. Provider terminology is similar, but route scope and association models differ materially.",
+        "Correct: Provider terminology is similar, but route scope and association models differ materially."
+      ]
     },
     {
       "id": "kb-0024",
@@ -584,7 +722,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: AWS VPCs are global does not best fit the evidence in this scenario. The key distinction is that AWS subnets are AZ-scoped, while Azure/GCP subnet constructs are regional in their respective models is the mechanism or design choice supported by the observed behavior. Availability scope changes how you design HA and fault-domain placement across clouds.",
+        "Incorrect: GCP subnets are per-VM does not best fit the evidence in this scenario. The key distinction is that AWS subnets are AZ-scoped, while Azure/GCP subnet constructs are regional in their respective models is the mechanism or design choice supported by the observed behavior. Availability scope changes how you design HA and fault-domain placement across clouds.",
+        "Correct: Availability scope changes how you design HA and fault-domain placement across clouds.",
+        "Incorrect: Azure has no regions does not best fit the evidence in this scenario. The key distinction is that AWS subnets are AZ-scoped, while Azure/GCP subnet constructs are regional in their respective models is the mechanism or design choice supported by the observed behavior. Availability scope changes how you design HA and fault-domain placement across clouds."
+      ]
     },
     {
       "id": "kb-0025",
@@ -608,7 +752,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: The managed firewall endpoint is integrated into Google's interception/policy path rather than exposed like a routable appliance ENI.",
+        "Incorrect: Endpoints are BGP peers does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise uses policy-driven packet interception, not a normal NVA next-hop IP is the mechanism or design choice supported by the observed behavior. The managed firewall endpoint is integrated into Google's interception/policy path rather than exposed like a routable appliance ENI.",
+        "Incorrect: Firewall endpoints are DNS servers does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise uses policy-driven packet interception, not a normal NVA next-hop IP is the mechanism or design choice supported by the observed behavior. The managed firewall endpoint is integrated into Google's interception/policy path rather than exposed like a routable appliance ENI.",
+        "Incorrect: Endpoints are PRP RedBoxes does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise uses policy-driven packet interception, not a normal NVA next-hop IP is the mechanism or design choice supported by the observed behavior. The managed firewall endpoint is integrated into Google's interception/policy path rather than exposed like a routable appliance ENI."
+      ]
     },
     {
       "id": "kb-0026",
@@ -632,7 +782,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Decryption/re-signing only works if endpoints trust the inspection CA and the TLS profile is compatible.",
+        "Incorrect: PRP duplicate discard does not best fit the evidence in this scenario. The key distinction is that Inspection CA trust and TLS inspection profile behavior is the mechanism or design choice supported by the observed behavior. Decryption/re-signing only works if endpoints trust the inspection CA and the TLS profile is compatible.",
+        "Incorrect: Cloud Router ASN does not best fit the evidence in this scenario. The key distinction is that Inspection CA trust and TLS inspection profile behavior is the mechanism or design choice supported by the observed behavior. Decryption/re-signing only works if endpoints trust the inspection CA and the TLS profile is compatible.",
+        "Incorrect: BGP confederation ID does not best fit the evidence in this scenario. The key distinction is that Inspection CA trust and TLS inspection profile behavior is the mechanism or design choice supported by the observed behavior. Decryption/re-signing only works if endpoints trust the inspection CA and the TLS profile is compatible."
+      ]
     },
     {
       "id": "kb-0027",
@@ -656,7 +812,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: NCC is a connectivity control plane; propagation/filter settings are the first place to verify missing learned routes.",
+        "Incorrect: DNS64 prefix does not best fit the evidence in this scenario. The key distinction is that Spoke type, topology, route exchange, and import/export filters is the mechanism or design choice supported by the observed behavior. NCC is a connectivity control plane; propagation/filter settings are the first place to verify missing learned routes.",
+        "Incorrect: MACsec CAK does not best fit the evidence in this scenario. The key distinction is that Spoke type, topology, route exchange, and import/export filters is the mechanism or design choice supported by the observed behavior. NCC is a connectivity control plane; propagation/filter settings are the first place to verify missing learned routes.",
+        "Incorrect: OIDC JWKS does not best fit the evidence in this scenario. The key distinction is that Spoke type, topology, route exchange, and import/export filters is the mechanism or design choice supported by the observed behavior. NCC is a connectivity control plane; propagation/filter settings are the first place to verify missing learned routes."
+      ]
     },
     {
       "id": "kb-0028",
@@ -680,7 +842,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Reachability is determined by which routes are exchanged among spokes, not merely by attaching everything to one hub.",
+        "Incorrect: A full mesh does not best fit the evidence in this scenario. The key distinction is that Topology and route-exchange policy limiting spoke-to-spoke propagation is the mechanism or design choice supported by the observed behavior. Reachability is determined by which routes are exchanged among spokes, not merely by attaching everything to one hub.",
+        "Incorrect: PRP sequence numbers does not best fit the evidence in this scenario. The key distinction is that Topology and route-exchange policy limiting spoke-to-spoke propagation is the mechanism or design choice supported by the observed behavior. Reachability is determined by which routes are exchanged among spokes, not merely by attaching everything to one hub.",
+        "Incorrect: DNS isolation does not best fit the evidence in this scenario. The key distinction is that Topology and route-exchange policy limiting spoke-to-spoke propagation is the mechanism or design choice supported by the observed behavior. Reachability is determined by which routes are exchanged among spokes, not merely by attaching everything to one hub."
+      ]
     },
     {
       "id": "kb-0029",
@@ -704,7 +872,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec MKA does not best fit the evidence in this scenario. The key distinction is that Reciprocal BGP route advertisement needed for deterministic inter-VPC forwarding is the mechanism or design choice supported by the observed behavior. The Router Appliance model depends on intentional route exchange in both directions.",
+        "Incorrect: OIDC login does not best fit the evidence in this scenario. The key distinction is that Reciprocal BGP route advertisement needed for deterministic inter-VPC forwarding is the mechanism or design choice supported by the observed behavior. The Router Appliance model depends on intentional route exchange in both directions.",
+        "Correct: The Router Appliance model depends on intentional route exchange in both directions.",
+        "Incorrect: DNSSEC signing does not best fit the evidence in this scenario. The key distinction is that Reciprocal BGP route advertisement needed for deterministic inter-VPC forwarding is the mechanism or design choice supported by the observed behavior. The Router Appliance model depends on intentional route exchange in both directions."
+      ]
     },
     {
       "id": "kb-0030",
@@ -728,7 +902,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNS64 versus NPTv6 does not best fit the evidence in this scenario. The key distinction is that ECMP resilience versus stateful session symmetry/state sharing is the mechanism or design choice supported by the observed behavior. Multipath can move a return flow to a different appliance; stateful HA must be designed to tolerate that.",
+        "Correct: Multipath can move a return flow to a different appliance; stateful HA must be designed to tolerate that.",
+        "Incorrect: KSK versus ZSK does not best fit the evidence in this scenario. The key distinction is that ECMP resilience versus stateful session symmetry/state sharing is the mechanism or design choice supported by the observed behavior. Multipath can move a return flow to a different appliance; stateful HA must be designed to tolerate that.",
+        "Incorrect: 802.11k versus 802.11v does not best fit the evidence in this scenario. The key distinction is that ECMP resilience versus stateful session symmetry/state sharing is the mechanism or design choice supported by the observed behavior. Multipath can move a return flow to a different appliance; stateful HA must be designed to tolerate that."
+      ]
     },
     {
       "id": "kb-0031",
@@ -752,7 +932,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Check only Cloud NAT does not best fit the evidence in this scenario. The key distinction is that Walk effective firewall-policy evaluation order before debugging routing is the mechanism or design choice supported by the observed behavior. Distributed enforcement happens in policy evaluation; routing can be perfect while an earlier policy decision terminates the flow.",
+        "Correct: Distributed enforcement happens in policy evaluation; routing can be perfect while an earlier policy decision terminates the flow.",
+        "Incorrect: Check only BGP does not best fit the evidence in this scenario. The key distinction is that Walk effective firewall-policy evaluation order before debugging routing is the mechanism or design choice supported by the observed behavior. Distributed enforcement happens in policy evaluation; routing can be perfect while an earlier policy decision terminates the flow.",
+        "Incorrect: Check only DNS does not best fit the evidence in this scenario. The key distinction is that Walk effective firewall-policy evaluation order before debugging routing is the mechanism or design choice supported by the observed behavior. Distributed enforcement happens in policy evaluation; routing can be perfect while an earlier policy decision terminates the flow."
+      ]
     },
     {
       "id": "kb-0032",
@@ -776,7 +962,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Cloud NAT runs MKA does not best fit the evidence in this scenario. The key distinction is that Cloud NAT is translation; security inspection comes from firewall/security policy services is the mechanism or design choice supported by the observed behavior. Address translation and L7 security enforcement are separate functions.",
+        "Correct: Address translation and L7 security enforcement are separate functions.",
+        "Incorrect: Cloud NAT is an IDS does not best fit the evidence in this scenario. The key distinction is that Cloud NAT is translation; security inspection comes from firewall/security policy services is the mechanism or design choice supported by the observed behavior. Address translation and L7 security enforcement are separate functions.",
+        "Incorrect: Cloud NAT validates JWTs does not best fit the evidence in this scenario. The key distinction is that Cloud NAT is translation; security inspection comes from firewall/security policy services is the mechanism or design choice supported by the observed behavior. Address translation and L7 security enforcement are separate functions."
+      ]
     },
     {
       "id": "kb-0033",
@@ -800,7 +992,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: They are identical does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise is a Google-native managed inspection service; VM-Series is customer-deployed PAN-OS with its own insertion model is the mechanism or design choice supported by the observed behavior. The products can solve similar security problems but have different control, insertion, and operational models.",
+        "Incorrect: Cloud NGFW Enterprise uses PAN-OS CLI does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise is a Google-native managed inspection service; VM-Series is customer-deployed PAN-OS with its own insertion model is the mechanism or design choice supported by the observed behavior. The products can solve similar security problems but have different control, insertion, and operational models.",
+        "Correct: The products can solve similar security problems but have different control, insertion, and operational models.",
+        "Incorrect: VM-Series cannot inspect traffic does not best fit the evidence in this scenario. The key distinction is that Cloud NGFW Enterprise is a Google-native managed inspection service; VM-Series is customer-deployed PAN-OS with its own insertion model is the mechanism or design choice supported by the observed behavior. The products can solve similar security problems but have different control, insertion, and operational models."
+      ]
     },
     {
       "id": "kb-0034",
@@ -824,7 +1022,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNSSEC trust anchor does not best fit the evidence in this scenario. The key distinction is that PAN-OS GENEVE/NSI handling and reinjection behavior is the mechanism or design choice supported by the observed behavior. NSI service insertion depends on the firewall correctly decapsulating, inspecting, and reinjecting traffic.",
+        "Correct: NSI service insertion depends on the firewall correctly decapsulating, inspecting, and reinjecting traffic.",
+        "Incorrect: OIDC nonce does not best fit the evidence in this scenario. The key distinction is that PAN-OS GENEVE/NSI handling and reinjection behavior is the mechanism or design choice supported by the observed behavior. NSI service insertion depends on the firewall correctly decapsulating, inspecting, and reinjecting traffic.",
+        "Incorrect: PRP RCT does not best fit the evidence in this scenario. The key distinction is that PAN-OS GENEVE/NSI handling and reinjection behavior is the mechanism or design choice supported by the observed behavior. NSI service insertion depends on the firewall correctly decapsulating, inspecting, and reinjecting traffic."
+      ]
     },
     {
       "id": "kb-0035",
@@ -848,7 +1052,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Explicit steering such as PBR/NSI/routed insertion is still required.",
+        "Incorrect: Shared VPC performs NAT64 does not best fit the evidence in this scenario. The key distinction is that Shared VPC is an ownership/network-sharing model, not a service-insertion primitive is the mechanism or design choice supported by the observed behavior. Explicit steering such as PBR/NSI/routed insertion is still required.",
+        "Incorrect: Service projects have separate Internet stacks does not best fit the evidence in this scenario. The key distinction is that Shared VPC is an ownership/network-sharing model, not a service-insertion primitive is the mechanism or design choice supported by the observed behavior. Explicit steering such as PBR/NSI/routed insertion is still required.",
+        "Incorrect: Shared VPC is a firewall next hop does not best fit the evidence in this scenario. The key distinction is that Shared VPC is an ownership/network-sharing model, not a service-insertion primitive is the mechanism or design choice supported by the observed behavior. Explicit steering such as PBR/NSI/routed insertion is still required."
+      ]
     },
     {
       "id": "kb-0036",
@@ -872,7 +1082,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: OIDC discovery does not best fit the evidence in this scenario. The key distinction is that Ingress source/path scope of the PBR or other steering mechanism is the mechanism or design choice supported by the observed behavior. Centralized insertion works only for traffic classes actually matched and steered by the chosen mechanism.",
+        "Incorrect: DNSSEC NSEC3 does not best fit the evidence in this scenario. The key distinction is that Ingress source/path scope of the PBR or other steering mechanism is the mechanism or design choice supported by the observed behavior. Centralized insertion works only for traffic classes actually matched and steered by the chosen mechanism.",
+        "Incorrect: 802.11r FT does not best fit the evidence in this scenario. The key distinction is that Ingress source/path scope of the PBR or other steering mechanism is the mechanism or design choice supported by the observed behavior. Centralized insertion works only for traffic classes actually matched and steered by the chosen mechanism.",
+        "Correct: Centralized insertion works only for traffic classes actually matched and steered by the chosen mechanism."
+      ]
     },
     {
       "id": "kb-0037",
@@ -896,7 +1112,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Observation does not place the security function in the packet's forwarding path.",
+        "Incorrect: Packet Mirroring is a route table does not best fit the evidence in this scenario. The key distinction is that Packet Mirroring/IDS is out-of-band observation, not inline enforcement is the mechanism or design choice supported by the observed behavior. Observation does not place the security function in the packet's forwarding path.",
+        "Incorrect: Cloud IDS terminates BGP does not best fit the evidence in this scenario. The key distinction is that Packet Mirroring/IDS is out-of-band observation, not inline enforcement is the mechanism or design choice supported by the observed behavior. Observation does not place the security function in the packet's forwarding path.",
+        "Incorrect: Cloud IDS is NAT does not best fit the evidence in this scenario. The key distinction is that Packet Mirroring/IDS is out-of-band observation, not inline enforcement is the mechanism or design choice supported by the observed behavior. Observation does not place the security function in the packet's forwarding path."
+      ]
     },
     {
       "id": "kb-0038",
@@ -920,7 +1142,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: PRP supervision does not best fit the evidence in this scenario. The key distinction is that Explicit next-hop, health, failover, and appliance HA mechanics is the mechanism or design choice supported by the observed behavior. Direct appliance next hops expose more of the HA and routing lifecycle to the operator.",
+        "Correct: Direct appliance next hops expose more of the HA and routing lifecycle to the operator.",
+        "Incorrect: OIDC discovery does not best fit the evidence in this scenario. The key distinction is that Explicit next-hop, health, failover, and appliance HA mechanics is the mechanism or design choice supported by the observed behavior. Direct appliance next hops expose more of the HA and routing lifecycle to the operator.",
+        "Incorrect: DNSSEC rollover does not best fit the evidence in this scenario. The key distinction is that Explicit next-hop, health, failover, and appliance HA mechanics is the mechanism or design choice supported by the observed behavior. Direct appliance next hops expose more of the HA and routing lifecycle to the operator."
+      ]
     },
     {
       "id": "kb-0039",
@@ -944,7 +1172,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: A DNSSEC DS record does not best fit the evidence in this scenario. The key distinction is that A DEFAULT_ROUTING bypass policy for post-inspection traffic is the mechanism or design choice supported by the observed behavior. Service-insertion PBRs often need an explicit bypass/default-routing rule so returned traffic does not re-enter the chain.",
+        "Incorrect: A PRP RedBox does not best fit the evidence in this scenario. The key distinction is that A DEFAULT_ROUTING bypass policy for post-inspection traffic is the mechanism or design choice supported by the observed behavior. Service-insertion PBRs often need an explicit bypass/default-routing rule so returned traffic does not re-enter the chain.",
+        "Correct: Service-insertion PBRs often need an explicit bypass/default-routing rule so returned traffic does not re-enter the chain.",
+        "Incorrect: An OIDC nonce does not best fit the evidence in this scenario. The key distinction is that A DEFAULT_ROUTING bypass policy for post-inspection traffic is the mechanism or design choice supported by the observed behavior. Service-insertion PBRs often need an explicit bypass/default-routing rule so returned traffic does not re-enter the chain."
+      ]
     },
     {
       "id": "kb-0040",
@@ -968,7 +1202,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: PBR supports only UDP does not best fit the evidence in this scenario. The key distinction is that Some provider destinations have special handling and are not ordinary PBR service-insertion candidates is the mechanism or design choice supported by the observed behavior. Provider-specific destinations can have special routing semantics that override naive service-chain assumptions.",
+        "Incorrect: PBR requires MACsec does not best fit the evidence in this scenario. The key distinction is that Some provider destinations have special handling and are not ordinary PBR service-insertion candidates is the mechanism or design choice supported by the observed behavior. Provider-specific destinations can have special routing semantics that override naive service-chain assumptions.",
+        "Correct: Provider-specific destinations can have special routing semantics that override naive service-chain assumptions.",
+        "Incorrect: Google APIs always use BGP does not best fit the evidence in this scenario. The key distinction is that Some provider destinations have special handling and are not ordinary PBR service-insertion candidates is the mechanism or design choice supported by the observed behavior. Provider-specific destinations can have special routing semantics that override naive service-chain assumptions."
+      ]
     },
     {
       "id": "kb-0041",
@@ -992,7 +1232,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only firewall policy does not best fit the evidence in this scenario. The key distinction is that The effective route table at the workload/NIC is the mechanism or design choice supported by the observed behavior. The firewall cannot inspect traffic that routing never sends to it; effective routes reveal the actual next-hop decision.",
+        "Incorrect: Only NSG names does not best fit the evidence in this scenario. The key distinction is that The effective route table at the workload/NIC is the mechanism or design choice supported by the observed behavior. The firewall cannot inspect traffic that routing never sends to it; effective routes reveal the actual next-hop decision.",
+        "Incorrect: Only DNS does not best fit the evidence in this scenario. The key distinction is that The effective route table at the workload/NIC is the mechanism or design choice supported by the observed behavior. The firewall cannot inspect traffic that routing never sends to it; effective routes reveal the actual next-hop decision.",
+        "Correct: The firewall cannot inspect traffic that routing never sends to it; effective routes reveal the actual next-hop decision."
+      ]
     },
     {
       "id": "kb-0042",
@@ -1016,7 +1262,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Route Server provides dynamic routing between NVAs and the Azure virtual network control plane.",
+        "Incorrect: Private DNS Resolver does not best fit the evidence in this scenario. The key distinction is that Azure Route Server is the mechanism or design choice supported by the observed behavior. Route Server provides dynamic routing between NVAs and the Azure virtual network control plane.",
+        "Incorrect: Azure Front Door does not best fit the evidence in this scenario. The key distinction is that Azure Route Server is the mechanism or design choice supported by the observed behavior. Route Server provides dynamic routing between NVAs and the Azure virtual network control plane.",
+        "Incorrect: Application Gateway WAF does not best fit the evidence in this scenario. The key distinction is that Azure Route Server is the mechanism or design choice supported by the observed behavior. Route Server provides dynamic routing between NVAs and the Azure virtual network control plane."
+      ]
     },
     {
       "id": "kb-0043",
@@ -1040,7 +1292,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: DNAT rules translate the destination for inbound connections.",
+        "Incorrect: DNS proxy only does not best fit the evidence in this scenario. The key distinction is that DNAT rule collection is the mechanism or design choice supported by the observed behavior. DNAT rules translate the destination for inbound connections.",
+        "Incorrect: Application rule only does not best fit the evidence in this scenario. The key distinction is that DNAT rule collection is the mechanism or design choice supported by the observed behavior. DNAT rules translate the destination for inbound connections.",
+        "Incorrect: Threat-intelligence allowlist only does not best fit the evidence in this scenario. The key distinction is that DNAT rule collection is the mechanism or design choice supported by the observed behavior. DNAT rules translate the destination for inbound connections."
+      ]
     },
     {
       "id": "kb-0044",
@@ -1064,7 +1322,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec CAK does not best fit the evidence in this scenario. The key distinction is that The firewall's FQDN policy depends on compatible DNS resolution behavior is the mechanism or design choice supported by the observed behavior. FQDN-based filtering is only as reliable as the name-resolution model feeding those policy decisions.",
+        "Incorrect: BGP cluster ID does not best fit the evidence in this scenario. The key distinction is that The firewall's FQDN policy depends on compatible DNS resolution behavior is the mechanism or design choice supported by the observed behavior. FQDN-based filtering is only as reliable as the name-resolution model feeding those policy decisions.",
+        "Incorrect: PRP LAN A does not best fit the evidence in this scenario. The key distinction is that The firewall's FQDN policy depends on compatible DNS resolution behavior is the mechanism or design choice supported by the observed behavior. FQDN-based filtering is only as reliable as the name-resolution model feeding those policy decisions.",
+        "Correct: FQDN-based filtering is only as reliable as the name-resolution model feeding those policy decisions."
+      ]
     },
     {
       "id": "kb-0045",
@@ -1088,7 +1352,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Control-plane attributes and policy drive path selection unless you deliberately engineer otherwise.",
+        "Incorrect: ExpressRoute chooses alphabetically does not best fit the evidence in this scenario. The key distinction is that BGP path selection and Azure routing policy, not active RTT, choose the route is the mechanism or design choice supported by the observed behavior. Control-plane attributes and policy drive path selection unless you deliberately engineer otherwise.",
+        "Incorrect: ICMP RTT automatically becomes MED does not best fit the evidence in this scenario. The key distinction is that BGP path selection and Azure routing policy, not active RTT, choose the route is the mechanism or design choice supported by the observed behavior. Control-plane attributes and policy drive path selection unless you deliberately engineer otherwise.",
+        "Incorrect: Azure uses DNS TTL does not best fit the evidence in this scenario. The key distinction is that BGP path selection and Azure routing policy, not active RTT, choose the route is the mechanism or design choice supported by the observed behavior. Control-plane attributes and policy drive path selection unless you deliberately engineer otherwise."
+      ]
     },
     {
       "id": "kb-0046",
@@ -1112,7 +1382,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only DNS records does not best fit the evidence in this scenario. The key distinction is that Gateway/BGP learned routes, propagation, and the VM's effective routes is the mechanism or design choice supported by the observed behavior. Route presence at the gateway does not prove the route propagated to the actual workload.",
+        "Incorrect: Only certificate chains does not best fit the evidence in this scenario. The key distinction is that Gateway/BGP learned routes, propagation, and the VM's effective routes is the mechanism or design choice supported by the observed behavior. Route presence at the gateway does not prove the route propagated to the actual workload.",
+        "Incorrect: Only NSG logs does not best fit the evidence in this scenario. The key distinction is that Gateway/BGP learned routes, propagation, and the VM's effective routes is the mechanism or design choice supported by the observed behavior. Route presence at the gateway does not prove the route propagated to the actual workload.",
+        "Correct: Route presence at the gateway does not prove the route propagated to the actual workload."
+      ]
     },
     {
       "id": "kb-0047",
@@ -1136,7 +1412,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNSSEC chain break does not best fit the evidence in this scenario. The key distinction is that Private Endpoint routing specificity and inspection-path design is the mechanism or design choice supported by the observed behavior. Private Endpoint traffic can follow very specific local paths; inspection requires a supported, deliberate route architecture.",
+        "Incorrect: OIDC state mismatch does not best fit the evidence in this scenario. The key distinction is that Private Endpoint routing specificity and inspection-path design is the mechanism or design choice supported by the observed behavior. Private Endpoint traffic can follow very specific local paths; inspection requires a supported, deliberate route architecture.",
+        "Incorrect: MACsec replay does not best fit the evidence in this scenario. The key distinction is that Private Endpoint routing specificity and inspection-path design is the mechanism or design choice supported by the observed behavior. Private Endpoint traffic can follow very specific local paths; inspection requires a supported, deliberate route architecture.",
+        "Correct: Private Endpoint traffic can follow very specific local paths; inspection requires a supported, deliberate route architecture."
+      ]
     },
     {
       "id": "kb-0048",
@@ -1160,7 +1442,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: A stateful NVA needs both directions of a session in the expected state context.",
+        "Incorrect: PRP duplication does not best fit the evidence in this scenario. The key distinction is that Session symmetry is the mechanism or design choice supported by the observed behavior. A stateful NVA needs both directions of a session in the expected state context.",
+        "Incorrect: Azure DNS does not best fit the evidence in this scenario. The key distinction is that Session symmetry is the mechanism or design choice supported by the observed behavior. A stateful NVA needs both directions of a session in the expected state context.",
+        "Incorrect: ExpressRoute encryption does not best fit the evidence in this scenario. The key distinction is that Session symmetry is the mechanism or design choice supported by the observed behavior. A stateful NVA needs both directions of a session in the expected state context."
+      ]
     },
     {
       "id": "kb-0049",
@@ -1184,7 +1472,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: ExpressRoute Gateway does not best fit the evidence in this scenario. The key distinction is that Azure Front Door WAF is the mechanism or design choice supported by the observed behavior. Front Door is the global edge L7 service; Application Gateway is regional.",
+        "Incorrect: Application Gateway WAF only does not best fit the evidence in this scenario. The key distinction is that Azure Front Door WAF is the mechanism or design choice supported by the observed behavior. Front Door is the global edge L7 service; Application Gateway is regional.",
+        "Correct: Front Door is the global edge L7 service; Application Gateway is regional.",
+        "Incorrect: Azure Route Server does not best fit the evidence in this scenario. The key distinction is that Azure Front Door WAF is the mechanism or design choice supported by the observed behavior. Front Door is the global edge L7 service; Application Gateway is regional."
+      ]
     },
     {
       "id": "kb-0050",
@@ -1208,7 +1502,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Azure Route Server does not best fit the evidence in this scenario. The key distinction is that Application Gateway WAF is the mechanism or design choice supported by the observed behavior. Application Gateway is the regional L7 load balancer/WAF integrated with VNet backends.",
+        "Incorrect: Virtual WAN hub does not best fit the evidence in this scenario. The key distinction is that Application Gateway WAF is the mechanism or design choice supported by the observed behavior. Application Gateway is the regional L7 load balancer/WAF integrated with VNet backends.",
+        "Incorrect: Front Door only does not best fit the evidence in this scenario. The key distinction is that Application Gateway WAF is the mechanism or design choice supported by the observed behavior. Application Gateway is the regional L7 load balancer/WAF integrated with VNet backends.",
+        "Correct: Application Gateway is the regional L7 load balancer/WAF integrated with VNet backends."
+      ]
     },
     {
       "id": "kb-0051",
@@ -1232,7 +1532,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: 802.11k versus 802.11r does not best fit the evidence in this scenario. The key distinction is that Centralized control versus path stretch and dependency concentration is the mechanism or design choice supported by the observed behavior. Forced tunneling centralizes egress policy but can add latency and failure dependencies.",
+        "Incorrect: PRP versus HSR does not best fit the evidence in this scenario. The key distinction is that Centralized control versus path stretch and dependency concentration is the mechanism or design choice supported by the observed behavior. Forced tunneling centralizes egress policy but can add latency and failure dependencies.",
+        "Incorrect: DNSSEC versus DNS64 does not best fit the evidence in this scenario. The key distinction is that Centralized control versus path stretch and dependency concentration is the mechanism or design choice supported by the observed behavior. Forced tunneling centralizes egress policy but can add latency and failure dependencies.",
+        "Correct: Forced tunneling centralizes egress policy but can add latency and failure dependencies."
+      ]
     },
     {
       "id": "kb-0052",
@@ -1256,7 +1562,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: OIDC JWKS does not best fit the evidence in this scenario. The key distinction is that Review of documented service tags, platform exceptions, and required Azure routes is the mechanism or design choice supported by the observed behavior. Forced tunneling must account for traffic that cannot be treated as ordinary Internet egress.",
+        "Incorrect: PRP supervision does not best fit the evidence in this scenario. The key distinction is that Review of documented service tags, platform exceptions, and required Azure routes is the mechanism or design choice supported by the observed behavior. Forced tunneling must account for traffic that cannot be treated as ordinary Internet egress.",
+        "Incorrect: MACsec MKA does not best fit the evidence in this scenario. The key distinction is that Review of documented service tags, platform exceptions, and required Azure routes is the mechanism or design choice supported by the observed behavior. Forced tunneling must account for traffic that cannot be treated as ordinary Internet egress.",
+        "Correct: Forced tunneling must account for traffic that cannot be treated as ordinary Internet egress."
+      ]
     },
     {
       "id": "kb-0053",
@@ -1280,7 +1592,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Integrated NVAs move more routing/insertion mechanics into the managed Virtual WAN architecture.",
+        "Incorrect: Removal of all routing does not best fit the evidence in this scenario. The key distinction is that Reduced customer-managed service-insertion plumbing through managed hub integration is the mechanism or design choice supported by the observed behavior. Integrated NVAs move more routing/insertion mechanics into the managed Virtual WAN architecture.",
+        "Incorrect: Automatic OIDC does not best fit the evidence in this scenario. The key distinction is that Reduced customer-managed service-insertion plumbing through managed hub integration is the mechanism or design choice supported by the observed behavior. Integrated NVAs move more routing/insertion mechanics into the managed Virtual WAN architecture.",
+        "Incorrect: Layer-2 stretching does not best fit the evidence in this scenario. The key distinction is that Reduced customer-managed service-insertion plumbing through managed hub integration is the mechanism or design choice supported by the observed behavior. Integrated NVAs move more routing/insertion mechanics into the managed Virtual WAN architecture."
+      ]
     },
     {
       "id": "kb-0054",
@@ -1304,7 +1622,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec CKN does not best fit the evidence in this scenario. The key distinction is that Routing Intent and which traffic classes are actually steered through the security provider is the mechanism or design choice supported by the observed behavior. Managed hub routing can steer Internet and private traffic differently.",
+        "Incorrect: DNSSEC DS does not best fit the evidence in this scenario. The key distinction is that Routing Intent and which traffic classes are actually steered through the security provider is the mechanism or design choice supported by the observed behavior. Managed hub routing can steer Internet and private traffic differently.",
+        "Correct: Managed hub routing can steer Internet and private traffic differently.",
+        "Incorrect: 802.11v BTM does not best fit the evidence in this scenario. The key distinction is that Routing Intent and which traffic classes are actually steered through the security provider is the mechanism or design choice supported by the observed behavior. Managed hub routing can steer Internet and private traffic differently."
+      ]
     },
     {
       "id": "kb-0055",
@@ -1328,7 +1652,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNS64 synthesis does not best fit the evidence in this scenario. The key distinction is that Symmetric UDR/service-insertion routing on the return direction is the mechanism or design choice supported by the observed behavior. Stateful hub firewalls require both directions to be steered through the same service path.",
+        "Incorrect: OIDC state does not best fit the evidence in this scenario. The key distinction is that Symmetric UDR/service-insertion routing on the return direction is the mechanism or design choice supported by the observed behavior. Stateful hub firewalls require both directions to be steered through the same service path.",
+        "Incorrect: PRP RCT does not best fit the evidence in this scenario. The key distinction is that Symmetric UDR/service-insertion routing on the return direction is the mechanism or design choice supported by the observed behavior. Stateful hub firewalls require both directions to be steered through the same service path.",
+        "Correct: Stateful hub firewalls require both directions to be steered through the same service path."
+      ]
     },
     {
       "id": "kb-0056",
@@ -1352,7 +1682,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNSSEC is unsigned does not best fit the evidence in this scenario. The key distinction is that A dynamic control plane is being undermined by static data-plane steering is the mechanism or design choice supported by the observed behavior. Dynamic failover only helps if actual forwarding follows the dynamically selected next hop.",
+        "Correct: Dynamic failover only helps if actual forwarding follows the dynamically selected next hop.",
+        "Incorrect: 802.11r is disabled does not best fit the evidence in this scenario. The key distinction is that A dynamic control plane is being undermined by static data-plane steering is the mechanism or design choice supported by the observed behavior. Dynamic failover only helps if actual forwarding follows the dynamically selected next hop.",
+        "Incorrect: MACsec uses the wrong cipher does not best fit the evidence in this scenario. The key distinction is that A dynamic control plane is being undermined by static data-plane steering is the mechanism or design choice supported by the observed behavior. Dynamic failover only helps if actual forwarding follows the dynamically selected next hop."
+      ]
     },
     {
       "id": "kb-0057",
@@ -1376,7 +1712,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: ExpressRoute Global Reach does not best fit the evidence in this scenario. The key distinction is that Gateway Load Balancer chaining is the mechanism or design choice supported by the observed behavior. GWLB transparently chains traffic through NVAs using encapsulation/service chaining.",
+        "Incorrect: Route Server only does not best fit the evidence in this scenario. The key distinction is that Gateway Load Balancer chaining is the mechanism or design choice supported by the observed behavior. GWLB transparently chains traffic through NVAs using encapsulation/service chaining.",
+        "Incorrect: Front Door only does not best fit the evidence in this scenario. The key distinction is that Gateway Load Balancer chaining is the mechanism or design choice supported by the observed behavior. GWLB transparently chains traffic through NVAs using encapsulation/service chaining.",
+        "Correct: GWLB transparently chains traffic through NVAs using encapsulation/service chaining."
+      ]
     },
     {
       "id": "kb-0058",
@@ -1400,7 +1742,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: OIDC nonce does not best fit the evidence in this scenario. The key distinction is that The symmetric transparent service chain is the mechanism or design choice supported by the observed behavior. GWLB insertion depends on correct return through the service tunnel so both directions stay in the chain.",
+        "Incorrect: BGP CLUSTER_LIST does not best fit the evidence in this scenario. The key distinction is that The symmetric transparent service chain is the mechanism or design choice supported by the observed behavior. GWLB insertion depends on correct return through the service tunnel so both directions stay in the chain.",
+        "Correct: GWLB insertion depends on correct return through the service tunnel so both directions stay in the chain.",
+        "Incorrect: DNSSEC validation does not best fit the evidence in this scenario. The key distinction is that The symmetric transparent service chain is the mechanism or design choice supported by the observed behavior. GWLB insertion depends on correct return through the service tunnel so both directions stay in the chain."
+      ]
     },
     {
       "id": "kb-0059",
@@ -1424,7 +1772,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: ExpressRoute Global Reach does not best fit the evidence in this scenario. The key distinction is that Virtual WAN Security SaaS provider integration is the mechanism or design choice supported by the observed behavior. The managed hub can steer Internet traffic to a supported cloud security provider.",
+        "Correct: The managed hub can steer Internet traffic to a supported cloud security provider.",
+        "Incorrect: Route Server in every spoke does not best fit the evidence in this scenario. The key distinction is that Virtual WAN Security SaaS provider integration is the mechanism or design choice supported by the observed behavior. The managed hub can steer Internet traffic to a supported cloud security provider.",
+        "Incorrect: Application Gateway does not best fit the evidence in this scenario. The key distinction is that Virtual WAN Security SaaS provider integration is the mechanism or design choice supported by the observed behavior. The managed hub can steer Internet traffic to a supported cloud security provider."
+      ]
     },
     {
       "id": "kb-0060",
@@ -1448,7 +1802,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: The managed control plane determines which traffic classes are handed to the security service.",
+        "Incorrect: OIDC UserInfo does not best fit the evidence in this scenario. The key distinction is that Routing Intent and traffic-category mapping for private versus Internet flows is the mechanism or design choice supported by the observed behavior. The managed control plane determines which traffic classes are handed to the security service.",
+        "Incorrect: DNSSEC ZSK does not best fit the evidence in this scenario. The key distinction is that Routing Intent and traffic-category mapping for private versus Internet flows is the mechanism or design choice supported by the observed behavior. The managed control plane determines which traffic classes are handed to the security service.",
+        "Incorrect: MACsec replay window does not best fit the evidence in this scenario. The key distinction is that Routing Intent and traffic-category mapping for private versus Internet flows is the mechanism or design choice supported by the observed behavior. The managed control plane determines which traffic classes are handed to the security service."
+      ]
     },
     {
       "id": "kb-0061",
@@ -1472,7 +1832,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only WAF rules does not best fit the evidence in this scenario. The key distinction is that Routing Intent for Private Traffic plus route-table associations/propagation is the mechanism or design choice supported by the observed behavior. Secured hub inspection depends on Virtual WAN routing intent and effective hub route relationships.",
+        "Correct: Secured hub inspection depends on Virtual WAN routing intent and effective hub route relationships.",
+        "Incorrect: Only Azure Policy does not best fit the evidence in this scenario. The key distinction is that Routing Intent for Private Traffic plus route-table associations/propagation is the mechanism or design choice supported by the observed behavior. Secured hub inspection depends on Virtual WAN routing intent and effective hub route relationships.",
+        "Incorrect: Only DNS proxy does not best fit the evidence in this scenario. The key distinction is that Routing Intent for Private Traffic plus route-table associations/propagation is the mechanism or design choice supported by the observed behavior. Secured hub inspection depends on Virtual WAN routing intent and effective hub route relationships."
+      ]
     },
     {
       "id": "kb-0062",
@@ -1496,7 +1862,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Managed services reduce platform operations, not the need to validate real failure behavior.",
+        "Incorrect: BGP is never involved does not best fit the evidence in this scenario. The key distinction is that Managed infrastructure still requires validation of route convergence, firewall state, and application recovery is the mechanism or design choice supported by the observed behavior. Managed services reduce platform operations, not the need to validate real failure behavior.",
+        "Incorrect: HA testing is unnecessary in cloud does not best fit the evidence in this scenario. The key distinction is that Managed infrastructure still requires validation of route convergence, firewall state, and application recovery is the mechanism or design choice supported by the observed behavior. Managed services reduce platform operations, not the need to validate real failure behavior.",
+        "Incorrect: Only DNS can fail does not best fit the evidence in this scenario. The key distinction is that Managed infrastructure still requires validation of route convergence, firewall state, and application recovery is the mechanism or design choice supported by the observed behavior. Managed services reduce platform operations, not the need to validate real failure behavior."
+      ]
     },
     {
       "id": "kb-0063",
@@ -1520,7 +1892,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec versus IPsec does not best fit the evidence in this scenario. The key distinction is that Policy centralization versus cross-region hairpin latency and failure-domain concentration is the mechanism or design choice supported by the observed behavior. Multi-region designs must balance centralized inspection against path stretch and resilience.",
+        "Correct: Multi-region designs must balance centralized inspection against path stretch and resilience.",
+        "Incorrect: DNSSEC versus NSEC3 does not best fit the evidence in this scenario. The key distinction is that Policy centralization versus cross-region hairpin latency and failure-domain concentration is the mechanism or design choice supported by the observed behavior. Multi-region designs must balance centralized inspection against path stretch and resilience.",
+        "Incorrect: OIDC versus OAuth does not best fit the evidence in this scenario. The key distinction is that Policy centralization versus cross-region hairpin latency and failure-domain concentration is the mechanism or design choice supported by the observed behavior. Multi-region designs must balance centralized inspection against path stretch and resilience."
+      ]
     },
     {
       "id": "kb-0064",
@@ -1544,7 +1922,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Control-plane alternate reachability does not guarantee the desired inspection/session path.",
+        "Incorrect: Only storage replication does not best fit the evidence in this scenario. The key distinction is that Actual connection redundancy, route propagation/preference, and the stateful security path during hub failure is the mechanism or design choice supported by the observed behavior. Control-plane alternate reachability does not guarantee the desired inspection/session path.",
+        "Incorrect: Only VM boot time does not best fit the evidence in this scenario. The key distinction is that Actual connection redundancy, route propagation/preference, and the stateful security path during hub failure is the mechanism or design choice supported by the observed behavior. Control-plane alternate reachability does not guarantee the desired inspection/session path.",
+        "Incorrect: Only DNS TTL does not best fit the evidence in this scenario. The key distinction is that Actual connection redundancy, route propagation/preference, and the stateful security path during hub failure is the mechanism or design choice supported by the observed behavior. Control-plane alternate reachability does not guarantee the desired inspection/session path."
+      ]
     },
     {
       "id": "kb-0065",
@@ -1568,7 +1952,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: It performs WAF does not best fit the evidence in this scenario. The key distinction is that The routing control plane can react to peer state without manual next-hop edits is the mechanism or design choice supported by the observed behavior. BGP withdrawal/reselection can automate route convergence around failed NVAs.",
+        "Correct: BGP withdrawal/reselection can automate route convergence around failed NVAs.",
+        "Incorrect: It signs DNS does not best fit the evidence in this scenario. The key distinction is that The routing control plane can react to peer state without manual next-hop edits is the mechanism or design choice supported by the observed behavior. BGP withdrawal/reselection can automate route convergence around failed NVAs.",
+        "Incorrect: It encrypts traffic does not best fit the evidence in this scenario. The key distinction is that The routing control plane can react to peer state without manual next-hop edits is the mechanism or design choice supported by the observed behavior. BGP withdrawal/reselection can automate route convergence around failed NVAs."
+      ]
     },
     {
       "id": "kb-0066",
@@ -1592,7 +1982,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Dynamic service insertion needs route policy, not uncontrolled mutual advertisement.",
+        "Incorrect: PKCE does not best fit the evidence in this scenario. The key distinction is that Import/export policy and routing-loop prevention is the mechanism or design choice supported by the observed behavior. Dynamic service insertion needs route policy, not uncontrolled mutual advertisement.",
+        "Incorrect: 802.11v does not best fit the evidence in this scenario. The key distinction is that Import/export policy and routing-loop prevention is the mechanism or design choice supported by the observed behavior. Dynamic service insertion needs route policy, not uncontrolled mutual advertisement.",
+        "Incorrect: NSEC3 does not best fit the evidence in this scenario. The key distinction is that Import/export policy and routing-loop prevention is the mechanism or design choice supported by the observed behavior. Dynamic service insertion needs route policy, not uncontrolled mutual advertisement."
+      ]
     },
     {
       "id": "kb-0067",
@@ -1616,7 +2012,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Method selection depends on the traffic class, ownership model, symmetry, and desired operations.",
+        "Incorrect: All methods are identical does not best fit the evidence in this scenario. The key distinction is that Each method has different steering scope, support boundaries, and operational tradeoffs is the mechanism or design choice supported by the observed behavior. Method selection depends on the traffic class, ownership model, symmetry, and desired operations.",
+        "Incorrect: Azure supports only one path does not best fit the evidence in this scenario. The key distinction is that Each method has different steering scope, support boundaries, and operational tradeoffs is the mechanism or design choice supported by the observed behavior. Method selection depends on the traffic class, ownership model, symmetry, and desired operations.",
+        "Incorrect: Routing is irrelevant does not best fit the evidence in this scenario. The key distinction is that Each method has different steering scope, support boundaries, and operational tradeoffs is the mechanism or design choice supported by the observed behavior. Method selection depends on the traffic class, ownership model, symmetry, and desired operations."
+      ]
     },
     {
       "id": "kb-0068",
@@ -1640,7 +2042,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only logs matter does not best fit the evidence in this scenario. The key distinction is that They must also validate effective routing, NAT, return path, HA/failover, and application behavior is the mechanism or design choice supported by the observed behavior. A correct rule hit does not prove end-to-end forwarding or failure behavior.",
+        "Incorrect: Routing cannot bypass a firewall does not best fit the evidence in this scenario. The key distinction is that They must also validate effective routing, NAT, return path, HA/failover, and application behavior is the mechanism or design choice supported by the observed behavior. A correct rule hit does not prove end-to-end forwarding or failure behavior.",
+        "Correct: A correct rule hit does not prove end-to-end forwarding or failure behavior.",
+        "Incorrect: Rule hits prove everything does not best fit the evidence in this scenario. The key distinction is that They must also validate effective routing, NAT, return path, HA/failover, and application behavior is the mechanism or design choice supported by the observed behavior. A correct rule hit does not prove end-to-end forwarding or failure behavior."
+      ]
     },
     {
       "id": "kb-0069",
@@ -1664,7 +2072,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Peering gives reachability; it does not itself create a firewall service chain.",
+        "Incorrect: OIDC discovery does not best fit the evidence in this scenario. The key distinction is that UDRs/effective routing that steer the relevant prefixes through the firewall is the mechanism or design choice supported by the observed behavior. Peering gives reachability; it does not itself create a firewall service chain.",
+        "Incorrect: Front Door probes does not best fit the evidence in this scenario. The key distinction is that UDRs/effective routing that steer the relevant prefixes through the firewall is the mechanism or design choice supported by the observed behavior. Peering gives reachability; it does not itself create a firewall service chain.",
+        "Incorrect: ExpressRoute Global Reach does not best fit the evidence in this scenario. The key distinction is that UDRs/effective routing that steer the relevant prefixes through the firewall is the mechanism or design choice supported by the observed behavior. Peering gives reachability; it does not itself create a firewall service chain."
+      ]
     },
     {
       "id": "kb-0070",
@@ -1688,7 +2102,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Whether MACsec uses AES-256 does not best fit the evidence in this scenario. The key distinction is that Whether SNAT is occurring as expected for that egress path is the mechanism or design choice supported by the observed behavior. Internet egress generally needs a returnable translated source and correct NAT placement.",
+        "Incorrect: Whether 802.11r is enabled does not best fit the evidence in this scenario. The key distinction is that Whether SNAT is occurring as expected for that egress path is the mechanism or design choice supported by the observed behavior. Internet egress generally needs a returnable translated source and correct NAT placement.",
+        "Correct: Internet egress generally needs a returnable translated source and correct NAT placement.",
+        "Incorrect: Whether DNSSEC is signed does not best fit the evidence in this scenario. The key distinction is that Whether SNAT is occurring as expected for that egress path is the mechanism or design choice supported by the observed behavior. Internet egress generally needs a returnable translated source and correct NAT placement."
+      ]
     },
     {
       "id": "kb-0071",
@@ -1712,7 +2132,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Application Gateway does not best fit the evidence in this scenario. The key distinction is that ExpressRoute Global Reach is the mechanism or design choice supported by the observed behavior. Global Reach links on-prem networks through Microsoft's backbone using ExpressRoute circuits.",
+        "Incorrect: Private Endpoint does not best fit the evidence in this scenario. The key distinction is that ExpressRoute Global Reach is the mechanism or design choice supported by the observed behavior. Global Reach links on-prem networks through Microsoft's backbone using ExpressRoute circuits.",
+        "Correct: Global Reach links on-prem networks through Microsoft's backbone using ExpressRoute circuits.",
+        "Incorrect: Azure Front Door does not best fit the evidence in this scenario. The key distinction is that ExpressRoute Global Reach is the mechanism or design choice supported by the observed behavior. Global Reach links on-prem networks through Microsoft's backbone using ExpressRoute circuits."
+      ]
     },
     {
       "id": "kb-0072",
@@ -1736,7 +2162,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Global Reach is DNS proxy does not best fit the evidence in this scenario. The key distinction is that Global Reach is connectivity; firewall insertion requires a separate explicit architecture is the mechanism or design choice supported by the observed behavior. The feature joins circuits; it does not insert a VNet firewall by default.",
+        "Correct: The feature joins circuits; it does not insert a VNet firewall by default.",
+        "Incorrect: Global Reach is itself a firewall does not best fit the evidence in this scenario. The key distinction is that Global Reach is connectivity; firewall insertion requires a separate explicit architecture is the mechanism or design choice supported by the observed behavior. The feature joins circuits; it does not insert a VNet firewall by default.",
+        "Incorrect: Global Reach is NAT64 does not best fit the evidence in this scenario. The key distinction is that Global Reach is connectivity; firewall insertion requires a separate explicit architecture is the mechanism or design choice supported by the observed behavior. The feature joins circuits; it does not insert a VNet firewall by default."
+      ]
     },
     {
       "id": "kb-0073",
@@ -1760,7 +2192,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: GWLB installs PAN-OS routes automatically does not best fit the evidence in this scenario. The key distinction is that Underlay delivery succeeds but the decapsulated flow still fails overlay forwarding is the mechanism or design choice supported by the observed behavior. The AWS underlay service path and the firewall's overlay forwarding table are separate routing layers.",
+        "Incorrect: DNS fixes the path does not best fit the evidence in this scenario. The key distinction is that Underlay delivery succeeds but the decapsulated flow still fails overlay forwarding is the mechanism or design choice supported by the observed behavior. The AWS underlay service path and the firewall's overlay forwarding table are separate routing layers.",
+        "Incorrect: BGP is irrelevant does not best fit the evidence in this scenario. The key distinction is that Underlay delivery succeeds but the decapsulated flow still fails overlay forwarding is the mechanism or design choice supported by the observed behavior. The AWS underlay service path and the firewall's overlay forwarding table are separate routing layers.",
+        "Correct: The AWS underlay service path and the firewall's overlay forwarding table are separate routing layers."
+      ]
     },
     {
       "id": "kb-0074",
@@ -1784,7 +2222,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Overlay forwarding and security-zone classification must both be correct.",
+        "Incorrect: BGP LOCAL_PREF changes zones does not best fit the evidence in this scenario. The key distinction is that PAN-OS policy is zone-aware, so endpoint-to-zone mapping is part of the security context is the mechanism or design choice supported by the observed behavior. Overlay forwarding and security-zone classification must both be correct.",
+        "Incorrect: DNS changes zones does not best fit the evidence in this scenario. The key distinction is that PAN-OS policy is zone-aware, so endpoint-to-zone mapping is part of the security context is the mechanism or design choice supported by the observed behavior. Overlay forwarding and security-zone classification must both be correct.",
+        "Incorrect: NAT64 changes zones does not best fit the evidence in this scenario. The key distinction is that PAN-OS policy is zone-aware, so endpoint-to-zone mapping is part of the security context is the mechanism or design choice supported by the observed behavior. Overlay forwarding and security-zone classification must both be correct."
+      ]
     },
     {
       "id": "kb-0075",
@@ -1808,7 +2252,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Public VIF only does not best fit the evidence in this scenario. The key distinction is that Transit VIF associated with the DX Gateway/TGW design is the mechanism or design choice supported by the observed behavior. Transit VIF is the Direct Connect construct for transit connectivity toward TGW through a Direct Connect Gateway.",
+        "Correct: Transit VIF is the Direct Connect construct for transit connectivity toward TGW through a Direct Connect Gateway.",
+        "Incorrect: No VIF does not best fit the evidence in this scenario. The key distinction is that Transit VIF associated with the DX Gateway/TGW design is the mechanism or design choice supported by the observed behavior. Transit VIF is the Direct Connect construct for transit connectivity toward TGW through a Direct Connect Gateway.",
+        "Incorrect: Route 53 Resolver endpoint does not best fit the evidence in this scenario. The key distinction is that Transit VIF associated with the DX Gateway/TGW design is the mechanism or design choice supported by the observed behavior. Transit VIF is the Direct Connect construct for transit connectivity toward TGW through a Direct Connect Gateway."
+      ]
     },
     {
       "id": "kb-0076",
@@ -1832,7 +2282,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only optical levels does not best fit the evidence in this scenario. The key distinction is that TGW propagation/association, DX Gateway allowed prefixes/association, then BGP advertisement is the mechanism or design choice supported by the observed behavior. Established BGP proves adjacency, not that the desired route propagated through every transit domain.",
+        "Incorrect: Only security groups does not best fit the evidence in this scenario. The key distinction is that TGW propagation/association, DX Gateway allowed prefixes/association, then BGP advertisement is the mechanism or design choice supported by the observed behavior. Established BGP proves adjacency, not that the desired route propagated through every transit domain.",
+        "Incorrect: Only DNS does not best fit the evidence in this scenario. The key distinction is that TGW propagation/association, DX Gateway allowed prefixes/association, then BGP advertisement is the mechanism or design choice supported by the observed behavior. Established BGP proves adjacency, not that the desired route propagated through every transit domain.",
+        "Correct: Established BGP proves adjacency, not that the desired route propagated through every transit domain."
+      ]
     },
     {
       "id": "kb-0077",
@@ -1856,7 +2312,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: CloudFront caching does not best fit the evidence in this scenario. The key distinction is that Appliance mode with AZ-symmetric stateful routing is the mechanism or design choice supported by the observed behavior. TGW appliance-mode patterns are used to preserve predictable symmetry for stateful appliances.",
+        "Correct: TGW appliance-mode patterns are used to preserve predictable symmetry for stateful appliances.",
+        "Incorrect: Route 53 health checks does not best fit the evidence in this scenario. The key distinction is that Appliance mode with AZ-symmetric stateful routing is the mechanism or design choice supported by the observed behavior. TGW appliance-mode patterns are used to preserve predictable symmetry for stateful appliances.",
+        "Incorrect: S3 endpoint policy does not best fit the evidence in this scenario. The key distinction is that Appliance mode with AZ-symmetric stateful routing is the mechanism or design choice supported by the observed behavior. TGW appliance-mode patterns are used to preserve predictable symmetry for stateful appliances."
+      ]
     },
     {
       "id": "kb-0078",
@@ -1880,7 +2342,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: S3 Gateway Endpoint does not best fit the evidence in this scenario. The key distinction is that GWLB with GWLBE is the mechanism or design choice supported by the observed behavior. GWLB abstracts a scalable appliance fleet behind endpoint-based service insertion.",
+        "Correct: GWLB abstracts a scalable appliance fleet behind endpoint-based service insertion.",
+        "Incorrect: CloudFront Function does not best fit the evidence in this scenario. The key distinction is that GWLB with GWLBE is the mechanism or design choice supported by the observed behavior. GWLB abstracts a scalable appliance fleet behind endpoint-based service insertion.",
+        "Incorrect: Route 53 Hosted Zone does not best fit the evidence in this scenario. The key distinction is that GWLB with GWLBE is the mechanism or design choice supported by the observed behavior. GWLB abstracts a scalable appliance fleet behind endpoint-based service insertion."
+      ]
     },
     {
       "id": "kb-0079",
@@ -1904,7 +2372,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNSSEC does not best fit the evidence in this scenario. The key distinction is that A working underlay path to carry the Connect/GRE traffic is the mechanism or design choice supported by the observed behavior. Overlay routing does not replace the transport it rides on.",
+        "Incorrect: OIDC does not best fit the evidence in this scenario. The key distinction is that A working underlay path to carry the Connect/GRE traffic is the mechanism or design choice supported by the observed behavior. Overlay routing does not replace the transport it rides on.",
+        "Correct: Overlay routing does not replace the transport it rides on.",
+        "Incorrect: PRP does not best fit the evidence in this scenario. The key distinction is that A working underlay path to carry the Connect/GRE traffic is the mechanism or design choice supported by the observed behavior. Overlay routing does not replace the transport it rides on."
+      ]
     },
     {
       "id": "kb-0080",
@@ -1928,7 +2402,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: A routing overlay can be logically correct while still violating stateful forwarding requirements.",
+        "Incorrect: Only ASN uniqueness does not best fit the evidence in this scenario. The key distinction is that Session symmetry and firewall state distribution is the mechanism or design choice supported by the observed behavior. A routing overlay can be logically correct while still violating stateful forwarding requirements.",
+        "Incorrect: Only DNS TTL does not best fit the evidence in this scenario. The key distinction is that Session symmetry and firewall state distribution is the mechanism or design choice supported by the observed behavior. A routing overlay can be logically correct while still violating stateful forwarding requirements.",
+        "Incorrect: Only IAM does not best fit the evidence in this scenario. The key distinction is that Session symmetry and firewall state distribution is the mechanism or design choice supported by the observed behavior. A routing overlay can be logically correct while still violating stateful forwarding requirements."
+      ]
     },
     {
       "id": "kb-0081",
@@ -1952,7 +2432,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Dynamic route exchange lets VPC routing respond to NVA control-plane state.",
+        "Incorrect: MACsec MKA does not best fit the evidence in this scenario. The key distinction is that Manual/static VPC route-table next-hop management for NVA failover is the mechanism or design choice supported by the observed behavior. Dynamic route exchange lets VPC routing respond to NVA control-plane state.",
+        "Incorrect: DNSSEC rollover does not best fit the evidence in this scenario. The key distinction is that Manual/static VPC route-table next-hop management for NVA failover is the mechanism or design choice supported by the observed behavior. Dynamic route exchange lets VPC routing respond to NVA control-plane state.",
+        "Incorrect: OIDC rotation does not best fit the evidence in this scenario. The key distinction is that Manual/static VPC route-table next-hop management for NVA failover is the mechanism or design choice supported by the observed behavior. Dynamic route exchange lets VPC routing respond to NVA control-plane state."
+      ]
     },
     {
       "id": "kb-0082",
@@ -1976,7 +2462,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Control-plane redundancy must be compatible with appliance session-state architecture.",
+        "Incorrect: OIDC audience mismatch does not best fit the evidence in this scenario. The key distinction is that Dynamic multipath/failover was not aligned with stateful HA behavior is the mechanism or design choice supported by the observed behavior. Control-plane redundancy must be compatible with appliance session-state architecture.",
+        "Incorrect: MACsec SCI collision does not best fit the evidence in this scenario. The key distinction is that Dynamic multipath/failover was not aligned with stateful HA behavior is the mechanism or design choice supported by the observed behavior. Control-plane redundancy must be compatible with appliance session-state architecture.",
+        "Incorrect: DNSSEC failure does not best fit the evidence in this scenario. The key distinction is that Dynamic multipath/failover was not aligned with stateful HA behavior is the mechanism or design choice supported by the observed behavior. Control-plane redundancy must be compatible with appliance session-state architecture."
+      ]
     },
     {
       "id": "kb-0083",
@@ -2000,7 +2492,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Route 53 hosted zone does not best fit the evidence in this scenario. The key distinction is that Cloud WAN core network policy and segment/service-insertion routing relationships is the mechanism or design choice supported by the observed behavior. Cloud WAN centralizes attachment and segment routing policy.",
+        "Correct: Cloud WAN centralizes attachment and segment routing policy.",
+        "Incorrect: IAM group does not best fit the evidence in this scenario. The key distinction is that Cloud WAN core network policy and segment/service-insertion routing relationships is the mechanism or design choice supported by the observed behavior. Cloud WAN centralizes attachment and segment routing policy.",
+        "Incorrect: S3 bucket policy does not best fit the evidence in this scenario. The key distinction is that Cloud WAN core network policy and segment/service-insertion routing relationships is the mechanism or design choice supported by the observed behavior. Cloud WAN centralizes attachment and segment routing policy."
+      ]
     },
     {
       "id": "kb-0084",
@@ -2024,7 +2522,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Segmentation is primarily a routing-policy construct in Cloud WAN.",
+        "Incorrect: Only DNS does not best fit the evidence in this scenario. The key distinction is that Segment sharing/route propagation rules in the core network policy is the mechanism or design choice supported by the observed behavior. Segmentation is primarily a routing-policy construct in Cloud WAN.",
+        "Incorrect: Only security groups does not best fit the evidence in this scenario. The key distinction is that Segment sharing/route propagation rules in the core network policy is the mechanism or design choice supported by the observed behavior. Segmentation is primarily a routing-policy construct in Cloud WAN.",
+        "Incorrect: Only NACLs does not best fit the evidence in this scenario. The key distinction is that Segment sharing/route propagation rules in the core network policy is the mechanism or design choice supported by the observed behavior. Segmentation is primarily a routing-policy construct in Cloud WAN."
+      ]
     },
     {
       "id": "kb-0085",
@@ -2048,7 +2552,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: ALB automatically mirrors state does not best fit the evidence in this scenario. The key distinction is that The firewall sees an incomplete/asymmetric session is the mechanism or design choice supported by the observed behavior. Inline inspection around load balancers still requires a coherent bidirectional service chain.",
+        "Correct: Inline inspection around load balancers still requires a coherent bidirectional service chain.",
+        "Incorrect: GWLB is stateless by definition does not best fit the evidence in this scenario. The key distinction is that The firewall sees an incomplete/asymmetric session is the mechanism or design choice supported by the observed behavior. Inline inspection around load balancers still requires a coherent bidirectional service chain.",
+        "Incorrect: DNS fixes symmetry does not best fit the evidence in this scenario. The key distinction is that The firewall sees an incomplete/asymmetric session is the mechanism or design choice supported by the observed behavior. Inline inspection around load balancers still requires a coherent bidirectional service chain."
+      ]
     },
     {
       "id": "kb-0086",
@@ -2072,7 +2582,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: GWLB hides all addresses does not best fit the evidence in this scenario. The key distinction is that ALB/NLB packet and source-address behavior changes what the firewall actually sees is the mechanism or design choice supported by the observed behavior. Security policy must be based on the packet attributes present on the real path.",
+        "Correct: Security policy must be based on the packet attributes present on the real path.",
+        "Incorrect: Both always SNAT identically does not best fit the evidence in this scenario. The key distinction is that ALB/NLB packet and source-address behavior changes what the firewall actually sees is the mechanism or design choice supported by the observed behavior. Security policy must be based on the packet attributes present on the real path.",
+        "Incorrect: Route 53 rewrites source IP does not best fit the evidence in this scenario. The key distinction is that ALB/NLB packet and source-address behavior changes what the firewall actually sees is the mechanism or design choice supported by the observed behavior. Security policy must be based on the packet attributes present on the real path."
+      ]
     },
     {
       "id": "kb-0087",
@@ -2096,7 +2612,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Direct NVA attachment designs expose more routing and appliance lifecycle mechanics to the operator.",
+        "Incorrect: DNSSEC is mandatory does not best fit the evidence in this scenario. The key distinction is that You directly own TGW route tables, AZ placement, ENI next hops, HA, and symmetry is the mechanism or design choice supported by the observed behavior. Direct NVA attachment designs expose more routing and appliance lifecycle mechanics to the operator.",
+        "Incorrect: OIDC is unsupported does not best fit the evidence in this scenario. The key distinction is that You directly own TGW route tables, AZ placement, ENI next hops, HA, and symmetry is the mechanism or design choice supported by the observed behavior. Direct NVA attachment designs expose more routing and appliance lifecycle mechanics to the operator.",
+        "Incorrect: BGP cannot exist does not best fit the evidence in this scenario. The key distinction is that You directly own TGW route tables, AZ placement, ENI next hops, HA, and symmetry is the mechanism or design choice supported by the observed behavior. Direct NVA attachment designs expose more routing and appliance lifecycle mechanics to the operator."
+      ]
     },
     {
       "id": "kb-0088",
@@ -2120,7 +2642,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNS only does not best fit the evidence in this scenario. The key distinction is that TGW route-table association, propagation, and routes toward the inspection attachment is the mechanism or design choice supported by the observed behavior. TGW route tables decide which attachment path a spoke uses.",
+        "Correct: TGW route tables decide which attachment path a spoke uses.",
+        "Incorrect: IAM only does not best fit the evidence in this scenario. The key distinction is that TGW route-table association, propagation, and routes toward the inspection attachment is the mechanism or design choice supported by the observed behavior. TGW route tables decide which attachment path a spoke uses.",
+        "Incorrect: Firewall CPU only does not best fit the evidence in this scenario. The key distinction is that TGW route-table association, propagation, and routes toward the inspection attachment is the mechanism or design choice supported by the observed behavior. TGW route tables decide which attachment path a spoke uses."
+      ]
     },
     {
       "id": "kb-0089",
@@ -2144,7 +2672,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Managed frontends have documented supported connectivity models that must be respected.",
+        "Incorrect: ALBs run OSPF does not best fit the evidence in this scenario. The key distinction is that Managed load balancers have service-specific connectivity semantics and are not generic routed next hops is the mechanism or design choice supported by the observed behavior. Managed frontends have documented supported connectivity models that must be respected.",
+        "Incorrect: TGW cannot route TCP does not best fit the evidence in this scenario. The key distinction is that Managed load balancers have service-specific connectivity semantics and are not generic routed next hops is the mechanism or design choice supported by the observed behavior. Managed frontends have documented supported connectivity models that must be respected.",
+        "Incorrect: DNSSEC blocks cross-VPC use does not best fit the evidence in this scenario. The key distinction is that Managed load balancers have service-specific connectivity semantics and are not generic routed next hops is the mechanism or design choice supported by the observed behavior. Managed frontends have documented supported connectivity models that must be respected."
+      ]
     },
     {
       "id": "kb-0090",
@@ -2168,7 +2702,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only certificate names does not best fit the evidence in this scenario. The key distinction is that Latency, processing cost, failure-domain concentration, and service supportability is the mechanism or design choice supported by the observed behavior. Centralization trades operational consistency for path stretch, cost, and blast-radius concerns.",
+        "Correct: Centralization trades operational consistency for path stretch, cost, and blast-radius concerns.",
+        "Incorrect: Only DNS TTL does not best fit the evidence in this scenario. The key distinction is that Latency, processing cost, failure-domain concentration, and service supportability is the mechanism or design choice supported by the observed behavior. Centralization trades operational consistency for path stretch, cost, and blast-radius concerns.",
+        "Incorrect: Only IAM does not best fit the evidence in this scenario. The key distinction is that Latency, processing cost, failure-domain concentration, and service supportability is the mechanism or design choice supported by the observed behavior. Centralization trades operational consistency for path stretch, cost, and blast-radius concerns."
+      ]
     },
     {
       "id": "kb-0091",
@@ -2192,7 +2732,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: Layered troubleshooting prevents blaming a healthy lower layer for an application-layer continuity problem.",
+        "Incorrect: DNSSEC failed does not best fit the evidence in this scenario. The key distinction is that The wireless and IP mobility layers succeeded; the remaining failure is application/proxy session handling is the mechanism or design choice supported by the observed behavior. Layered troubleshooting prevents blaming a healthy lower layer for an application-layer continuity problem.",
+        "Incorrect: 802.11r failed does not best fit the evidence in this scenario. The key distinction is that The wireless and IP mobility layers succeeded; the remaining failure is application/proxy session handling is the mechanism or design choice supported by the observed behavior. Layered troubleshooting prevents blaming a healthy lower layer for an application-layer continuity problem.",
+        "Incorrect: NAT64 failed does not best fit the evidence in this scenario. The key distinction is that The wireless and IP mobility layers succeeded; the remaining failure is application/proxy session handling is the mechanism or design choice supported by the observed behavior. Layered troubleshooting prevents blaming a healthy lower layer for an application-layer continuity problem."
+      ]
     },
     {
       "id": "kb-0092",
@@ -2216,7 +2762,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: MACsec MTU does not best fit the evidence in this scenario. The key distinction is that DNSSEC validation and DNS64 synthesis interaction/trust placement is the mechanism or design choice supported by the observed behavior. DNSSEC and DNS64 interact because synthesis modifies DNS data; validation must occur in an architecture that understands that relationship.",
+        "Incorrect: PRP duplicate discard does not best fit the evidence in this scenario. The key distinction is that DNSSEC validation and DNS64 synthesis interaction/trust placement is the mechanism or design choice supported by the observed behavior. DNSSEC and DNS64 interact because synthesis modifies DNS data; validation must occur in an architecture that understands that relationship.",
+        "Incorrect: BGP CLUSTER_LIST does not best fit the evidence in this scenario. The key distinction is that DNSSEC validation and DNS64 synthesis interaction/trust placement is the mechanism or design choice supported by the observed behavior. DNSSEC and DNS64 interact because synthesis modifies DNS data; validation must occur in an architecture that understands that relationship.",
+        "Correct: DNSSEC and DNS64 interact because synthesis modifies DNS data; validation must occur in an architecture that understands that relationship."
+      ]
     },
     {
       "id": "kb-0093",
@@ -2240,7 +2792,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: If the packet never reaches the firewall, policy tuning cannot fix the failure.",
+        "Incorrect: The DNSSEC KSK does not best fit the evidence in this scenario. The key distinction is that The service-insertion routing/steering path is the mechanism or design choice supported by the observed behavior. If the packet never reaches the firewall, policy tuning cannot fix the failure.",
+        "Incorrect: The firewall rulebase does not best fit the evidence in this scenario. The key distinction is that The service-insertion routing/steering path is the mechanism or design choice supported by the observed behavior. If the packet never reaches the firewall, policy tuning cannot fix the failure.",
+        "Incorrect: The OIDC nonce does not best fit the evidence in this scenario. The key distinction is that The service-insertion routing/steering path is the mechanism or design choice supported by the observed behavior. If the packet never reaches the firewall, policy tuning cannot fix the failure."
+      ]
     },
     {
       "id": "kb-0094",
@@ -2264,7 +2822,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: Only DNS TTL does not best fit the evidence in this scenario. The key distinction is that Firewall/session-state failover and application recovery is the mechanism or design choice supported by the observed behavior. Fast route convergence does not imply stateful session continuity.",
+        "Incorrect: Only BGP detection does not best fit the evidence in this scenario. The key distinction is that Firewall/session-state failover and application recovery is the mechanism or design choice supported by the observed behavior. Fast route convergence does not imply stateful session continuity.",
+        "Incorrect: Only PKCE does not best fit the evidence in this scenario. The key distinction is that Firewall/session-state failover and application recovery is the mechanism or design choice supported by the observed behavior. Fast route convergence does not imply stateful session continuity.",
+        "Correct: Fast route convergence does not imply stateful session continuity."
+      ]
     },
     {
       "id": "kb-0095",
@@ -2288,7 +2852,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: RIB correctness alone does not prove stateful data-plane correctness.",
+        "Incorrect: The number of DNS servers does not best fit the evidence in this scenario. The key distinction is that Whether forward/return flows remain on compatible state or state is synchronized across appliances is the mechanism or design choice supported by the observed behavior. RIB correctness alone does not prove stateful data-plane correctness.",
+        "Incorrect: The MACsec cipher does not best fit the evidence in this scenario. The key distinction is that Whether forward/return flows remain on compatible state or state is synchronized across appliances is the mechanism or design choice supported by the observed behavior. RIB correctness alone does not prove stateful data-plane correctness.",
+        "Incorrect: The OIDC issuer does not best fit the evidence in this scenario. The key distinction is that Whether forward/return flows remain on compatible state or state is synchronized across appliances is the mechanism or design choice supported by the observed behavior. RIB correctness alone does not prove stateful data-plane correctness."
+      ]
     },
     {
       "id": "kb-0096",
@@ -2312,7 +2882,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: DNS recursion does not best fit the evidence in this scenario. The key distinction is that Route redistribution feedback/loop caused by missing policy boundaries is the mechanism or design choice supported by the observed behavior. Cross-domain leaking plus redistribution requires tags/filters and clear route ownership.",
+        "Incorrect: OIDC replay does not best fit the evidence in this scenario. The key distinction is that Route redistribution feedback/loop caused by missing policy boundaries is the mechanism or design choice supported by the observed behavior. Cross-domain leaking plus redistribution requires tags/filters and clear route ownership.",
+        "Incorrect: PRP duplication does not best fit the evidence in this scenario. The key distinction is that Route redistribution feedback/loop caused by missing policy boundaries is the mechanism or design choice supported by the observed behavior. Cross-domain leaking plus redistribution requires tags/filters and clear route ownership.",
+        "Correct: Cross-domain leaking plus redistribution requires tags/filters and clear route ownership."
+      ]
     },
     {
       "id": "kb-0097",
@@ -2336,7 +2912,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: OIDC makes segmentation unnecessary does not best fit the evidence in this scenario. The key distinction is that Identity-aware network segmentation/authorization is still weak even though authentication is strong is the mechanism or design choice supported by the observed behavior. Authentication answers who the user is; network authorization/segmentation decides what that identity can reach.",
+        "Incorrect: MACsec assigns VLANs does not best fit the evidence in this scenario. The key distinction is that Identity-aware network segmentation/authorization is still weak even though authentication is strong is the mechanism or design choice supported by the observed behavior. Authentication answers who the user is; network authorization/segmentation decides what that identity can reach.",
+        "Incorrect: DNSSEC provides segmentation does not best fit the evidence in this scenario. The key distinction is that Identity-aware network segmentation/authorization is still weak even though authentication is strong is the mechanism or design choice supported by the observed behavior. Authentication answers who the user is; network authorization/segmentation decides what that identity can reach.",
+        "Correct: Authentication answers who the user is; network authorization/segmentation decides what that identity can reach."
+      ]
     },
     {
       "id": "kb-0098",
@@ -2360,7 +2942,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Correct: A lower-layer MTU problem can masquerade as a routing-session instability.",
+        "Incorrect: BGP Hold Time does not best fit the evidence in this scenario. The key distinction is that L2 MTU overhead and fragmentation/PMTU effects introduced by MACsec is the mechanism or design choice supported by the observed behavior. A lower-layer MTU problem can masquerade as a routing-session instability.",
+        "Incorrect: DNSSEC DS does not best fit the evidence in this scenario. The key distinction is that L2 MTU overhead and fragmentation/PMTU effects introduced by MACsec is the mechanism or design choice supported by the observed behavior. A lower-layer MTU problem can masquerade as a routing-session instability.",
+        "Incorrect: OIDC audience does not best fit the evidence in this scenario. The key distinction is that L2 MTU overhead and fragmentation/PMTU effects introduced by MACsec is the mechanism or design choice supported by the observed behavior. A lower-layer MTU problem can masquerade as a routing-session instability."
+      ]
     },
     {
       "id": "kb-0099",
@@ -2384,7 +2972,13 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: That RedBoxes support SANs does not best fit the evidence in this scenario. The key distinction is that That PRP guarantees zero recovery time for the entire end-to-end routed application path is the mechanism or design choice supported by the observed behavior. PRP gives zero-time redundancy within its domain; higher-layer routing and applications have their own convergence timelines.",
+        "Correct: PRP gives zero-time redundancy within its domain; higher-layer routing and applications have their own convergence timelines.",
+        "Incorrect: That PRP duplicates frames does not best fit the evidence in this scenario. The key distinction is that That PRP guarantees zero recovery time for the entire end-to-end routed application path is the mechanism or design choice supported by the observed behavior. PRP gives zero-time redundancy within its domain; higher-layer routing and applications have their own convergence timelines.",
+        "Incorrect: That PRP uses two LANs does not best fit the evidence in this scenario. The key distinction is that That PRP guarantees zero recovery time for the entire end-to-end routed application path is the mechanism or design choice supported by the observed behavior. PRP gives zero-time redundancy within its domain; higher-layer routing and applications have their own convergence timelines."
+      ]
     },
     {
       "id": "kb-0100",
@@ -2408,7 +3002,17 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "option_explanations": [
+        "Incorrect: NAT never affects policy does not best fit the evidence in this scenario. The key distinction is that NAT placement is part of the security and routing architecture, not a cosmetic implementation detail is the mechanism or design choice supported by the observed behavior. Where translation occurs changes return routing, source identity, and which policy/session state the firewall sees.",
+        "Correct: Where translation occurs changes return routing, source identity, and which policy/session state the firewall sees.",
+        "Incorrect: Only DNS matters does not best fit the evidence in this scenario. The key distinction is that NAT placement is part of the security and routing architecture, not a cosmetic implementation detail is the mechanism or design choice supported by the observed behavior. Where translation occurs changes return routing, source identity, and which policy/session state the firewall sees.",
+        "Incorrect: Only BGP matters does not best fit the evidence in this scenario. The key distinction is that NAT placement is part of the security and routing architecture, not a cosmetic implementation detail is the mechanism or design choice supported by the observed behavior. Where translation occurs changes return routing, source identity, and which policy/session state the firewall sees."
+      ]
     }
-  ]
+  ],
+  "option_explanation_policy": {
+    "required": true,
+    "rule": "Every option must have its own rationale. Correct choices explain why the evidence supports them; distractors explain why they do not fit the scenario and, when useful, when they would be relevant instead."
+  }
 }
