@@ -1,16 +1,13 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Knowledge Exam — 2026-09-17</title><style>
 :root{--b:#0b1020;--c:#131a2b;--t:#eef3ff;--m:#9fb0d0;--a:#7dd3fc;--g:#86efac;--r:#fca5a5;--d:#2b3654}*{box-sizing:border-box}body{margin:0;background:var(--b);color:var(--t);font:16px/1.55 system-ui}main{max-width:1120px;margin:auto;padding:24px}.hero,.q,#score{background:var(--c);border:1px solid var(--d);border-radius:14px;padding:18px;margin:14px 0}.meta{color:var(--m)}h2{margin-top:38px}.opt{display:block;border:1px solid var(--d);border-radius:9px;padding:10px;margin:7px 0}.correct{border-color:var(--g)!important}.wrong{border-color:var(--r)!important}.exp,.fb{display:none;margin-top:10px;padding:10px;border-radius:8px;background:#0d1528}.show{display:block}.check,.submit{padding:10px 14px;border:0;border-radius:9px;background:var(--a);color:#082032;font-weight:800;cursor:pointer}.check{width:auto;margin-top:8px}.submit{width:100%;font-size:1.05rem;margin-top:24px}#score{display:none;position:sticky;top:8px;z-index:5}#score.show{display:block}a{color:var(--a)}img.exhibit{max-width:100%;border-radius:10px;border:1px solid var(--d);margin:12px 0}</style></head><body><main>
-<section class="hero"><h1>Daily Knowledge Exam — 2026-09-17</h1><p id="intro">Loading question bank…</p><p class="meta">This page automatically loads <code>questions-bank/exam-YYYY-MM-DD.json</code> for its own filename, then loads the bank named by that manifest.</p></section>
+<section class="hero"><h1>Daily Knowledge Exam — 2026-09-17</h1><p id="intro">Loading question bank…</p><p class="meta">This page explicitly loads <code>questions-bank/exam-2026-09-17.json</code>, then loads the bank named by that manifest.</p></section>
 <div id="score"></div><div id="questions"></div><button class="submit" id="submit" hidden>Submit All</button>
 <script>
 let Q=[];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function load(){
- const file=location.pathname.split('/').pop()||'';
- const m=file.match(/^exam-(\\d{4}-\\d{2}-\\d{2})\\.html$/);
- if(!m) throw new Error('This page must be named exam-YYYY-MM-DD.html');
- const examDate=m[1];
- const manifestUrl='questions-bank/exam-'+examDate+'.json';
+ const examDate='2026-09-17';
+ const manifestUrl='questions-bank/exam-2026-09-17.json';
  const manifestResp=await fetch(manifestUrl,{cache:'no-store'});
  if(!manifestResp.ok) throw new Error('Daily manifest not found: '+manifestUrl+' (HTTP '+manifestResp.status+')');
  const sel=await manifestResp.json();
