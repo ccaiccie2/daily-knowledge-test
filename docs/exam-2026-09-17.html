@@ -46,7 +46,34 @@ async function load(){
  document.getElementById('submit').hidden=false;
  document.getElementById('submit').onclick=submitAll;
 }
-function checkOne(i){const q=Q[i],s=document.querySelector('input[name="q'+i+'"]:checked'),fb=document.getElementById('fb'+i),ex=document.getElementById('ex'+i);if(!s){fb.textContent='Select an answer first.';fb.className='fb show';return;}document.querySelectorAll('input[name="q'+i+'"]').forEach(el=>el.closest('.opt').classList.remove('correct','wrong'));document.getElementById('q'+i+'o'+q.answer_index).classList.add('correct');const v=+s.value;if(v===q.answer_index)fb.textContent='Correct.';else{document.getElementById('q'+i+'o'+v).classList.add('wrong');fb.textContent='Incorrect. Correct answer: '+q.options[q.answer_index];}fb.className='fb show';ex.className='exp show';}
+function checkOne(i){
+ const q=Q[i],
+       s=document.querySelector('input[name="q'+i+'"]:checked'),
+       fb=document.getElementById('fb'+i),
+       ex=document.getElementById('ex'+i);
+ if(!s){
+   fb.textContent='Select an answer first.';
+   fb.className='fb show';
+   return;
+ }
+ document.querySelectorAll('input[name="q'+i+'"]').forEach(el=>el.closest('.opt').classList.remove('correct','wrong'));
+ document.getElementById('q'+i+'o'+q.answer_index).classList.add('correct');
+ const v=+s.value;
+ const rationales=Array.isArray(q.option_explanations)?q.option_explanations:[];
+ if(v===q.answer_index){
+   fb.innerHTML='<b>Correct.</b><br>'+esc(rationales[v]||q.explanation||'');
+ }else{
+   document.getElementById('q'+i+'o'+v).classList.add('wrong');
+   const selectedWhy=rationales[v]||('That option does not fit the evidence in this scenario.');
+   const correctWhy=rationales[q.answer_index]||q.explanation||'';
+   fb.innerHTML='<b>Incorrect.</b><br><strong>Why your answer is wrong:</strong> '+esc(selectedWhy)+
+     '<br><br><strong>Correct answer:</strong> '+esc(q.options[q.answer_index])+
+     '<br><strong>Why it is correct:</strong> '+esc(correctWhy);
+ }
+ fb.className='fb show';
+ ex.innerHTML='<b>Concept reinforcement:</b> '+esc(q.explanation||'');
+ ex.className='exp show';
+}
 function submitAll(){let score=0;Q.forEach((q,i)=>{const s=document.querySelector('input[name="q'+i+'"]:checked');if(s&&+s.value===q.answer_index)score++;checkOne(i)});const box=document.getElementById('score');box.className='hero show';box.innerHTML='<h2>Score: '+score+' / '+Q.length+' ('+Math.round(score*100/Q.length)+'%)</h2>';window.scrollTo({top:0,behavior:'smooth'});}
 load().catch(e=>{document.getElementById('intro').textContent='Unable to assemble this exam from its dated JSON manifest: '+e.message;});
 </script></main></body></html>
