@@ -1,0 +1,2414 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-17",
+  "purpose": "Cumulative question bank. New questions must be checked against existing stems and reasoning paths before append.",
+  "dedupe_policy": {
+    "exact_stem": "reject",
+    "normalized_stem": "reject",
+    "near_duplicate_semantics": "reject unless reasoning path is materially different",
+    "template_clone": "reject questions that only swap vendor/product/IP/prefix names",
+    "required_difference": "new questions should test a distinct mechanism, failure mode, evidence set, packet walk, design tradeoff, command interpretation, or verification path"
+  },
+  "questions": [
+    {
+      "id": "kb-0001",
+      "topic": "802.11k/v/r",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A hospital voice handset loses 350–450 ms during every roam. A capture shows most of the delay is active scanning across many 5 GHz channels; once the target AP is chosen, FT authentication and reassociation finish in under 50 ms. Which feature addresses the dominant delay?",
+      "options": [
+        "802.11r only",
+        "802.11k Neighbor Reports",
+        "802.11v BTM alone",
+        "Longer DHCP leases"
+      ],
+      "answer_index": 1,
+      "explanation": "The evidence isolates candidate discovery as the bottleneck. 802.11k reduces the scan search space by supplying neighboring BSSIDs/channels; 802.11r already appears healthy.",
+      "difficulty": "advanced",
+      "tags": [
+        "802-11k-v-r"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0002",
+      "topic": "802.11k/v/r",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A controller sends an 802.11v BSS Transition Management Request recommending AP-2 because AP-1 is overloaded. The station ignores it and stays on AP-1. No disassociation-imminent flag is set. What should you conclude first?",
+      "options": [
+        "The WLAN is necessarily broken",
+        "The controller must immediately deauthenticate it",
+        "The client is allowed to ignore the advisory",
+        "802.11r key derivation failed"
+      ],
+      "answer_index": 2,
+      "explanation": "Ordinary BTM is advisory. The infrastructure can recommend a target, but the client normally retains the final roaming decision.",
+      "difficulty": "advanced",
+      "tags": [
+        "802-11k-v-r"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0003",
+      "topic": "DNS64/NAT64",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An IPv6-only client receives AAAA 64:ff9b::c000:020a for an IPv4-only server, but packets die at the edge. DNS resolution is correct. What must exist on the forwarding path?",
+      "options": [
+        "A MACsec CAK",
+        "A DNSSEC KSK rollover",
+        "An 802.11r mobility domain",
+        "A NAT64 translator configured for the same synthesis prefix"
+      ],
+      "answer_index": 3,
+      "explanation": "DNS64 only synthesizes an IPv6 destination. A NAT64 translator must recognize the same prefix and translate the flow to IPv4.",
+      "difficulty": "advanced",
+      "tags": [
+        "dns64-nat64"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0004",
+      "topic": "DNS64/NAT64",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "External DNS64 synthesizes with 64:ff9b::/96, but the Palo Alto NAT64 rule expects a different prefix. What operational symptom follows?",
+      "options": [
+        "The client falls back to NPTv6 automatically",
+        "Valid-looking AAAA answers that never match the NAT64 translation rule",
+        "DNS stops using UDP",
+        "BGP enters Active"
+      ],
+      "answer_index": 1,
+      "explanation": "DNS64 and NAT64 must agree on the translation prefix. Prefix mismatch breaks the control-plane/data-plane handoff.",
+      "difficulty": "advanced",
+      "tags": [
+        "dns64-nat64"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0005",
+      "topic": "OIDC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A web RP accepts any signed JWT from its IdP and never checks aud. An access token intended for api.example.com is presented to the RP and accepted as a login token. Which validation failure enabled this?",
+      "options": [
+        "The RP failed to validate token audience and token purpose",
+        "The OP used PKCE",
+        "The browser used state",
+        "JWKS was cached"
+      ],
+      "answer_index": 0,
+      "explanation": "Signature validity is not enough. The RP must validate that the token type and audience are intended for that client.",
+      "difficulty": "advanced",
+      "tags": [
+        "oidc"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0006",
+      "topic": "OIDC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An attacker steals the authorization code from a browser redirect but does not know the original code_verifier. Which mechanism is specifically designed to make the stolen code useless?",
+      "options": [
+        "UserInfo",
+        "PKCE",
+        "nonce",
+        "state"
+      ],
+      "answer_index": 1,
+      "explanation": "PKCE binds the authorization code to the client instance through the code_verifier/code_challenge relationship.",
+      "difficulty": "advanced",
+      "tags": [
+        "oidc"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0007",
+      "topic": "Perimeter Design",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A dual-firewall Internet edge reconverges routing in 700 ms, but every established session resets during failover because the standby has no synchronized session state. Which design area was under-specified?",
+      "options": [
+        "HA state synchronization and application recovery behavior",
+        "DNS TTL",
+        "OIDC logout",
+        "802.11k neighbor reports"
+      ],
+      "answer_index": 0,
+      "explanation": "Routing convergence is only one timeline. Stateful HA also requires session/state synchronization and explicit recovery expectations.",
+      "difficulty": "advanced",
+      "tags": [
+        "perimeter-design"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0008",
+      "topic": "Perimeter Design",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The HLD says Internet → firewall → DMZ reverse proxy → app, but the LLD contains no return-path, NAT, or failure-state detail. Why is that a production risk?",
+      "options": [
+        "The design intent was never translated into concrete bidirectional packet/session behavior",
+        "Only the SIEM needs packet details",
+        "Return paths do not matter on stateful firewalls",
+        "HLD always overrides routing"
+      ],
+      "answer_index": 0,
+      "explanation": "A usable LLD must define routing, NAT, policy, session behavior, and failover—not just the forward architecture picture.",
+      "difficulty": "advanced",
+      "tags": [
+        "perimeter-design"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0009",
+      "topic": "DNSSEC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A validating resolver returns SERVFAIL after a KSK rollover. dig +trace shows the parent DS points to a digest that no longer matches the child's active KSK DNSKEY. How will validation classify the child?",
+      "options": [
+        "Insecure",
+        "Bogus",
+        "Secure",
+        "Unsigned but trusted"
+      ],
+      "answer_index": 1,
+      "explanation": "A broken DS→DNSKEY chain is an authenticated-chain failure, so the response becomes Bogus rather than merely Insecure.",
+      "difficulty": "advanced",
+      "tags": [
+        "dnssec"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0010",
+      "topic": "DNSSEC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Signed responses work over TCP but intermittently fail over UDP through one firewall path, especially for DNSKEY answers. What should you investigate?",
+      "options": [
+        "MACsec CKN",
+        "EDNS size, fragmentation/PMTU handling, and TCP fallback",
+        "OIDC nonce reuse",
+        "BGP LOCAL_PREF"
+      ],
+      "answer_index": 1,
+      "explanation": "DNSSEC increases response size, which makes EDNS, fragmentation, MTU, and TCP fallback operationally important.",
+      "difficulty": "advanced",
+      "tags": [
+        "dnssec"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0011",
+      "topic": "MACsec",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Small frames cross a MACsec-protected carrier Ethernet handoff, but near-MTU frames drop only after MACsec is enabled. What is the first data-plane check?",
+      "options": [
+        "Whether OIDC aud is correct",
+        "Whether BGP ORIGIN is IGP",
+        "Whether NAT64 uses 64:ff9b::/96",
+        "Whether MACsec overhead exceeds the service MTU"
+      ],
+      "answer_index": 3,
+      "explanation": "MACsec adds Ethernet overhead. Paths already near MTU can begin dropping larger frames when protection is enabled.",
+      "difficulty": "advanced",
+      "tags": [
+        "macsec"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0012",
+      "topic": "MACsec",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Both sides are configured for AES-GCM, but MKA never forms a secure channel. One side uses CKN WAN-A and the other WAN-B. Why is this significant?",
+      "options": [
+        "CKN selects BGP best path",
+        "The peers do not agree on the connectivity association/keying identity",
+        "CKN is a DNSSEC digest",
+        "CKN changes IP routing"
+      ],
+      "answer_index": 1,
+      "explanation": "MKA peers need compatible CAK/CKN association parameters before SAKs and secure associations can be established.",
+      "difficulty": "advanced",
+      "tags": [
+        "macsec"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0013",
+      "topic": "PRP",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A DANP transmits every Ethernet frame on LAN A and LAN B. LAN A fails completely, yet the control application sees no reconvergence pause. What explains the zero-recovery behavior?",
+      "options": [
+        "The receiver was already accepting duplicate copies and simply continues with the surviving LAN copy",
+        "The RedBox performed NAT",
+        "STP reconverged instantly",
+        "BFD rerouted LAN B"
+      ],
+      "answer_index": 0,
+      "explanation": "PRP duplicates every frame across independent LANs; losing one copy does not require a convergence event.",
+      "difficulty": "advanced",
+      "tags": [
+        "prp"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0014",
+      "topic": "PRP",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A single-attached legacy PLC must participate in a PRP domain without native dual-LAN support. Which component adapts it?",
+      "options": [
+        "A route reflector",
+        "A RedBox",
+        "An OIDC RP",
+        "A NAT64 gateway"
+      ],
+      "answer_index": 1,
+      "explanation": "A RedBox connects SAN devices to the PRP network and handles replication/duplicate-discard functions for them.",
+      "difficulty": "advanced",
+      "tags": [
+        "prp"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0015",
+      "topic": "FortiAP Dynamic VLAN",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "RADIUS Access-Accept returns Tunnel-Type=VLAN, Tunnel-Medium-Type=IEEE-802, and Tunnel-Private-Group-ID=220. Authentication succeeds, but the client lands in the SSID default VLAN. What should you validate first?",
+      "options": [
+        "That dynamic VLAN assignment is enabled and VLAN 220 maps to a valid data path for that AP",
+        "That DNSSEC is disabled",
+        "That BGP Add-Path is enabled",
+        "That 802.11r is disabled"
+      ],
+      "answer_index": 0,
+      "explanation": "Successful authentication does not prove VLAN placement. The FortiAP/FortiGate policy must consume the attributes and map them to a reachable VLAN.",
+      "difficulty": "advanced",
+      "tags": [
+        "fortiap-dynamic-vlan"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0016",
+      "topic": "FortiAP Dynamic VLAN",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A bridge-mode FortiAP correctly assigns VLAN 330, but DHCP never answers. The FortiGate is not tunneling user data. Which dependency is most likely missing?",
+      "options": [
+        "The AP's wired uplink trunk does not carry VLAN 330",
+        "The client lacks 802.11k",
+        "The FortiGate lacks NAT64",
+        "The AP lacks JWKS"
+      ],
+      "answer_index": 0,
+      "explanation": "In bridge mode, user VLANs leave the AP on the physical uplink, so the switching path must carry the dynamically assigned VLAN.",
+      "difficulty": "advanced",
+      "tags": [
+        "fortiap-dynamic-vlan"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0017",
+      "topic": "IOS XE Route Leaking",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "VRF BLUE can reach a shared DNS server leaked from global routing, but replies from the server never return to BLUE. What is the most likely architectural mistake?",
+      "options": [
+        "802.11r FT failed",
+        "DNSSEC became Bogus",
+        "Only the forward route was leaked; the return path into BLUE is missing",
+        "MACsec MKA failed"
+      ],
+      "answer_index": 2,
+      "explanation": "VRFs have separate RIB/FIB domains. Shared services require deliberate bidirectional reachability.",
+      "difficulty": "advanced",
+      "tags": [
+        "ios-xe-route-leaking"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0018",
+      "topic": "IOS XE Route Leaking",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Broad redistribution between VRF BLUE and RED causes a leaked prefix to feed back into its original protocol and oscillate. What control was missing?",
+      "options": [
+        "PKCE",
+        "Selective policy/tagging with redistribution loop prevention",
+        "Longer DHCP leases",
+        "Global ECMP disablement"
+      ],
+      "answer_index": 1,
+      "explanation": "Redistribution across routing domains needs filtering, tagging, and loop-prevention policy—not just mutual redistribution statements.",
+      "difficulty": "advanced",
+      "tags": [
+        "ios-xe-route-leaking"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0019",
+      "topic": "GCP Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two VMs in the same VPC must traverse a third-party firewall, but the design assumes ordinary subnet routing will naturally hairpin through the appliance. What is missing?",
+      "options": [
+        "A PRP RedBox",
+        "An explicit insertion mechanism such as PBR, NSI, or a supported routed next-hop design",
+        "An OIDC nonce",
+        "A DNSSEC trust anchor"
+      ],
+      "answer_index": 1,
+      "explanation": "Same-VPC traffic will not detour through an NVA simply because it exists; the provider must be instructed how to steer it.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0020",
+      "topic": "GCP Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Forward traffic crosses a stateful VM-Series firewall, but the return flow takes a direct VPC route. What property is violated?",
+      "options": [
+        "DNS recursion",
+        "Stateful path symmetry",
+        "MKA key rotation",
+        "802.11k scanning"
+      ],
+      "answer_index": 1,
+      "explanation": "Stateful inspection depends on both directions of a session traversing compatible state.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0021",
+      "topic": "GCP Policy Hierarchy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An organization-level hierarchical firewall rule matches traffic and uses goto_next. Engineers expect an allow, but lower layers still evaluate the flow. Why?",
+      "options": [
+        "goto_next delegates evaluation rather than terminating it",
+        "goto_next enables TLS inspection",
+        "goto_next performs SNAT",
+        "goto_next creates a route"
+      ],
+      "answer_index": 0,
+      "explanation": "goto_next explicitly passes policy evaluation to the next applicable firewall-policy layer.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-policy-hierarchy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0022",
+      "topic": "GCP Policy Hierarchy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A network firewall policy is configured AFTER_CLASSIC_FIREWALL. A classic VPC rule denies the flow first. Can the later network policy allow normally rescue it?",
+      "options": [
+        "Only with BFD",
+        "Yes; any allow overrides any deny",
+        "Only when DNSSEC is off",
+        "No; the earlier terminating decision already handled the packet"
+      ],
+      "answer_index": 3,
+      "explanation": "Policy placement and evaluation order matter. A later layer cannot undo an already terminating earlier decision.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-policy-hierarchy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0023",
+      "topic": "Cross-Cloud Mental Model",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An AWS engineer migrates to GCP and creates a separate route table per subnet, expecting AWS-style explicit subnet associations. What conceptual mistake is being made?",
+      "options": [
+        "GCP has no routes",
+        "AWS has no subnets",
+        "Azure requires MACsec",
+        "GCP route applicability is VPC-level rather than AWS-style subnet route-table association"
+      ],
+      "answer_index": 3,
+      "explanation": "Provider terminology is similar, but route scope and association models differ materially.",
+      "difficulty": "advanced",
+      "tags": [
+        "cross-cloud-mental-model"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0024",
+      "topic": "Cross-Cloud Mental Model",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A design document treats AWS subnets, Azure subnets, and GCP subnets as having identical failure-domain scope. Which distinction matters most?",
+      "options": [
+        "AWS VPCs are global",
+        "GCP subnets are per-VM",
+        "AWS subnets are AZ-scoped, while Azure/GCP subnet constructs are regional in their respective models",
+        "Azure has no regions"
+      ],
+      "answer_index": 2,
+      "explanation": "Availability scope changes how you design HA and fault-domain placement across clouds.",
+      "difficulty": "advanced",
+      "tags": [
+        "cross-cloud-mental-model"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0025",
+      "topic": "GCP NGFW Enterprise Endpoints",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A team deploys a zonal firewall endpoint and tries to add it as a customer route-table next hop. Why is that the wrong model?",
+      "options": [
+        "Cloud NGFW Enterprise uses policy-driven packet interception, not a normal NVA next-hop IP",
+        "Endpoints are BGP peers",
+        "Firewall endpoints are DNS servers",
+        "Endpoints are PRP RedBoxes"
+      ],
+      "answer_index": 0,
+      "explanation": "The managed firewall endpoint is integrated into Google's interception/policy path rather than exposed like a routable appliance ENI.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ngfw-enterprise-endpoints"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0026",
+      "topic": "GCP NGFW Enterprise Endpoints",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "TLS inspection is enabled and browsers immediately begin rejecting many sites although routing is healthy. Which dependency becomes primary?",
+      "options": [
+        "Inspection CA trust and TLS inspection profile behavior",
+        "PRP duplicate discard",
+        "Cloud Router ASN",
+        "BGP confederation ID"
+      ],
+      "answer_index": 0,
+      "explanation": "Decryption/re-signing only works if endpoints trust the inspection CA and the TLS profile is compatible.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ngfw-enterprise-endpoints"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0027",
+      "topic": "GCP NCC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A new NCC VPC spoke attaches successfully but learns none of the expected prefixes from other spokes. What should you inspect before taking packet captures?",
+      "options": [
+        "Spoke type, topology, route exchange, and import/export filters",
+        "DNS64 prefix",
+        "MACsec CAK",
+        "OIDC JWKS"
+      ],
+      "answer_index": 0,
+      "explanation": "NCC is a connectivity control plane; propagation/filter settings are the first place to verify missing learned routes.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ncc"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0028",
+      "topic": "GCP NCC",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "You need branches to reach shared services but not each other. Which NCC design lever creates that behavior?",
+      "options": [
+        "Topology and route-exchange policy limiting spoke-to-spoke propagation",
+        "A full mesh",
+        "PRP sequence numbers",
+        "DNS isolation"
+      ],
+      "answer_index": 0,
+      "explanation": "Reachability is determined by which routes are exchanged among spokes, not merely by attaching everything to one hub.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ncc"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0029",
+      "topic": "GCP NCC Router Appliance",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "VPC-A advertises its prefixes to a two-NIC firewall, but the firewall advertises only default back; VPC-B never learns VPC-A specifics. Which part of the design is incomplete?",
+      "options": [
+        "MACsec MKA",
+        "OIDC login",
+        "Reciprocal BGP route advertisement needed for deterministic inter-VPC forwarding",
+        "DNSSEC signing"
+      ],
+      "answer_index": 2,
+      "explanation": "The Router Appliance model depends on intentional route exchange in both directions.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ncc-router-appliance"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0030",
+      "topic": "GCP NCC Router Appliance",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two stateful firewall instances are placed in ECMP without state synchronization. Intermittent return-path drops appear. What design tension is exposed?",
+      "options": [
+        "DNS64 versus NPTv6",
+        "ECMP resilience versus stateful session symmetry/state sharing",
+        "KSK versus ZSK",
+        "802.11k versus 802.11v"
+      ],
+      "answer_index": 1,
+      "explanation": "Multipath can move a return flow to a different appliance; stateful HA must be designed to tolerate that.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-ncc-router-appliance"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0031",
+      "topic": "GCP Distributed NGFW",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An east-west packet is denied by an earlier policy layer before it ever reaches an apply_security_profile_group rule. What troubleshooting sequence fits the architecture?",
+      "options": [
+        "Check only Cloud NAT",
+        "Walk effective firewall-policy evaluation order before debugging routing",
+        "Check only BGP",
+        "Check only DNS"
+      ],
+      "answer_index": 1,
+      "explanation": "Distributed enforcement happens in policy evaluation; routing can be perfect while an earlier policy decision terminates the flow.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-distributed-ngfw"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0032",
+      "topic": "GCP Distributed NGFW",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A team expects Cloud NAT to provide malware and URL inspection because all Internet traffic uses it. What's the conceptual error?",
+      "options": [
+        "Cloud NAT runs MKA",
+        "Cloud NAT is translation; security inspection comes from firewall/security policy services",
+        "Cloud NAT is an IDS",
+        "Cloud NAT validates JWTs"
+      ],
+      "answer_index": 1,
+      "explanation": "Address translation and L7 security enforcement are separate functions.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-distributed-ngfw"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0033",
+      "topic": "Palo Alto in GCP",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An architect says Google Cloud NGFW Enterprise is simply VM-Series hosted by Google. What distinction must be made?",
+      "options": [
+        "They are identical",
+        "Cloud NGFW Enterprise uses PAN-OS CLI",
+        "Cloud NGFW Enterprise is a Google-native managed inspection service; VM-Series is customer-deployed PAN-OS with its own insertion model",
+        "VM-Series cannot inspect traffic"
+      ],
+      "answer_index": 2,
+      "explanation": "The products can solve similar security problems but have different control, insertion, and operational models.",
+      "difficulty": "advanced",
+      "tags": [
+        "palo-alto-in-gcp"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0034",
+      "topic": "Palo Alto in GCP",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "NSI delivers GENEVE-encapsulated packets to VM-Series, but decapsulated traffic never returns to the consumer flow. Which appliance-side function should you validate?",
+      "options": [
+        "DNSSEC trust anchor",
+        "PAN-OS GENEVE/NSI handling and reinjection behavior",
+        "OIDC nonce",
+        "PRP RCT"
+      ],
+      "answer_index": 1,
+      "explanation": "NSI service insertion depends on the firewall correctly decapsulating, inspecting, and reinjecting traffic.",
+      "difficulty": "advanced",
+      "tags": [
+        "palo-alto-in-gcp"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0035",
+      "topic": "GCP Shared VPC Insertion",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two service-project workloads share a host VPC. The design assumes Shared VPC itself forces east-west traffic through a centralized firewall project. Why is that false?",
+      "options": [
+        "Shared VPC is an ownership/network-sharing model, not a service-insertion primitive",
+        "Shared VPC performs NAT64",
+        "Service projects have separate Internet stacks",
+        "Shared VPC is a firewall next hop"
+      ],
+      "answer_index": 0,
+      "explanation": "Explicit steering such as PBR/NSI/routed insertion is still required.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-shared-vpc-insertion"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0036",
+      "topic": "GCP Shared VPC Insertion",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Hybrid traffic enters through Interconnect but bypasses the intended firewall. What should be audited?",
+      "options": [
+        "OIDC discovery",
+        "DNSSEC NSEC3",
+        "802.11r FT",
+        "Ingress source/path scope of the PBR or other steering mechanism"
+      ],
+      "answer_index": 3,
+      "explanation": "Centralized insertion works only for traffic classes actually matched and steered by the chosen mechanism.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-shared-vpc-insertion"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0037",
+      "topic": "GCP Inspection Taxonomy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A requirement says inline prevention, but the proposal uses Cloud IDS fed by Packet Mirroring. What mismatch should you call out?",
+      "options": [
+        "Packet Mirroring/IDS is out-of-band observation, not inline enforcement",
+        "Packet Mirroring is a route table",
+        "Cloud IDS terminates BGP",
+        "Cloud IDS is NAT"
+      ],
+      "answer_index": 0,
+      "explanation": "Observation does not place the security function in the packet's forwarding path.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-inspection-taxonomy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0038",
+      "topic": "GCP Inspection Taxonomy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A multi-NIC direct firewall VM is chosen instead of an internal passthrough NLB fronting a firewall pool. What operational responsibility increases?",
+      "options": [
+        "PRP supervision",
+        "Explicit next-hop, health, failover, and appliance HA mechanics",
+        "OIDC discovery",
+        "DNSSEC rollover"
+      ],
+      "answer_index": 1,
+      "explanation": "Direct appliance next hops expose more of the HA and routing lifecycle to the operator.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-inspection-taxonomy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0039",
+      "topic": "GCP PBR",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A PBR sends app traffic to an internal passthrough NLB fronting a firewall. After inspection, reinjected traffic matches the same PBR and loops back into the service. What control prevents recursion?",
+      "options": [
+        "A DNSSEC DS record",
+        "A PRP RedBox",
+        "A DEFAULT_ROUTING bypass policy for post-inspection traffic",
+        "An OIDC nonce"
+      ],
+      "answer_index": 2,
+      "explanation": "Service-insertion PBRs often need an explicit bypass/default-routing rule so returned traffic does not re-enter the chain.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-pbr"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0040",
+      "topic": "GCP PBR",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A PBR looks correct, but traffic to a Google-managed service never follows it. Why should you check the service's documented routing caveats?",
+      "options": [
+        "PBR supports only UDP",
+        "PBR requires MACsec",
+        "Some provider destinations have special handling and are not ordinary PBR service-insertion candidates",
+        "Google APIs always use BGP"
+      ],
+      "answer_index": 2,
+      "explanation": "Provider-specific destinations can have special routing semantics that override naive service-chain assumptions.",
+      "difficulty": "advanced",
+      "tags": [
+        "gcp-pbr"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0041",
+      "topic": "Azure Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A hub-spoke design points spoke traffic at Azure Firewall, but propagated gateway routes install a more-specific path that bypasses the hub. Which view tells you what the VM will really use?",
+      "options": [
+        "Only firewall policy",
+        "Only NSG names",
+        "Only DNS",
+        "The effective route table at the workload/NIC"
+      ],
+      "answer_index": 3,
+      "explanation": "The firewall cannot inspect traffic that routing never sends to it; effective routes reveal the actual next-hop decision.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0042",
+      "topic": "Azure Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A third-party NVA hub design is becoming unmanageable because hundreds of UDRs must be updated during failover. Which Azure service can add BGP-based dynamic route exchange with NVAs?",
+      "options": [
+        "Azure Route Server",
+        "Private DNS Resolver",
+        "Azure Front Door",
+        "Application Gateway WAF"
+      ],
+      "answer_index": 0,
+      "explanation": "Route Server provides dynamic routing between NVAs and the Azure virtual network control plane.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0043",
+      "topic": "Azure Firewall Policy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Inbound Internet traffic needs destination translation to an internal service. Which rule type performs the translation?",
+      "options": [
+        "DNAT rule collection",
+        "DNS proxy only",
+        "Application rule only",
+        "Threat-intelligence allowlist only"
+      ],
+      "answer_index": 0,
+      "explanation": "DNAT rules translate the destination for inbound connections.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-policy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0044",
+      "topic": "Azure Firewall Policy",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Application rules using FQDNs stop matching after clients are moved to a DNS path inconsistent with the firewall's configured DNS behavior. What dependency was overlooked?",
+      "options": [
+        "MACsec CAK",
+        "BGP cluster ID",
+        "PRP LAN A",
+        "The firewall's FQDN policy depends on compatible DNS resolution behavior"
+      ],
+      "answer_index": 3,
+      "explanation": "FQDN-based filtering is only as reliable as the name-resolution model feeding those policy decisions.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-policy"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0045",
+      "topic": "Azure ExpressRoute",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two circuits advertise the same prefix. Engineers expect the circuit with lower measured latency to win, but Azure picks the other. Why?",
+      "options": [
+        "BGP path selection and Azure routing policy, not active RTT, choose the route",
+        "ExpressRoute chooses alphabetically",
+        "ICMP RTT automatically becomes MED",
+        "Azure uses DNS TTL"
+      ],
+      "answer_index": 0,
+      "explanation": "Control-plane attributes and policy drive path selection unless you deliberately engineer otherwise.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-expressroute"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0046",
+      "topic": "Azure ExpressRoute",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The gateway learns an on-prem prefix, but a VM still does not use it. What should you compare end to end?",
+      "options": [
+        "Only DNS records",
+        "Only certificate chains",
+        "Only NSG logs",
+        "Gateway/BGP learned routes, propagation, and the VM's effective routes"
+      ],
+      "answer_index": 3,
+      "explanation": "Route presence at the gateway does not prove the route propagated to the actual workload.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-expressroute"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0047",
+      "topic": "Azure Private Endpoint Inspection",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A spoke VM resolves a PaaS name to a Private Endpoint IP, but traffic follows a direct local route and never reaches the hub firewall. What design problem is exposed?",
+      "options": [
+        "DNSSEC chain break",
+        "OIDC state mismatch",
+        "MACsec replay",
+        "Private Endpoint routing specificity and inspection-path design"
+      ],
+      "answer_index": 3,
+      "explanation": "Private Endpoint traffic can follow very specific local paths; inspection requires a supported, deliberate route architecture.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-private-endpoint-inspection"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0048",
+      "topic": "Azure Private Endpoint Inspection",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An ILB-backed NVA receives the forward flow to a Private Endpoint, but the endpoint returns directly to the client. What fails first on a stateful firewall?",
+      "options": [
+        "Session symmetry",
+        "PRP duplication",
+        "Azure DNS",
+        "ExpressRoute encryption"
+      ],
+      "answer_index": 0,
+      "explanation": "A stateful NVA needs both directions of a session in the expected state context.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-private-endpoint-inspection"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0049",
+      "topic": "Azure Front Door/App Gateway WAF",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A global web service needs anycast edge entry, global HTTP acceleration, and WAF before regional backends. Which service aligns with that role?",
+      "options": [
+        "ExpressRoute Gateway",
+        "Application Gateway WAF only",
+        "Azure Front Door WAF",
+        "Azure Route Server"
+      ],
+      "answer_index": 2,
+      "explanation": "Front Door is the global edge L7 service; Application Gateway is regional.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-front-door-app-gateway-waf"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0050",
+      "topic": "Azure Front Door/App Gateway WAF",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A private regional app needs WAF close to the VNet backend plus path-based routing. Which service fits better?",
+      "options": [
+        "Azure Route Server",
+        "Virtual WAN hub",
+        "Front Door only",
+        "Application Gateway WAF"
+      ],
+      "answer_index": 3,
+      "explanation": "Application Gateway is the regional L7 load balancer/WAF integrated with VNet backends.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-front-door-app-gateway-waf"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0051",
+      "topic": "Azure Forced Tunneling",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A VNet sends 0/0 over ExpressRoute to on-prem Internet inspection. SaaS latency doubles and the VNet now depends on the WAN and on-prem egress stack. What tradeoff is being exercised?",
+      "options": [
+        "802.11k versus 802.11r",
+        "PRP versus HSR",
+        "DNSSEC versus DNS64",
+        "Centralized control versus path stretch and dependency concentration"
+      ],
+      "answer_index": 3,
+      "explanation": "Forced tunneling centralizes egress policy but can add latency and failure dependencies.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-forced-tunneling"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0052",
+      "topic": "Azure Forced Tunneling",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The 0/0 route is present, but Azure platform traffic breaks. Which design work was likely skipped?",
+      "options": [
+        "OIDC JWKS",
+        "PRP supervision",
+        "MACsec MKA",
+        "Review of documented service tags, platform exceptions, and required Azure routes"
+      ],
+      "answer_index": 3,
+      "explanation": "Forced tunneling must account for traffic that cannot be treated as ordinary Internet egress.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-forced-tunneling"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0053",
+      "topic": "Azure vWAN Integrated NGFW",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An enterprise wants a supported third-party firewall integrated directly into the managed Virtual WAN hub rather than deploying firewall VMs in a customer VNet. What operational benefit is being sought?",
+      "options": [
+        "Reduced customer-managed service-insertion plumbing through managed hub integration",
+        "Removal of all routing",
+        "Automatic OIDC",
+        "Layer-2 stretching"
+      ],
+      "answer_index": 0,
+      "explanation": "Integrated NVAs move more routing/insertion mechanics into the managed Virtual WAN architecture.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-integrated-ngfw"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0054",
+      "topic": "Azure vWAN Integrated NGFW",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Branch Internet traffic is inspected, but branch-to-branch private traffic bypasses the integrated firewall. What should be checked?",
+      "options": [
+        "MACsec CKN",
+        "DNSSEC DS",
+        "Routing Intent and which traffic classes are actually steered through the security provider",
+        "802.11v BTM"
+      ],
+      "answer_index": 2,
+      "explanation": "Managed hub routing can steer Internet and private traffic differently.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-integrated-ngfw"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0055",
+      "topic": "Azure Customer-Managed NVA Hub",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Spoke A→B goes through the hub firewall, but B→A returns directly over peering. What was omitted?",
+      "options": [
+        "DNS64 synthesis",
+        "OIDC state",
+        "PRP RCT",
+        "Symmetric UDR/service-insertion routing on the return direction"
+      ],
+      "answer_index": 3,
+      "explanation": "Stateful hub firewalls require both directions to be steered through the same service path.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-customer-managed-nva-hub"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0056",
+      "topic": "Azure Customer-Managed NVA Hub",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The NVA learns routes dynamically from Azure Route Server, but the spoke still uses a stale static UDR pointing to the failed appliance IP. What inconsistency exists?",
+      "options": [
+        "DNSSEC is unsigned",
+        "A dynamic control plane is being undermined by static data-plane steering",
+        "802.11r is disabled",
+        "MACsec uses the wrong cipher"
+      ],
+      "answer_index": 1,
+      "explanation": "Dynamic failover only helps if actual forwarding follows the dynamically selected next hop.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-customer-managed-nva-hub"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0057",
+      "topic": "Azure GWLB",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A public workload uses a standard load balancer and needs transparent firewall insertion without adding workload UDRs. Which Azure construct is designed for this?",
+      "options": [
+        "ExpressRoute Global Reach",
+        "Route Server only",
+        "Front Door only",
+        "Gateway Load Balancer chaining"
+      ],
+      "answer_index": 3,
+      "explanation": "GWLB transparently chains traffic through NVAs using encapsulation/service chaining.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-gwlb"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0058",
+      "topic": "Azure GWLB",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The NVA receives encapsulated traffic but sends return packets out a normal NIC path instead of the GWLB tunnel. What breaks?",
+      "options": [
+        "OIDC nonce",
+        "BGP CLUSTER_LIST",
+        "The symmetric transparent service chain",
+        "DNSSEC validation"
+      ],
+      "answer_index": 2,
+      "explanation": "GWLB insertion depends on correct return through the service tunnel so both directions stay in the chain.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-gwlb"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0059",
+      "topic": "Azure vWAN Security SaaS",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A branch should send Internet traffic to a cloud security provider from the Virtual WAN hub instead of backhauling through a self-managed firewall VNet. Which integration model is being used?",
+      "options": [
+        "ExpressRoute Global Reach",
+        "Virtual WAN Security SaaS provider integration",
+        "Route Server in every spoke",
+        "Application Gateway"
+      ],
+      "answer_index": 1,
+      "explanation": "The managed hub can steer Internet traffic to a supported cloud security provider.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-security-saas"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0060",
+      "topic": "Azure vWAN Security SaaS",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Private east-west traffic is unexpectedly sent to the Internet security SaaS service. What should you inspect?",
+      "options": [
+        "Routing Intent and traffic-category mapping for private versus Internet flows",
+        "OIDC UserInfo",
+        "DNSSEC ZSK",
+        "MACsec replay window"
+      ],
+      "answer_index": 0,
+      "explanation": "The managed control plane determines which traffic classes are handed to the security service.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-security-saas"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0061",
+      "topic": "Azure vWAN Secured Hub",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A secured hub contains Azure Firewall, yet branch-to-spoke traffic bypasses inspection. Which managed construct should you review first?",
+      "options": [
+        "Only WAF rules",
+        "Routing Intent for Private Traffic plus route-table associations/propagation",
+        "Only Azure Policy",
+        "Only DNS proxy"
+      ],
+      "answer_index": 1,
+      "explanation": "Secured hub inspection depends on Virtual WAN routing intent and effective hub route relationships.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-secured-hub"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0062",
+      "topic": "Azure vWAN Secured Hub",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A design document says 'managed hub means HA is automatic, so no failover testing is needed.' What is the correction?",
+      "options": [
+        "Managed infrastructure still requires validation of route convergence, firewall state, and application recovery",
+        "BGP is never involved",
+        "HA testing is unnecessary in cloud",
+        "Only DNS can fail"
+      ],
+      "answer_index": 0,
+      "explanation": "Managed services reduce platform operations, not the need to validate real failure behavior.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-secured-hub"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0063",
+      "topic": "Azure vWAN Multi-Region",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Europe and US branches attach to local hubs, but all private traffic is forced through one US firewall. What tradeoff should be challenged?",
+      "options": [
+        "MACsec versus IPsec",
+        "Policy centralization versus cross-region hairpin latency and failure-domain concentration",
+        "DNSSEC versus NSEC3",
+        "OIDC versus OAuth"
+      ],
+      "answer_index": 1,
+      "explanation": "Multi-region designs must balance centralized inspection against path stretch and resilience.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-multi-region"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0064",
+      "topic": "Azure vWAN Multi-Region",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A DR plan says traffic will automatically use the other hub. What must be proven before accepting that claim?",
+      "options": [
+        "Actual connection redundancy, route propagation/preference, and the stateful security path during hub failure",
+        "Only storage replication",
+        "Only VM boot time",
+        "Only DNS TTL"
+      ],
+      "answer_index": 0,
+      "explanation": "Control-plane alternate reachability does not guarantee the desired inspection/session path.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-vwan-multi-region"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0065",
+      "topic": "Azure Route Server + NVA",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two NVA instances advertise a default route via BGP. One fails and withdraws the route. What advantage does this provide over static UDR-only failover?",
+      "options": [
+        "It performs WAF",
+        "The routing control plane can react to peer state without manual next-hop edits",
+        "It signs DNS",
+        "It encrypts traffic"
+      ],
+      "answer_index": 1,
+      "explanation": "BGP withdrawal/reselection can automate route convergence around failed NVAs.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-route-server-nva"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0066",
+      "topic": "Azure Route Server + NVA",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The NVA learns a prefix from Azure, redistributes it back, and creates instability. What control is missing?",
+      "options": [
+        "Import/export policy and routing-loop prevention",
+        "PKCE",
+        "802.11v",
+        "NSEC3"
+      ],
+      "answer_index": 0,
+      "explanation": "Dynamic service insertion needs route policy, not uncontrolled mutual advertisement.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-route-server-nva"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0067",
+      "topic": "Azure Firewall Methods",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A proposal says one Azure insertion method is universally best for all east-west, private endpoint, Internet, and load-balanced traffic. What is wrong with that conclusion?",
+      "options": [
+        "Each method has different steering scope, support boundaries, and operational tradeoffs",
+        "All methods are identical",
+        "Azure supports only one path",
+        "Routing is irrelevant"
+      ],
+      "answer_index": 0,
+      "explanation": "Method selection depends on the traffic class, ownership model, symmetry, and desired operations.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-methods"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0068",
+      "topic": "Azure Firewall Methods",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Engineers validate only firewall rule hits after a migration. Why is that insufficient?",
+      "options": [
+        "Only logs matter",
+        "Routing cannot bypass a firewall",
+        "They must also validate effective routing, NAT, return path, HA/failover, and application behavior",
+        "Rule hits prove everything"
+      ],
+      "answer_index": 2,
+      "explanation": "A correct rule hit does not prove end-to-end forwarding or failure behavior.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-methods"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0069",
+      "topic": "Azure Firewall Hub VNet",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two spokes are peered to a hub containing Azure Firewall, but spoke-to-spoke traffic takes direct peering and bypasses inspection. What is typically required?",
+      "options": [
+        "UDRs/effective routing that steer the relevant prefixes through the firewall",
+        "OIDC discovery",
+        "Front Door probes",
+        "ExpressRoute Global Reach"
+      ],
+      "answer_index": 0,
+      "explanation": "Peering gives reachability; it does not itself create a firewall service chain.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-hub-vnet"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0070",
+      "topic": "Azure Firewall Hub VNet",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Firewall logs show outbound allow, but Internet replies never return to a private spoke address. Which translation check is central?",
+      "options": [
+        "Whether MACsec uses AES-256",
+        "Whether 802.11r is enabled",
+        "Whether SNAT is occurring as expected for that egress path",
+        "Whether DNSSEC is signed"
+      ],
+      "answer_index": 2,
+      "explanation": "Internet egress generally needs a returnable translated source and correct NAT placement.",
+      "difficulty": "advanced",
+      "tags": [
+        "azure-firewall-hub-vnet"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0071",
+      "topic": "ExpressRoute Global Reach",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Site A and Site B each have ExpressRoute circuits and need private site-to-site connectivity without traversing Azure VNets. Which feature is designed for this?",
+      "options": [
+        "Application Gateway",
+        "Private Endpoint",
+        "ExpressRoute Global Reach",
+        "Azure Front Door"
+      ],
+      "answer_index": 2,
+      "explanation": "Global Reach links on-prem networks through Microsoft's backbone using ExpressRoute circuits.",
+      "difficulty": "advanced",
+      "tags": [
+        "expressroute-global-reach"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0072",
+      "topic": "ExpressRoute Global Reach",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Security assumes all Global Reach traffic automatically crosses an Azure Firewall in a VNet. What correction is required?",
+      "options": [
+        "Global Reach is DNS proxy",
+        "Global Reach is connectivity; firewall insertion requires a separate explicit architecture",
+        "Global Reach is itself a firewall",
+        "Global Reach is NAT64"
+      ],
+      "answer_index": 1,
+      "explanation": "The feature joins circuits; it does not insert a VNet firewall by default.",
+      "difficulty": "advanced",
+      "tags": [
+        "expressroute-global-reach"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0073",
+      "topic": "AWS Palo Alto GWLB Overlay",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "GWLB delivers GENEVE traffic to VM-Series, but PAN-OS has no route in its overlay virtual router for the post-inspection destination. What happens?",
+      "options": [
+        "GWLB installs PAN-OS routes automatically",
+        "DNS fixes the path",
+        "BGP is irrelevant",
+        "Underlay delivery succeeds but the decapsulated flow still fails overlay forwarding"
+      ],
+      "answer_index": 3,
+      "explanation": "The AWS underlay service path and the firewall's overlay forwarding table are separate routing layers.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-palo-alto-gwlb-overlay"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0074",
+      "topic": "AWS Palo Alto GWLB Overlay",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An endpoint is mapped to the wrong PAN-OS zone. Routing still works, but policy does not match as designed. Why?",
+      "options": [
+        "PAN-OS policy is zone-aware, so endpoint-to-zone mapping is part of the security context",
+        "BGP LOCAL_PREF changes zones",
+        "DNS changes zones",
+        "NAT64 changes zones"
+      ],
+      "answer_index": 0,
+      "explanation": "Overlay forwarding and security-zone classification must both be correct.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-palo-alto-gwlb-overlay"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0075",
+      "topic": "AWS Direct Connect Transit VIF",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A Direct Connect circuit must reach many VPCs behind a Transit Gateway. Which VIF type belongs in that architecture?",
+      "options": [
+        "Public VIF only",
+        "Transit VIF associated with the DX Gateway/TGW design",
+        "No VIF",
+        "Route 53 Resolver endpoint"
+      ],
+      "answer_index": 1,
+      "explanation": "Transit VIF is the Direct Connect construct for transit connectivity toward TGW through a Direct Connect Gateway.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-direct-connect-transit-vif"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0076",
+      "topic": "AWS Direct Connect Transit VIF",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The BGP session is Established, but an on-prem router never receives one spoke VPC prefix. Which control planes should be traced?",
+      "options": [
+        "Only optical levels",
+        "Only security groups",
+        "Only DNS",
+        "TGW propagation/association, DX Gateway allowed prefixes/association, then BGP advertisement"
+      ],
+      "answer_index": 3,
+      "explanation": "Established BGP proves adjacency, not that the desired route propagated through every transit domain.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-direct-connect-transit-vif"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0077",
+      "topic": "AWS Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A spoke VPC sends traffic to centralized inspection through TGW, but the return path hashes through a different AZ/attachment and firewall state is missed. Which TGW design feature may be required?",
+      "options": [
+        "CloudFront caching",
+        "Appliance mode with AZ-symmetric stateful routing",
+        "Route 53 health checks",
+        "S3 endpoint policy"
+      ],
+      "answer_index": 1,
+      "explanation": "TGW appliance-mode patterns are used to preserve predictable symmetry for stateful appliances.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0078",
+      "topic": "AWS Firewall Insertion Summary",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A workload needs transparent inline inspection without static routes to individual firewall ENIs. Which service family is purpose-built for that?",
+      "options": [
+        "S3 Gateway Endpoint",
+        "GWLB with GWLBE",
+        "CloudFront Function",
+        "Route 53 Hosted Zone"
+      ],
+      "answer_index": 1,
+      "explanation": "GWLB abstracts a scalable appliance fleet behind endpoint-based service insertion.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-firewall-insertion-summary"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0079",
+      "topic": "AWS TGW/Cloud WAN Connect",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An SD-WAN appliance needs BGP-based overlay integration into AWS transit. The design uses Connect. What still must exist beneath the overlay?",
+      "options": [
+        "DNSSEC",
+        "OIDC",
+        "A working underlay path to carry the Connect/GRE traffic",
+        "PRP"
+      ],
+      "answer_index": 2,
+      "explanation": "Overlay routing does not replace the transport it rides on.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-tgw-cloud-wan-connect"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0080",
+      "topic": "AWS TGW/Cloud WAN Connect",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "The overlay learns routes correctly, but the stateful firewall peer is used in ECMP and return flows land on another appliance. What extra problem exists beyond BGP reachability?",
+      "options": [
+        "Session symmetry and firewall state distribution",
+        "Only ASN uniqueness",
+        "Only DNS TTL",
+        "Only IAM"
+      ],
+      "answer_index": 0,
+      "explanation": "A routing overlay can be logically correct while still violating stateful forwarding requirements.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-tgw-cloud-wan-connect"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0081",
+      "topic": "AWS VPC Route Server",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two NVAs advertise routes dynamically. One fails and withdraws them. What operational problem is VPC Route Server intended to reduce?",
+      "options": [
+        "Manual/static VPC route-table next-hop management for NVA failover",
+        "MACsec MKA",
+        "DNSSEC rollover",
+        "OIDC rotation"
+      ],
+      "answer_index": 0,
+      "explanation": "Dynamic route exchange lets VPC routing respond to NVA control-plane state.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-vpc-route-server"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0082",
+      "topic": "AWS VPC Route Server",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Two NVAs advertise equal paths but do not synchronize state. Flows rebalance after maintenance and reset. What design mismatch caused this?",
+      "options": [
+        "Dynamic multipath/failover was not aligned with stateful HA behavior",
+        "OIDC audience mismatch",
+        "MACsec SCI collision",
+        "DNSSEC failure"
+      ],
+      "answer_index": 0,
+      "explanation": "Control-plane redundancy must be compatible with appliance session-state architecture.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-vpc-route-server"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0083",
+      "topic": "AWS Cloud WAN Service Insertion",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Multiple segments must reach shared services only through a centralized firewall attachment. Which policy object should enforce that intent?",
+      "options": [
+        "Route 53 hosted zone",
+        "Cloud WAN core network policy and segment/service-insertion routing relationships",
+        "IAM group",
+        "S3 bucket policy"
+      ],
+      "answer_index": 1,
+      "explanation": "Cloud WAN centralizes attachment and segment routing policy.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-cloud-wan-service-insertion"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0084",
+      "topic": "AWS Cloud WAN Service Insertion",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A new segment unexpectedly learns routes from another isolated segment. What should be audited first?",
+      "options": [
+        "Segment sharing/route propagation rules in the core network policy",
+        "Only DNS",
+        "Only security groups",
+        "Only NACLs"
+      ],
+      "answer_index": 0,
+      "explanation": "Segmentation is primarily a routing-policy construct in Cloud WAN.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-cloud-wan-service-insertion"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0085",
+      "topic": "AWS ALB/NLB + GWLB",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "Internet traffic hits a load balancer, then a GWLBE, then a stateful firewall. Forward traffic is inspected but return traffic bypasses the endpoint. What breaks?",
+      "options": [
+        "ALB automatically mirrors state",
+        "The firewall sees an incomplete/asymmetric session",
+        "GWLB is stateless by definition",
+        "DNS fixes symmetry"
+      ],
+      "answer_index": 1,
+      "explanation": "Inline inspection around load balancers still requires a coherent bidirectional service chain.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-alb-nlb-gwlb"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0086",
+      "topic": "AWS ALB/NLB + GWLB",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A firewall policy assumes the load balancer source IP, but the selected NLB mode preserves client source addresses. Why does load-balancer choice matter?",
+      "options": [
+        "GWLB hides all addresses",
+        "ALB/NLB packet and source-address behavior changes what the firewall actually sees",
+        "Both always SNAT identically",
+        "Route 53 rewrites source IP"
+      ],
+      "answer_index": 1,
+      "explanation": "Security policy must be based on the packet attributes present on the real path.",
+      "difficulty": "advanced",
+      "tags": [
+        "aws-alb-nlb-gwlb"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0087",
+      "topic": "Legacy AWS TGW NVA",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A TGW sends spoke traffic directly into an inspection VPC attachment with firewall ENIs. What operational burden is higher than with GWLB abstraction?",
+      "options": [
+        "You directly own TGW route tables, AZ placement, ENI next hops, HA, and symmetry",
+        "DNSSEC is mandatory",
+        "OIDC is unsupported",
+        "BGP cannot exist"
+      ],
+      "answer_index": 0,
+      "explanation": "Direct NVA attachment designs expose more routing and appliance lifecycle mechanics to the operator.",
+      "difficulty": "advanced",
+      "tags": [
+        "legacy-aws-tgw-nva"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0088",
+      "topic": "Legacy AWS TGW NVA",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A new spoke attachment is healthy but never crosses inspection. Which control plane should be checked first?",
+      "options": [
+        "DNS only",
+        "TGW route-table association, propagation, and routes toward the inspection attachment",
+        "IAM only",
+        "Firewall CPU only"
+      ],
+      "answer_index": 1,
+      "explanation": "TGW route tables decide which attachment path a spoke uses.",
+      "difficulty": "advanced",
+      "tags": [
+        "legacy-aws-tgw-nva"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0089",
+      "topic": "Centralized AWS Ingress Caveats",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A central ingress VPC tries to route directly across TGW to the private nodes of an ALB that belongs to another VPC, treating the ALB like a generic routed appliance. Why is this fragile?",
+      "options": [
+        "Managed load balancers have service-specific connectivity semantics and are not generic routed next hops",
+        "ALBs run OSPF",
+        "TGW cannot route TCP",
+        "DNSSEC blocks cross-VPC use"
+      ],
+      "answer_index": 0,
+      "explanation": "Managed frontends have documented supported connectivity models that must be respected.",
+      "difficulty": "advanced",
+      "tags": [
+        "centralized-aws-ingress-caveats"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0090",
+      "topic": "Centralized AWS Ingress Caveats",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "One central inspection VPC adds cross-AZ and TGW hops to every inbound flow across many applications. What should be evaluated beyond policy consistency?",
+      "options": [
+        "Only certificate names",
+        "Latency, processing cost, failure-domain concentration, and service supportability",
+        "Only DNS TTL",
+        "Only IAM"
+      ],
+      "answer_index": 1,
+      "explanation": "Centralization trades operational consistency for path stretch, cost, and blast-radius concerns.",
+      "difficulty": "advanced",
+      "tags": [
+        "centralized-aws-ingress-caveats"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0091",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A wireless client roams successfully using 802.11r, keeps its IP, but its OIDC-authenticated application session still resets because the reverse proxy loses source affinity. Which conclusion is strongest?",
+      "options": [
+        "The wireless and IP mobility layers succeeded; the remaining failure is application/proxy session handling",
+        "DNSSEC failed",
+        "802.11r failed",
+        "NAT64 failed"
+      ],
+      "answer_index": 0,
+      "explanation": "Layered troubleshooting prevents blaming a healthy lower layer for an application-layer continuity problem.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0092",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "An IPv6-only client resolves a DNSSEC-signed IPv4-only name through DNS64. The validator marks the synthesized answer Bogus. Which design topic must be considered?",
+      "options": [
+        "MACsec MTU",
+        "PRP duplicate discard",
+        "BGP CLUSTER_LIST",
+        "DNSSEC validation and DNS64 synthesis interaction/trust placement"
+      ],
+      "answer_index": 3,
+      "explanation": "DNSSEC and DNS64 interact because synthesis modifies DNS data; validation must occur in an architecture that understands that relationship.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0093",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A centralized cloud firewall shows no session for a failed flow, but the workload effective route points directly to the destination. What should you fix before changing firewall policy?",
+      "options": [
+        "The service-insertion routing/steering path",
+        "The DNSSEC KSK",
+        "The firewall rulebase",
+        "The OIDC nonce"
+      ],
+      "answer_index": 0,
+      "explanation": "If the packet never reaches the firewall, policy tuning cannot fix the failure.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0094",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A BGP-driven NVA service-insertion design converges routes in under one second, yet TCP sessions still reset. What separate timeline must you validate?",
+      "options": [
+        "Only DNS TTL",
+        "Only BGP detection",
+        "Only PKCE",
+        "Firewall/session-state failover and application recovery"
+      ],
+      "answer_index": 3,
+      "explanation": "Fast route convergence does not imply stateful session continuity.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0095",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A cloud design uses ECMP across stateful NVAs because equal-cost paths look healthy in the RIB. Which evidence determines whether this is actually safe?",
+      "options": [
+        "Whether forward/return flows remain on compatible state or state is synchronized across appliances",
+        "The number of DNS servers",
+        "The MACsec cipher",
+        "The OIDC issuer"
+      ],
+      "answer_index": 0,
+      "explanation": "RIB correctness alone does not prove stateful data-plane correctness.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0096",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A shared-service route is leaked between VRFs and then redistributed into BGP. The prefix returns from another domain with different attributes and gets reintroduced. What failure class is this?",
+      "options": [
+        "DNS recursion",
+        "OIDC replay",
+        "PRP duplication",
+        "Route redistribution feedback/loop caused by missing policy boundaries"
+      ],
+      "answer_index": 3,
+      "explanation": "Cross-domain leaking plus redistribution requires tags/filters and clear route ownership.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0097",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A zero-trust design authenticates users with OIDC but places every authenticated user into the same flat wireless VLAN. What architectural gap remains?",
+      "options": [
+        "OIDC makes segmentation unnecessary",
+        "MACsec assigns VLANs",
+        "DNSSEC provides segmentation",
+        "Identity-aware network segmentation/authorization is still weak even though authentication is strong"
+      ],
+      "answer_index": 3,
+      "explanation": "Authentication answers who the user is; network authorization/segmentation decides what that identity can reach.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0098",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A MACsec-protected WAN link carries an ExpressRoute or Direct Connect underlay. BGP drops only after MACsec is enabled on near-MTU paths. What should be tested before changing BGP timers?",
+      "options": [
+        "L2 MTU overhead and fragmentation/PMTU effects introduced by MACsec",
+        "BGP Hold Time",
+        "DNSSEC DS",
+        "OIDC audience"
+      ],
+      "answer_index": 0,
+      "explanation": "A lower-layer MTU problem can masquerade as a routing-session instability.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0099",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "PRP removes L2 reconvergence time inside an industrial cell, but the upstream routed gateway still takes seconds to reconverge. What should the operations team avoid claiming?",
+      "options": [
+        "That RedBoxes support SANs",
+        "That PRP guarantees zero recovery time for the entire end-to-end routed application path",
+        "That PRP duplicates frames",
+        "That PRP uses two LANs"
+      ],
+      "answer_index": 1,
+      "explanation": "PRP gives zero-time redundancy within its domain; higher-layer routing and applications have their own convergence timelines.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    },
+    {
+      "id": "kb-0100",
+      "topic": "Integration",
+      "source_repo": "ccaiccie/knowledge",
+      "source_article": null,
+      "reasoning_type": "scenario",
+      "stem": "A cloud firewall design is correct on the forward path, but NAT is performed after the firewall in one region and before it in another. Troubleshooting shows different source identities and policy hits. What lesson applies?",
+      "options": [
+        "NAT never affects policy",
+        "NAT placement is part of the security and routing architecture, not a cosmetic implementation detail",
+        "Only DNS matters",
+        "Only BGP matters"
+      ],
+      "answer_index": 1,
+      "explanation": "Where translation occurs changes return routing, source identity, and which policy/session state the firewall sees.",
+      "difficulty": "advanced",
+      "tags": [
+        "integration"
+      ],
+      "exhibit": null,
+      "first_added": "2026-09-17",
+      "last_used": "2026-09-17",
+      "times_used": 1
+    }
+  ]
+}
