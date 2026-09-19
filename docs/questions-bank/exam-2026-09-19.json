@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "title": "Daily Knowledge Exam — 2026-09-19",
+  "bank": "master-v2.json",
+  "strategy": {
+    "minimum_questions": 100,
+    "mix": "spaced-repetition rotation from the validated v2 article-specific bank",
+    "avoid_recent_repeats": false,
+    "source_index_sha": "6a912ce376075b7877ee95fae411612aaabf307f",
+    "coverage_note": "The current v2 bank has 100 validated questions across 45 article families. The README now indexes additional pre-v2 articles; those remain a bank-expansion backlog rather than being falsely claimed as covered by this manifest."
+  },
+  "question_ids": ["kb2-0026","kb2-0027","kb2-0028","kb2-0029","kb2-0030","kb2-0031","kb2-0032","kb2-0033","kb2-0034","kb2-0035","kb2-0036","kb2-0037","kb2-0038","kb2-0039","kb2-0040","kb2-0041","kb2-0042","kb2-0043","kb2-0044","kb2-0045","kb2-0046","kb2-0047","kb2-0048","kb2-0049","kb2-0050","kb2-0051","kb2-0052","kb2-0053","kb2-0054","kb2-0055","kb2-0056","kb2-0057","kb2-0058","kb2-0059","kb2-0060","kb2-0061","kb2-0062","kb2-0063","kb2-0064","kb2-0065","kb2-0066","kb2-0067","kb2-0068","kb2-0069","kb2-0070","kb2-0071","kb2-0072","kb2-0073","kb2-0074","kb2-0075","kb2-0076","kb2-0077","kb2-0078","kb2-0079","kb2-0080","kb2-0081","kb2-0082","kb2-0083","kb2-0084","kb2-0085","kb2-0086","kb2-0087","kb2-0088","kb2-0089","kb2-0090","kb2-0091","kb2-0092","kb2-0093","kb2-0094","kb2-0095","kb2-0096","kb2-0097","kb2-0098","kb2-0099","kb2-0100","kb2-0001","kb2-0002","kb2-0003","kb2-0004","kb2-0005","kb2-0006","kb2-0007","kb2-0008","kb2-0009","kb2-0010","kb2-0011","kb2-0012","kb2-0013","kb2-0014","kb2-0015","kb2-0016","kb2-0017","kb2-0018","kb2-0019","kb2-0020","kb2-0021","kb2-0022","kb2-0023","kb2-0024","kb2-0025"]
+}
