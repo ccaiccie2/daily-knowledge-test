@@ -1,7 +1,7 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "bank_id": "master-v2",
-  "updated": "2026-09-17",
+  "updated": "2026-09-19",
   "purpose": "Article-specific scenario bank replacing the legacy imported question set.",
   "source_index": "ccaiccie/knowledge/README.md",
   "indexed_article_count": 45,
@@ -49,7 +49,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-16-26-18-03_IEEE_80211k_80211v_80211r_WiFi_Roaming_Deep_Dive.md",
+      "source_section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+      "memory_refresh": {
+        "article": "IEEE 802.11k/v/r Wi-Fi Roaming",
+        "section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-16-26-18-03_IEEE_80211k_80211v_80211r_WiFi_Roaming_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0002",
@@ -82,7 +89,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-16-26-18-03_IEEE_80211k_80211v_80211r_WiFi_Roaming_Deep_Dive.md",
+      "source_section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+      "memory_refresh": {
+        "article": "IEEE 802.11k/v/r Wi-Fi Roaming",
+        "section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-16-26-18-03_IEEE_80211k_80211v_80211r_WiFi_Roaming_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0003",
@@ -115,7 +129,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-10-00_DNS64_NAT64_Fortinet_Palo_Alto_Cisco_Comparison_Deep_Dive.md",
+      "source_section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+      "memory_refresh": {
+        "article": "DNS64/NAT64 Across Fortinet, Palo Alto, Cisco",
+        "section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-10-00_DNS64_NAT64_Fortinet_Palo_Alto_Cisco_Comparison_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0004",
@@ -148,7 +169,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-10-00_DNS64_NAT64_Fortinet_Palo_Alto_Cisco_Comparison_Deep_Dive.md",
+      "source_section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+      "memory_refresh": {
+        "article": "DNS64/NAT64 Across Fortinet, Palo Alto, Cisco",
+        "section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-10-00_DNS64_NAT64_Fortinet_Palo_Alto_Cisco_Comparison_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0005",
@@ -181,7 +209,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-19-26_OIDC_OpenID_Connect_Comprehensive_Study_Guide.md",
+      "source_section": "Authorization Code Flow with PKCE; ID Token validation; audience and token-purpose checks",
+      "memory_refresh": {
+        "article": "OIDC Comprehensive Study Guide",
+        "section": "Authorization Code Flow with PKCE; ID Token validation; audience and token-purpose checks",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-19-26_OIDC_OpenID_Connect_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0006",
@@ -214,7 +249,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-19-26_OIDC_OpenID_Connect_Comprehensive_Study_Guide.md",
+      "source_section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+      "memory_refresh": {
+        "article": "OIDC Comprehensive Study Guide",
+        "section": "802.11k / 802.11v / 802.11r roaming mechanisms and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-19-26_OIDC_OpenID_Connect_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0007",
@@ -247,7 +289,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-07-33_Perimeter_Design_Engineer_Interview_Study_Guide.md",
+      "source_section": "Packet/session flow, HA convergence, HLD/LLD design, and return-path validation",
+      "memory_refresh": {
+        "article": "Perimeter Design Engineer",
+        "section": "Packet/session flow, HA convergence, HLD/LLD design, and return-path validation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-07-33_Perimeter_Design_Engineer_Interview_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0008",
@@ -280,7 +329,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-07-33_Perimeter_Design_Engineer_Interview_Study_Guide.md",
+      "source_section": "Packet/session flow, HA convergence, HLD/LLD design, and return-path validation",
+      "memory_refresh": {
+        "article": "Perimeter Design Engineer",
+        "section": "Packet/session flow, HA convergence, HLD/LLD design, and return-path validation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-07-33_Perimeter_Design_Engineer_Interview_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0009",
@@ -313,7 +369,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-14_DNSSEC_Comprehensive_Study_Guide.md",
+      "source_section": "Chain of trust; Secure/Insecure/Bogus states; KSK rollover; dig verification",
+      "memory_refresh": {
+        "article": "DNSSEC Comprehensive Study Guide",
+        "section": "Chain of trust; Secure/Insecure/Bogus states; KSK rollover; dig verification",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-14_DNSSEC_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0010",
@@ -346,7 +409,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-14_DNSSEC_Comprehensive_Study_Guide.md",
+      "source_section": "Chain of trust; Secure/Insecure/Bogus states; KSK rollover; dig verification",
+      "memory_refresh": {
+        "article": "DNSSEC Comprehensive Study Guide",
+        "section": "Chain of trust; Secure/Insecure/Bogus states; KSK rollover; dig verification",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-14_DNSSEC_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0011",
@@ -379,7 +449,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-09-16_MACsec_IEEE8021AE_Study_Guide.md",
+      "source_section": "MKA, CAK/CKN/SAK relationships, MTU overhead, and troubleshooting",
+      "memory_refresh": {
+        "article": "MACsec IEEE 802.1AE",
+        "section": "MKA, CAK/CKN/SAK relationships, MTU overhead, and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-09-16_MACsec_IEEE8021AE_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0012",
@@ -412,7 +489,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-09-16_MACsec_IEEE8021AE_Study_Guide.md",
+      "source_section": "MKA, CAK/CKN/SAK relationships, MTU overhead, and troubleshooting",
+      "memory_refresh": {
+        "article": "MACsec IEEE 802.1AE",
+        "section": "MKA, CAK/CKN/SAK relationships, MTU overhead, and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-09-16_MACsec_IEEE8021AE_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0013",
@@ -445,7 +529,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-17-51_PRP_Parallel_Redundancy_Protocol_IEC62439_3_Study_Guide.md",
+      "source_section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+      "memory_refresh": {
+        "article": "PRP IEC 62439-3",
+        "section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-17-51_PRP_Parallel_Redundancy_Protocol_IEC62439_3_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0014",
@@ -478,7 +569,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-17-51_PRP_Parallel_Redundancy_Protocol_IEC62439_3_Study_Guide.md",
+      "source_section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+      "memory_refresh": {
+        "article": "PRP IEC 62439-3",
+        "section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-17-51_PRP_Parallel_Redundancy_Protocol_IEC62439_3_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0015",
@@ -511,7 +609,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-18-23_FortiAP_Dynamic_User_VLAN_Assignment_Deep_Dive.md",
+      "source_section": "RADIUS dynamic VLAN attributes, bridge/tunnel data paths, DHCP and trunk requirements",
+      "memory_refresh": {
+        "article": "FortiAP Dynamic User VLAN Assignment",
+        "section": "RADIUS dynamic VLAN attributes, bridge/tunnel data paths, DHCP and trunk requirements",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-18-23_FortiAP_Dynamic_User_VLAN_Assignment_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0016",
@@ -544,7 +649,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-18-23_FortiAP_Dynamic_User_VLAN_Assignment_Deep_Dive.md",
+      "source_section": "RADIUS dynamic VLAN attributes, bridge/tunnel data paths, DHCP and trunk requirements",
+      "memory_refresh": {
+        "article": "FortiAP Dynamic User VLAN Assignment",
+        "section": "RADIUS dynamic VLAN attributes, bridge/tunnel data paths, DHCP and trunk requirements",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-11-26-18-23_FortiAP_Dynamic_User_VLAN_Assignment_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0017",
@@ -577,7 +689,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-09-27_Cisco_IOS_XE_Route_Leaking_Redistribution_Visual_Deep_Dive.md",
+      "source_section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+      "memory_refresh": {
+        "article": "Cisco IOS XE Route Leaking and Redistribution",
+        "section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-09-27_Cisco_IOS_XE_Route_Leaking_Redistribution_Visual_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0018",
@@ -610,7 +729,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-09-27_Cisco_IOS_XE_Route_Leaking_Redistribution_Visual_Deep_Dive.md",
+      "source_section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+      "memory_refresh": {
+        "article": "Cisco IOS XE Route Leaking and Redistribution",
+        "section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-13-26-09-27_Cisco_IOS_XE_Route_Leaking_Redistribution_Visual_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0019",
@@ -643,7 +769,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Insertion_Summary.md",
+      "source_section": "GCP Firewall Insertion Summary",
+      "memory_refresh": {
+        "article": "GCP Firewall Insertion Summary",
+        "section": "GCP Firewall Insertion Summary",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0020",
@@ -676,7 +809,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Insertion_Summary.md",
+      "source_section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+      "memory_refresh": {
+        "article": "GCP Firewall Insertion Summary",
+        "section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0021",
@@ -709,7 +849,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Policy_Hierarchy_Goto_Next_NSI_Deep_Dive.md",
+      "source_section": "Firewall policy hierarchy, goto_next, BEFORE_CLASSIC_FIREWALL / AFTER_CLASSIC_FIREWALL",
+      "memory_refresh": {
+        "article": "GCP Firewall Policy Hierarchy/goto_next/NSI",
+        "section": "Firewall policy hierarchy, goto_next, BEFORE_CLASSIC_FIREWALL / AFTER_CLASSIC_FIREWALL",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Policy_Hierarchy_Goto_Next_NSI_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0022",
@@ -742,7 +889,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Policy_Hierarchy_Goto_Next_NSI_Deep_Dive.md",
+      "source_section": "GCP Firewall Policy Hierarchy/goto_next/NSI",
+      "memory_refresh": {
+        "article": "GCP Firewall Policy Hierarchy/goto_next/NSI",
+        "section": "GCP Firewall Policy Hierarchy/goto_next/NSI",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Firewall_Policy_Hierarchy_Goto_Next_NSI_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0023",
@@ -775,7 +929,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-16_AWS_Azure_GCP_VPC_Subnet_Routing_Mental_Model.md",
+      "source_section": "AWS vs Azure vs GCP routing/NAT mental models",
+      "memory_refresh": {
+        "article": "AWS vs Azure vs GCP Routing Mental Model",
+        "section": "AWS vs Azure vs GCP routing/NAT mental models",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-16_AWS_Azure_GCP_VPC_Subnet_Routing_Mental_Model.md"
+      }
     },
     {
       "id": "kb2-0024",
@@ -808,7 +969,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-16_AWS_Azure_GCP_VPC_Subnet_Routing_Mental_Model.md",
+      "source_section": "AWS vs Azure vs GCP routing/NAT mental models",
+      "memory_refresh": {
+        "article": "AWS vs Azure vs GCP Routing Mental Model",
+        "section": "AWS vs Azure vs GCP routing/NAT mental models",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-16_AWS_Azure_GCP_VPC_Subnet_Routing_Mental_Model.md"
+      }
     },
     {
       "id": "kb2-0025",
@@ -841,7 +1009,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-05_GCP_Cloud_NGFW_Enterprise_Firewall_Endpoints_Deep_Dive.md",
+      "source_section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+      "memory_refresh": {
+        "article": "GCP Cloud NGFW Enterprise Firewall Endpoints",
+        "section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-05_GCP_Cloud_NGFW_Enterprise_Firewall_Endpoints_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0026",
@@ -874,7 +1049,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-05_GCP_Cloud_NGFW_Enterprise_Firewall_Endpoints_Deep_Dive.md",
+      "source_section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+      "memory_refresh": {
+        "article": "GCP Cloud NGFW Enterprise Firewall Endpoints",
+        "section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-05_GCP_Cloud_NGFW_Enterprise_Firewall_Endpoints_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0027",
@@ -907,7 +1089,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-15_GCP_Network_Connectivity_Center_Comprehensive_Study_Guide.md",
+      "source_section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+      "memory_refresh": {
+        "article": "GCP NCC Comprehensive Study Guide",
+        "section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-15_GCP_Network_Connectivity_Center_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0028",
@@ -940,7 +1129,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-15_GCP_Network_Connectivity_Center_Comprehensive_Study_Guide.md",
+      "source_section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+      "memory_refresh": {
+        "article": "GCP NCC Comprehensive Study Guide",
+        "section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-15_GCP_Network_Connectivity_Center_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0029",
@@ -973,7 +1169,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-03_GCP_NCC_Router_Appliance_BGP_Firewall_Insertion_Deep_Dive.md",
+      "source_section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+      "memory_refresh": {
+        "article": "GCP NCC Router Appliance+BGP Firewall Insertion",
+        "section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-03_GCP_NCC_Router_Appliance_BGP_Firewall_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0030",
@@ -1006,7 +1209,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-03_GCP_NCC_Router_Appliance_BGP_Firewall_Insertion_Deep_Dive.md",
+      "source_section": "GCP NCC Router Appliance+BGP Firewall Insertion",
+      "memory_refresh": {
+        "article": "GCP NCC Router Appliance+BGP Firewall Insertion",
+        "section": "GCP NCC Router Appliance+BGP Firewall Insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-09-03_GCP_NCC_Router_Appliance_BGP_Firewall_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0031",
@@ -1039,7 +1249,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-21_GCP_Cloud_NGFW_Distributed_Policy_Deep_Dive.md",
+      "source_section": "Cloud NGFW distributed policy, secure tags, and Enterprise L7 security profiles",
+      "memory_refresh": {
+        "article": "GCP Cloud NGFW Distributed Policy",
+        "section": "Cloud NGFW distributed policy, secure tags, and Enterprise L7 security profiles",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-21_GCP_Cloud_NGFW_Distributed_Policy_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0032",
@@ -1072,7 +1289,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-21_GCP_Cloud_NGFW_Distributed_Policy_Deep_Dive.md",
+      "source_section": "Cloud NGFW distributed policy, secure tags, and Enterprise L7 security profiles",
+      "memory_refresh": {
+        "article": "GCP Cloud NGFW Distributed Policy",
+        "section": "Cloud NGFW distributed policy, secure tags, and Enterprise L7 security profiles",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-19-21_GCP_Cloud_NGFW_Distributed_Policy_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0033",
@@ -1105,7 +1329,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-03_Palo_Alto_Networks_Firewalling_in_GCP_Deep_Dive.md",
+      "source_section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+      "memory_refresh": {
+        "article": "Palo Alto Firewalling in GCP",
+        "section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-03_Palo_Alto_Networks_Firewalling_in_GCP_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0034",
@@ -1138,7 +1369,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-03_Palo_Alto_Networks_Firewalling_in_GCP_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "Palo Alto Firewalling in GCP",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-07-03_Palo_Alto_Networks_Firewalling_in_GCP_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0035",
@@ -1171,7 +1409,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Shared_VPC_Centralized_Firewall_Insertion_Method_11_Deep_Dive.md",
+      "source_section": "Shared VPC ownership, host/service project roles, and centralized firewall insertion",
+      "memory_refresh": {
+        "article": "GCP Shared VPC Centralized Firewall Insertion",
+        "section": "Shared VPC ownership, host/service project roles, and centralized firewall insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Shared_VPC_Centralized_Firewall_Insertion_Method_11_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0036",
@@ -1204,7 +1449,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Shared_VPC_Centralized_Firewall_Insertion_Method_11_Deep_Dive.md",
+      "source_section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+      "memory_refresh": {
+        "article": "GCP Shared VPC Centralized Firewall Insertion",
+        "section": "Network Connectivity Center topology, route exchange, Router Appliance/BGP",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_GCP_Shared_VPC_Centralized_Firewall_Insertion_Method_11_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0037",
@@ -1237,7 +1489,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-18-58_GCP_Firewall_Inspection_Insertion_Comprehensive_Study_Guide.md",
+      "source_section": "Firewall inspection taxonomy: inline insertion vs Packet Mirroring/Cloud IDS",
+      "memory_refresh": {
+        "article": "GCP Firewall Inspection and Service Insertion",
+        "section": "Firewall inspection taxonomy: inline insertion vs Packet Mirroring/Cloud IDS",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-18-58_GCP_Firewall_Inspection_Insertion_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0038",
@@ -1270,7 +1529,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-18-58_GCP_Firewall_Inspection_Insertion_Comprehensive_Study_Guide.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "GCP Firewall Inspection and Service Insertion",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-18-58_GCP_Firewall_Inspection_Insertion_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0039",
@@ -1303,7 +1569,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-08-12_GCP_Policy_Based_Routing_Study_Guide.md",
+      "source_section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+      "memory_refresh": {
+        "article": "GCP Policy-Based Routing",
+        "section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-08-12_GCP_Policy_Based_Routing_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0040",
@@ -1336,7 +1609,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-08-12_GCP_Policy_Based_Routing_Study_Guide.md",
+      "source_section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+      "memory_refresh": {
+        "article": "GCP Policy-Based Routing",
+        "section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-08-12_GCP_Policy_Based_Routing_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0041",
@@ -1369,7 +1649,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_Azure_Firewall_Insertion_Summary.md",
+      "source_section": "Azure Firewall Insertion Summary",
+      "memory_refresh": {
+        "article": "Azure Firewall Insertion Summary",
+        "section": "Azure Firewall Insertion Summary",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_Azure_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0042",
@@ -1402,7 +1689,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_Azure_Firewall_Insertion_Summary.md",
+      "source_section": "Cross-cloud stateful symmetry and return-path consistency",
+      "memory_refresh": {
+        "article": "Azure Firewall Insertion Summary",
+        "section": "Cross-cloud stateful symmetry and return-path consistency",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_Azure_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0043",
@@ -1435,7 +1729,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-15-20_Azure_Firewall_Policy_Rule_Collections_Deep_Dive.md",
+      "source_section": "Azure Firewall Policy processing order, DNS Proxy, DNAT/Network/Application rules",
+      "memory_refresh": {
+        "article": "Azure Firewall Policy Rule Collections",
+        "section": "Azure Firewall Policy processing order, DNS Proxy, DNAT/Network/Application rules",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-15-20_Azure_Firewall_Policy_Rule_Collections_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0044",
@@ -1468,7 +1769,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-15-20_Azure_Firewall_Policy_Rule_Collections_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "Azure Firewall Policy Rule Collections",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26-15-20_Azure_Firewall_Policy_Rule_Collections_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0045",
@@ -1501,7 +1809,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-40_Azure_ExpressRoute_Comprehensive_Study_Guide.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure ExpressRoute Comprehensive",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-40_Azure_ExpressRoute_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0046",
@@ -1534,7 +1849,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-40_Azure_ExpressRoute_Comprehensive_Study_Guide.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure ExpressRoute Comprehensive",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-40_Azure_ExpressRoute_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0047",
@@ -1567,7 +1889,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-37_Azure_Private_Endpoint_Inspection_Azure_Firewall_Deep_Dive.md",
+      "source_section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+      "memory_refresh": {
+        "article": "Azure Private Endpoint Inspection",
+        "section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-37_Azure_Private_Endpoint_Inspection_Azure_Firewall_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0048",
@@ -1600,7 +1929,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-37_Azure_Private_Endpoint_Inspection_Azure_Firewall_Deep_Dive.md",
+      "source_section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+      "memory_refresh": {
+        "article": "Azure Private Endpoint Inspection",
+        "section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-12-37_Azure_Private_Endpoint_Inspection_Azure_Firewall_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0049",
@@ -1633,7 +1969,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-10-24_Azure_Front_Door_Application_Gateway_WAF_Method_9_Deep_Dive.md",
+      "source_section": "Front Door WAF / Application Gateway WAF, origin lockdown, three-leg TLS",
+      "memory_refresh": {
+        "article": "Azure Front Door/App Gateway WAF",
+        "section": "Front Door WAF / Application Gateway WAF, origin lockdown, three-leg TLS",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-10-24_Azure_Front_Door_Application_Gateway_WAF_Method_9_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0050",
@@ -1666,7 +2009,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-10-24_Azure_Front_Door_Application_Gateway_WAF_Method_9_Deep_Dive.md",
+      "source_section": "Front Door WAF / Application Gateway WAF, origin lockdown, three-leg TLS",
+      "memory_refresh": {
+        "article": "Azure Front Door/App Gateway WAF",
+        "section": "Front Door WAF / Application Gateway WAF, origin lockdown, three-leg TLS",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-10-24_Azure_Front_Door_Application_Gateway_WAF_Method_9_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0051",
@@ -1699,7 +2049,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-53_Azure_Forced_Tunneling_On_Premises_Internet_Inspection_Deep_Dive.md",
+      "source_section": "Forced tunneling to on-premises, learned defaults, SNAT, symmetry and fail-open behavior",
+      "memory_refresh": {
+        "article": "Azure Forced Tunneling",
+        "section": "Forced tunneling to on-premises, learned defaults, SNAT, symmetry and fail-open behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-53_Azure_Forced_Tunneling_On_Premises_Internet_Inspection_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0052",
@@ -1732,7 +2089,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-53_Azure_Forced_Tunneling_On_Premises_Internet_Inspection_Deep_Dive.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure Forced Tunneling",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-53_Azure_Forced_Tunneling_On_Premises_Internet_Inspection_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0053",
@@ -1765,7 +2129,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-00_Azure_Virtual_WAN_Integrated_Third_Party_NGFW_Direct_Hub_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "Azure vWAN Integrated Third-Party NGFW",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-00_Azure_Virtual_WAN_Integrated_Third_Party_NGFW_Direct_Hub_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0054",
@@ -1798,7 +2169,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-00_Azure_Virtual_WAN_Integrated_Third_Party_NGFW_Direct_Hub_Deep_Dive.md",
+      "source_section": "Integrated third-party NGFW in Virtual WAN hub, Routing Intent and managed infrastructure",
+      "memory_refresh": {
+        "article": "Azure vWAN Integrated Third-Party NGFW",
+        "section": "Integrated third-party NGFW in Virtual WAN hub, Routing Intent and managed infrastructure",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-20-00_Azure_Virtual_WAN_Integrated_Third_Party_NGFW_Direct_Hub_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0055",
@@ -1831,7 +2209,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-19-45_Third_Party_NGFW_NVA_Customer_Managed_Hub_VNet_Method_2_Deep_Dive.md",
+      "source_section": "Customer-managed hub NVA, NIC IP forwarding, HA Ports and stateful symmetry",
+      "memory_refresh": {
+        "article": "Azure Customer-Managed Hub NVA",
+        "section": "Customer-managed hub NVA, NIC IP forwarding, HA Ports and stateful symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-19-45_Third_Party_NGFW_NVA_Customer_Managed_Hub_VNet_Method_2_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0056",
@@ -1864,7 +2249,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-19-45_Third_Party_NGFW_NVA_Customer_Managed_Hub_VNet_Method_2_Deep_Dive.md",
+      "source_section": "Customer-managed hub NVA, NIC IP forwarding, HA Ports and stateful symmetry",
+      "memory_refresh": {
+        "article": "Azure Customer-Managed Hub NVA",
+        "section": "Customer-managed hub NVA, NIC IP forwarding, HA Ports and stateful symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-19-45_Third_Party_NGFW_NVA_Customer_Managed_Hub_VNet_Method_2_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0057",
@@ -1897,7 +2289,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-17-03_Gateway_Load_Balancer_Transparent_NVA_Insertion_Study_Guide.md",
+      "source_section": "Gateway Load Balancer transparent chaining, frontend reference, NAT Gateway interactions",
+      "memory_refresh": {
+        "article": "Azure Gateway Load Balancer",
+        "section": "Gateway Load Balancer transparent chaining, frontend reference, NAT Gateway interactions",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-17-03_Gateway_Load_Balancer_Transparent_NVA_Insertion_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0058",
@@ -1930,7 +2329,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-17-03_Gateway_Load_Balancer_Transparent_NVA_Insertion_Study_Guide.md",
+      "source_section": "Gateway Load Balancer transparent chaining, frontend reference, NAT Gateway interactions",
+      "memory_refresh": {
+        "article": "Azure Gateway Load Balancer",
+        "section": "Gateway Load Balancer transparent chaining, frontend reference, NAT Gateway interactions",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-17-03_Gateway_Load_Balancer_Transparent_NVA_Insertion_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0059",
@@ -1963,7 +2369,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-44_Azure_Virtual_WAN_Security_SaaS_Provider_Method_6_Deep_Dive.md",
+      "source_section": "Virtual WAN Security Partner Provider service insertion and Internet/private traffic split",
+      "memory_refresh": {
+        "article": "Azure vWAN Security SaaS Provider",
+        "section": "Virtual WAN Security Partner Provider service insertion and Internet/private traffic split",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-44_Azure_Virtual_WAN_Security_SaaS_Provider_Method_6_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0060",
@@ -1996,7 +2409,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-44_Azure_Virtual_WAN_Security_SaaS_Provider_Method_6_Deep_Dive.md",
+      "source_section": "Virtual WAN Security Partner Provider service insertion and Internet/private traffic split",
+      "memory_refresh": {
+        "article": "Azure vWAN Security SaaS Provider",
+        "section": "Virtual WAN Security Partner Provider service insertion and Internet/private traffic split",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-44_Azure_Virtual_WAN_Security_SaaS_Provider_Method_6_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0061",
@@ -2029,7 +2449,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-15-56_Azure_Virtual_WAN_Secured_Hub_Method_4_Study_Guide.md",
+      "source_section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+      "memory_refresh": {
+        "article": "Azure vWAN Secured Hub",
+        "section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-15-56_Azure_Virtual_WAN_Secured_Hub_Method_4_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0062",
@@ -2062,7 +2489,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-15-56_Azure_Virtual_WAN_Secured_Hub_Method_4_Study_Guide.md",
+      "source_section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+      "memory_refresh": {
+        "article": "Azure vWAN Secured Hub",
+        "section": "Private Endpoint inspection, network policies, UDRs, ILB/NVA hairpin caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-15-56_Azure_Virtual_WAN_Secured_Hub_Method_4_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0063",
@@ -2095,7 +2529,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-05_Azure_Virtual_WAN_Multi_Region_Hubs_Deep_Dive.md",
+      "source_section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+      "memory_refresh": {
+        "article": "Azure vWAN Multi-Region Hubs",
+        "section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-05_Azure_Virtual_WAN_Multi_Region_Hubs_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0064",
@@ -2128,7 +2569,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-05_Azure_Virtual_WAN_Multi_Region_Hubs_Deep_Dive.md",
+      "source_section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+      "memory_refresh": {
+        "article": "Azure vWAN Multi-Region Hubs",
+        "section": "Virtual WAN secured hub, Routing Intent, route association/propagation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-16-05_Azure_Virtual_WAN_Multi_Region_Hubs_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0065",
@@ -2161,7 +2609,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-13-55_Azure_Route_Server_Third_Party_NVA_Dynamic_Service_Insertion_Study_Guide.md",
+      "source_section": "Azure Route Server+BGP, effective route interaction and inspection-bypass caveats",
+      "memory_refresh": {
+        "article": "Azure Route Server + NVA",
+        "section": "Azure Route Server+BGP, effective route interaction and inspection-bypass caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-13-55_Azure_Route_Server_Third_Party_NVA_Dynamic_Service_Insertion_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0066",
@@ -2194,7 +2649,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-13-55_Azure_Route_Server_Third_Party_NVA_Dynamic_Service_Insertion_Study_Guide.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure Route Server + NVA",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-13-55_Azure_Route_Server_Third_Party_NVA_Dynamic_Service_Insertion_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0067",
@@ -2227,7 +2689,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-41_Azure_Firewall_Inspection_Methods_Comprehensive_Study_Guide.md",
+      "source_section": "Azure firewall inspection methods, transparent vs routed insertion, double inspection",
+      "memory_refresh": {
+        "article": "Azure Firewall Inspection Methods",
+        "section": "Azure firewall inspection methods, transparent vs routed insertion, double inspection",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-41_Azure_Firewall_Inspection_Methods_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0068",
@@ -2260,7 +2729,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-41_Azure_Firewall_Inspection_Methods_Comprehensive_Study_Guide.md",
+      "source_section": "Azure firewall inspection methods, transparent vs routed insertion, double inspection",
+      "memory_refresh": {
+        "article": "Azure Firewall Inspection Methods",
+        "section": "Azure firewall inspection methods, transparent vs routed insertion, double inspection",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-12-41_Azure_Firewall_Inspection_Methods_Comprehensive_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0069",
@@ -2293,7 +2769,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-18-55_Azure_Firewall_Customer_Managed_Hub_VNet_Method_1_Deep_Dive.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure Firewall Customer-Managed Hub",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-18-55_Azure_Firewall_Customer_Managed_Hub_VNet_Method_1_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0070",
@@ -2326,7 +2809,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-18-55_Azure_Firewall_Customer_Managed_Hub_VNet_Method_1_Deep_Dive.md",
+      "source_section": "Azure Firewall Customer-Managed Hub",
+      "memory_refresh": {
+        "article": "Azure Firewall Customer-Managed Hub",
+        "section": "Azure Firewall Customer-Managed Hub",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-05-26-18-55_Azure_Firewall_Customer_Managed_Hub_VNet_Method_1_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0071",
@@ -2359,7 +2849,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-04-26-18-22_Azure_ExpressRoute_Global_Reach_Study_Guide.md",
+      "source_section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+      "memory_refresh": {
+        "article": "Azure ExpressRoute Global Reach",
+        "section": "ExpressRoute routing, BGP path engineering, FastPath, multi-circuit behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-04-26-18-22_Azure_ExpressRoute_Global_Reach_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0072",
@@ -2392,7 +2889,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-04-26-18-22_Azure_ExpressRoute_Global_Reach_Study_Guide.md",
+      "source_section": "ExpressRoute Global Reach addressing, BGP policy and asymmetric-routing considerations",
+      "memory_refresh": {
+        "article": "Azure ExpressRoute Global Reach",
+        "section": "ExpressRoute Global Reach addressing, BGP policy and asymmetric-routing considerations",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-04-26-18-22_Azure_ExpressRoute_Global_Reach_Study_Guide.md"
+      }
     },
     {
       "id": "kb2-0073",
@@ -2425,7 +2929,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-20_AWS_Overlay_Routing_Underlay_BGP_TGW_Cloud_WAN_Connect_Deep_Dive.md",
+      "source_section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+      "memory_refresh": {
+        "article": "Palo Alto Overlay Routing with AWS GWLB",
+        "section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-20_AWS_Overlay_Routing_Underlay_BGP_TGW_Cloud_WAN_Connect_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0074",
@@ -2458,7 +2969,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-20_AWS_Overlay_Routing_Underlay_BGP_TGW_Cloud_WAN_Connect_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "Palo Alto Overlay Routing with AWS GWLB",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-20_AWS_Overlay_Routing_Underlay_BGP_TGW_Cloud_WAN_Connect_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0075",
@@ -2491,7 +3009,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-08-26_AWS_Direct_Connect_Transit_VIF_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "AWS Direct Connect Transit VIF",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-08-26_AWS_Direct_Connect_Transit_VIF_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0076",
@@ -2524,7 +3049,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-08-26_AWS_Direct_Connect_Transit_VIF_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "AWS Direct Connect Transit VIF",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-08-26_AWS_Direct_Connect_Transit_VIF_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0077",
@@ -2557,7 +3089,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_AWS_Firewall_Insertion_Summary.md",
+      "source_section": "AWS firewall insertion summary: TGW appliance mode and Cloud WAN service insertion",
+      "memory_refresh": {
+        "article": "AWS Firewall Insertion Summary",
+        "section": "AWS firewall insertion summary: TGW appliance mode and Cloud WAN service insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_AWS_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0078",
@@ -2590,7 +3129,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_AWS_Firewall_Insertion_Summary.md",
+      "source_section": "AWS firewall insertion summary: TGW appliance mode and Cloud WAN service insertion",
+      "memory_refresh": {
+        "article": "AWS Firewall Insertion Summary",
+        "section": "AWS firewall insertion summary: TGW appliance mode and Cloud WAN service insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-07-26_AWS_Firewall_Insertion_Summary.md"
+      }
     },
     {
       "id": "kb2-0079",
@@ -2623,7 +3169,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-10_AWS_Overlay_Networking_TGW_Cloud_WAN_Connect_Service_Insertion_Deep_Dive.md",
+      "source_section": "TGW Connect / Cloud WAN Connect overlays, GRE/BGP underlay dependency and scaling",
+      "memory_refresh": {
+        "article": "AWS TGW/Cloud WAN Connect Service Insertion",
+        "section": "TGW Connect / Cloud WAN Connect overlays, GRE/BGP underlay dependency and scaling",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-10_AWS_Overlay_Networking_TGW_Cloud_WAN_Connect_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0080",
@@ -2656,7 +3209,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-10_AWS_Overlay_Networking_TGW_Cloud_WAN_Connect_Service_Insertion_Deep_Dive.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "AWS TGW/Cloud WAN Connect Service Insertion",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-10-26-17-10_AWS_Overlay_Networking_TGW_Cloud_WAN_Connect_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0081",
@@ -2689,7 +3249,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_VPC_Route_Server_NVA_Dynamic_Service_Insertion_Deep_Dive.md",
+      "source_section": "Amazon VPC Route Server, BGP/BFD, ENI next-hop programming and propagation",
+      "memory_refresh": {
+        "article": "AWS VPC Route Server + NVA",
+        "section": "Amazon VPC Route Server, BGP/BFD, ENI next-hop programming and propagation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_VPC_Route_Server_NVA_Dynamic_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0082",
@@ -2722,7 +3289,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_VPC_Route_Server_NVA_Dynamic_Service_Insertion_Deep_Dive.md",
+      "source_section": "Amazon VPC Route Server, BGP/BFD, ENI next-hop programming and propagation",
+      "memory_refresh": {
+        "article": "AWS VPC Route Server + NVA",
+        "section": "Amazon VPC Route Server, BGP/BFD, ENI next-hop programming and propagation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_VPC_Route_Server_NVA_Dynamic_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0083",
@@ -2755,7 +3329,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_Cloud_WAN_Service_Insertion_Deep_Dive.md",
+      "source_section": "AWS Cloud WAN Network Function Groups, send-via/send-to, dual-hop and segment isolation",
+      "memory_refresh": {
+        "article": "AWS Cloud WAN Service Insertion",
+        "section": "AWS Cloud WAN Network Function Groups, send-via/send-to, dual-hop and segment isolation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_Cloud_WAN_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0084",
@@ -2788,7 +3369,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_Cloud_WAN_Service_Insertion_Deep_Dive.md",
+      "source_section": "AWS Cloud WAN Network Function Groups, send-via/send-to, dual-hop and segment isolation",
+      "memory_refresh": {
+        "article": "AWS Cloud WAN Service Insertion",
+        "section": "AWS Cloud WAN Network Function Groups, send-via/send-to, dual-hop and segment isolation",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-17-01_AWS_Cloud_WAN_Service_Insertion_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0085",
@@ -2821,7 +3409,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-42_AWS_ALB_NLB_Inline_Firewall_Endpoint_GWLBE_Deep_Dive.md",
+      "source_section": "ALB/NLB with GWLB/GWLBE, ingress steering, GENEVE and client-IP caveats",
+      "memory_refresh": {
+        "article": "AWS ALB/NLB + GWLB/GWLBE",
+        "section": "ALB/NLB with GWLB/GWLBE, ingress steering, GENEVE and client-IP caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-42_AWS_ALB_NLB_Inline_Firewall_Endpoint_GWLBE_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0086",
@@ -2854,7 +3449,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-42_AWS_ALB_NLB_Inline_Firewall_Endpoint_GWLBE_Deep_Dive.md",
+      "source_section": "ALB/NLB with GWLB/GWLBE, ingress steering, GENEVE and client-IP caveats",
+      "memory_refresh": {
+        "article": "AWS ALB/NLB + GWLB/GWLBE",
+        "section": "ALB/NLB with GWLB/GWLBE, ingress steering, GENEVE and client-IP caveats",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-42_AWS_ALB_NLB_Inline_Firewall_Endpoint_GWLBE_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0087",
@@ -2887,7 +3489,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-41_Legacy_TGW_NVA_VPC_Attachment_Deep_Dive.md",
+      "source_section": "Legacy TGW direct-NVA insertion, PRE/POST route tables, appliance mode and source/dest check",
+      "memory_refresh": {
+        "article": "Legacy AWS TGW + Direct NVA",
+        "section": "Legacy TGW direct-NVA insertion, PRE/POST route tables, appliance mode and source/dest check",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-41_Legacy_TGW_NVA_VPC_Attachment_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0088",
@@ -2920,7 +3529,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-41_Legacy_TGW_NVA_VPC_Attachment_Deep_Dive.md",
+      "source_section": "Legacy TGW direct-NVA insertion, PRE/POST route tables, appliance mode and source/dest check",
+      "memory_refresh": {
+        "article": "Legacy AWS TGW + Direct NVA",
+        "section": "Legacy TGW direct-NVA insertion, PRE/POST route tables, appliance mode and source/dest check",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-41_Legacy_TGW_NVA_VPC_Attachment_Deep_Dive.md"
+      }
     },
     {
       "id": "kb2-0089",
@@ -2953,7 +3569,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-23_Caveats_for_Centralized_Ingress_Routing.md",
+      "source_section": "Centralized ingress caveats, ALB/NLB return paths, GWLBE/TGW and distributed alternatives",
+      "memory_refresh": {
+        "article": "AWS Centralized Ingress Routing Caveats",
+        "section": "Centralized ingress caveats, ALB/NLB return paths, GWLBE/TGW and distributed alternatives",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-23_Caveats_for_Centralized_Ingress_Routing.md"
+      }
     },
     {
       "id": "kb2-0090",
@@ -2986,7 +3609,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-23_Caveats_for_Centralized_Ingress_Routing.md",
+      "source_section": "Centralized ingress caveats, ALB/NLB return paths, GWLBE/TGW and distributed alternatives",
+      "memory_refresh": {
+        "article": "AWS Centralized Ingress Routing Caveats",
+        "section": "Centralized ingress caveats, ALB/NLB return paths, GWLBE/TGW and distributed alternatives",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/09-06-26-16-23_Caveats_for_Centralized_Ingress_Routing.md"
+      }
     },
     {
       "id": "kb2-0091",
@@ -3019,7 +3649,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Authorization Code Flow with PKCE; ID Token validation; audience and token-purpose checks",
+      "memory_refresh": {
+        "article": "Wi-Fi roaming + identity",
+        "section": "Authorization Code Flow with PKCE; ID Token validation; audience and token-purpose checks",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0092",
@@ -3052,7 +3689,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+      "memory_refresh": {
+        "article": "DNSSEC + DNS64/NAT64",
+        "section": "DNS64 synthesis, NAT64 translation, prefix coordination, and troubleshooting",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0093",
@@ -3085,7 +3729,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+      "memory_refresh": {
+        "article": "Cloud symmetry",
+        "section": "Google Cloud Policy-Based Routing, DEFAULT_ROUTING bypass, hybrid scopes and symmetry",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0094",
@@ -3118,7 +3769,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "GCP/Azure/AWS insertion",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0095",
@@ -3151,7 +3809,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Failure detection vs routing/FIB/session/application recovery timelines",
+      "memory_refresh": {
+        "article": "BGP + cloud",
+        "section": "Failure detection vs routing/FIB/session/application recovery timelines",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0096",
@@ -3184,7 +3849,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+      "memory_refresh": {
+        "article": "Private endpoints + WAF",
+        "section": "Palo Alto VM-Series in GCP: NSI GENEVE interception vs routed PBR/NLB insertion",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0097",
@@ -3217,7 +3889,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+      "memory_refresh": {
+        "article": "PRP + routed HA",
+        "section": "PRP frame replication, duplicate discard, LAN A/LAN B failure behavior",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0098",
@@ -3250,7 +3929,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "FortiAP dynamic VLAN end-to-end packet walk",
+      "memory_refresh": {
+        "article": "FortiAP + routing",
+        "section": "FortiAP dynamic VLAN end-to-end packet walk",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0099",
@@ -3283,7 +3969,14 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+      "memory_refresh": {
+        "article": "AWS/GCP overlay",
+        "section": "Cloud NGFW Enterprise firewall endpoints, Packet Intercept, MTU/GENEVE",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     },
     {
       "id": "kb2-0100",
@@ -3316,7 +4009,18 @@
       "exhibit": null,
       "first_added": "2026-09-17",
       "last_used": "2026-09-17",
-      "times_used": 1
+      "times_used": 1,
+      "source_url": "https://github.com/ccaiccie/knowledge/blob/main/README.md",
+      "source_section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+      "memory_refresh": {
+        "article": "Route leaking + cloud inspection",
+        "section": "VRF route leaking, route-replicate vs redistribution, and bidirectional return paths",
+        "url": "https://github.com/ccaiccie/knowledge/blob/main/README.md"
+      }
     }
-  ]
+  ],
+  "memory_refresh_policy": {
+    "required": true,
+    "rule": "Each question identifies the source knowledge article and a relevant refresh section/topic, with a direct GitHub article URL."
+  }
 }
